@@ -1,13 +1,10 @@
 /******************************************************************
-Site Name:
-Author:
+Site Name: KRIS ALLEN Official
+Author: INGENIOUS Design (http://ingsdesign.com)
 
 Stylesheet: Main Stylesheet
 
-Here's where the magic happens. Here, you'll see we are calling in
-the separate media queries. The base mobile goes outside any query
-and is called at the beginning, after that we call the rest
-of the styles inside media queries.
+Here's where the magic happens.
 ******************************************************************/
 
 
@@ -15,106 +12,331 @@ of the styles inside media queries.
 // IMPORTING STYLES
 //
 
-// import normalize
-@import "normalize";
-
 // import mixins
 @import "mixins";
 
-/*
-BASE (MOBILE) SIZE
-This are the mobile styles. It's what people see on their phones. If
-you set a great foundation, you won't need to add too many styles in
-the other stylesheets. Remember, keep it light: Speed is Important.
-*/
+// import Raleway webfont
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,900,800,600,500,700);
 
-// styles in base.scss
-@import "base";
+a {
+	color:#737373;
 
-/*
-LARGER MOBILE DEVICES
-This is for devices like the Galaxy Note or something that's
-larger than an iPhone but smaller than a tablet. Let's call them
-tweeners.
-*/
-@media only screen and (min-width: 481px) {
-
-	// styles in 481up.scss
-	@import "481up";
-
-} // end of media query
-
-/*
-TABLET & SMALLER LAPTOPS
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
-*/
-@media only screen and (min-width: 768px) {
-
-	// import grids
-	@import "grid";
-
-	// styles in 768up.scss
-	@import "768up";
-
-} // end of media query
-
-/*
-DESKTOP
-This is the average viewing window. So Desktops, Laptops, and
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
-*/
-@media only screen and (min-width: 1030px) {
-
-	// styles in 1030up.scss
-	@import "1030up";
-
-} // end of media query
-
-/*
-LARGE VIEWING SIZE
-This is for the larger monitors and possibly full screen viewers.
-*/
-@media only screen and (min-width: 1240px) {
-
-	// styles in 1240up.scss
-	@import "1240up";
-
-} // end of media query
-
-/*
-RETINA (2x RESOLUTION DEVICES)
-This applies to the retina iPhone (4s) and iPad (2,3) along with
-other displays with a 2x resolution. You can also create a media
-query for retina AND a certain size if you want. Go Nuts.
-*/
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min--moz-device-pixel-ratio: 1.5),
-       only screen and (min-device-pixel-ratio: 1.5) {
-
-	// styles in 2x.scss
-	@import "2x";
-
-} // end of media query
-
-/*
-iPHONE 5 MEDIA QUERY
-Want to get fancy for no good reason? Knock yourself out.
-*/
-@media (device-height: 568px) and (-webkit-min-device-pixel-ratio: 2) {
-  
-  // iPhone 5 or iPod Touch 5th generation styles (you can include your own file if you want)
-  
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;		
+	&:hover {
+		text-decoration: none;
+	}
 }
 
-/*
-PRINT STYLESHEET
-Feel free to customize this. Remember to add things that won't make
-sense to print at the bottom. Things like nav, ads, and forms should
-be set to display none.
-*/
-@media print {
-	@import "print";
+h1, h2, h3 	{ line-height: 1em; }
+
+h3 {
+	font: 300 18px "Raleway";
+	margin:0 0 20px;
+	font-weight: normal;
+	line-height: 1em;
+}
+
+h4  {
+	font: 200 18px "Raleway";
+}
+
+body {
+	background: #ededed;
+	color: #686868;
+	font: 12px HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+	line-height: 21px;
+}
+
+.container-fluid {
+	padding-right: 0;
+	padding-left: 0;
+}
+
+header {
+	background: url('img/header.jpg') no-repeat 50% 50%;
+	height: 322px;
+	width: 100%;
+	position: fixed;
+	display: block;
+	overflow: hidden;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	a {
+		background: url('img/krisallen.png') no-repeat center center;
+		background-size: 100%;
+		height: 61px;
+		width: 362px;
+		left: 50%;
+		top:130px;
+		margin: 0 0 0 -181px;
+		text-indent: -9999px;
+		position: fixed;
+		display: block;		
+	}
+}
+
+
+nav {
+	background: #fff;
+	width: 100%;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+	position: relative;
+	top: 322px;
+	z-index: 20;
+	.fixed {
+		position: fixed;
+		top: 0;
+	}
+	ul {
+		margin: 0px;
+		padding: 0px;
+		margin: 0 auto;
+		text-align: center;	
+		li {
+			text-transform: uppercase;
+			color:#b3b3b3;
+			letter-spacing: 0.2em;
+			display:inline-block;
+			list-style: none;		
+			a {
+				padding: 23px 0;
+				width: 150px;
+				display: block;
+				font: 300 16px "Raleway";
+				&:hover {
+					font-weight: 400;
+				}
+			}	
+		}
+	}
+}
+
+#main { background:#ededed; padding: 60px 0 0; margin: 262px 0 0; }
+
+#news {
+	margin: 60px 0 0 0;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	.scrollarea {
+		width: 2000px;
+	}
+	article {
+		background: #fff;
+		width: 545px;
+		box-shadow: 0 0 5px rgba(0,0,0,0.1);
+		display: inline-block;
+		margin: 0 0 60px 60px;
+	
+		-webkit-transition: all 0.25s ease;
+		-moz-transition: all 0.25s ease;
+		-o-transition: all 0.25s ease;	
+		p {
+			color: #acacac;
+
+			-webkit-transition: all 0.25s ease;
+			-moz-transition: all 0.25s ease;
+			-o-transition: all 0.25s ease;	
+		}
+		.img {
+			div {
+				height: 307px;
+				background-position: center center;
+				background-size: 95%;
+			
+				-webkit-transition: all 0.25s ease;
+				-moz-transition: all 0.25s ease;	
+				-o-transition: all 0.25s ease;			
+			}
+		}
+		section {
+			padding: 40px 30px 30px 30px;
+		}
+		&:hover {
+			box-shadow: 0 0 5px rgba(0,0,0,0.2);
+			p {
+				color: #808080;
+			}
+			.img div {
+				opacity: 0.8;
+			}
+		}
+	}
+}
+
+.next {
+	width: 40px;
+	height: 60px;
+	background: #fff url('img/arrow-r.png') no-repeat center center;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+	position: absolute;
+	right: 0;
+	z-index: 5;
+	top: 50%;
+	margin: -30px 0 0 0;
+}
+
+#social {
+	width: 100%;
+	overflow: auto;
+	background: #fff;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
+	.embed {
+		/*background: #f2f2f2;*/
+		margin: 0 0 0 94px;
+		height: 185px;
+		position: relative;		
+	}
+	.facebook 	{	background: url('img/fb.jpg') no-repeat left top; background-size: auto; }
+	.instagram 	{	
+		background: url('img/in.jpg') no-repeat left top; background-size: auto; 
+		.embed { padding: 0 0 5px; }
+		.scrollarea {
+			width: 500px;
+		}
+		article {
+			height: 185px;
+			width: 185px;
+			float: left;
+			margin: 0 20px 0 0;
+			box-shadow: 0 0 5px rgba(0,0,0,0.1);
+			position: relative;
+			p {
+				position: absolute;	
+				background: #fff;
+				display: block;
+				padding: 10px;
+				box-shadow: 0 0 5px rgba(0,0,0,0.1);
+				margin: 0;
+				bottom: -185px;
+			
+				-webkit-transition: all 0.5s ease;
+				-moz-transition: all 0.5s ease;
+				-o-transition: all 0.5s ease;	
+			}
+			&:hover {
+				p {
+					bottom:0;
+				}
+			}
+		}
+		img {
+			height: 185px;
+		}
+	}
+	.twitter 	{	background: url('img/tw.jpg') no-repeat left top; background-size: auto; }
+}
+#social > div {
+	width:29%;
+	margin:50px 0 50px 50px;
+	float: left;
+	overflow: hidden;
+}
+
+/* Twitter */
+
+#social .twitter .tweet_list {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+
+#social .twitter .tweet_list li {
+	margin: 0 0 20px;
+}
+
+#social .twitter .tweet_text { color: #acacac; }
+#social .twitter .tweet_time { display: block; margin: 0 0 5px; }
+
+#events {
+	margin: 60px;
+	width: auto !important;
+}
+
+#events section {
+	background: #fff;
+	box-shadow: 0 0 5px rgba(0,0,0,0.1);
+	display: inline-block;
+	width: 300px;
+	height: 160px;
+	padding: 30px;
+	margin: 0 30px 30px 0;
+	position: relative;
+}
+
+#events h3, #events h4 {
+	font-size: 18px;
+	margin: 0px;
+}
+
+#events p {
+	display: block;
+	position: absolute;
+	bottom: 30px;
+	margin: 0px;
+	color: #acacac;
+
+	-webkit-transition: all 0.25s ease;
+	-moz-transition: all 0.25s ease;
+	-o-transition: all 0.25s ease;	
+}
+
+#events section:hover p { color: #808080; }
+
+
+/*														-- (1285, infinity) */
+@media (min-width: 1285px) {
+	#news article { width: 545px; }
+}
+
+/* Large desktop										-- (1200, infinity) */
+@media (min-width: 1200px) {
+	#news { margin: 60px 0 0 !important; }
+	#news article { margin: 0 0 60px 60px !important; }
+}
+
+/*														-- (768, infinity) */
+@media (min-width: 768px) { 
+	#news article { margin: 0 0 60px 60px !important; }
+	#news { margin: 60px 0 0 !important; }
+	#social > div { margin: 50px 0 50px 50px !important; }
+	#social .embed { margin: 0 0 0 94px !important; }
+	#events { margin: 60px !important; }
+	#events section { width: 300px !important; }
+}
+
+/* Portrait tablet to landscape and desktop 			-- (768, 979) */
+@media (min-width: 768px) and (max-width: 979px) { 
+}
+ 
+/* Landscape phone to portrait tablet 					-- (0, 768) */
+@media (max-width: 767px) {
+
+	body { padding: 0; }
+
+	nav ul li a {
+		font-size: 12px !important;
+		width: 112px !important;
+	}
+
+	#news .scrollarea { width: 100%; }
+
+	#social > div { background-size: 25px !important; }
+
+	#events section { width: 100%; }
+}
+ 
+/* Landscape phones and down 							-- (0, 480) */
+@media (max-width: 480px) {
+
+	#logo { background-size:65%; }
+	nav ul li a {
+		width: 72px !important;
+	}
+	
+	#events section { margin-right: 0px !important; }
+
 }

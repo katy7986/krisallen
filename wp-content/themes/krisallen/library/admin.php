@@ -6,11 +6,6 @@ dashboard. Updates to this page are coming soon.
 It's turned off by default, but you can call it
 via the functions file.
 
-Developed by: Eddie Machado
-URL: http://themble.com/bones/
-
-Special Thanks for code & inspiration to:
-@jackmcconnell - http://www.voltronik.co.uk/
 Digging into WP - http://digwp.com/2010/10/customize-wordpress-dashboard/
 
 */
@@ -31,22 +26,9 @@ function disable_default_dashboard_widgets() {
 
 	// removing plugin dashboard boxes
 	remove_meta_box('yoast_db_widget', 'dashboard', 'normal');         // Yoast's SEO Plugin Widget
-
-	/*
-	have more plugin widgets you'd like to remove?
-	share them with us so we can get a list of
-	the most commonly used. :D
-	https://github.com/eddiemachado/bones/issues
-	*/
 }
 
 /*
-Now let's talk about adding your own custom Dashboard widget.
-Sometimes you want to show clients feeds relative to their
-site's content. For example, the NBA.com feed for a sports
-site. Here is an example Dashboard Widget that displays recent
-entries from an RSS Feed.
-
 For more information on creating Dashboard Widgets, view:
 http://digwp.com/2010/10/customize-wordpress-dashboard/
 */
@@ -55,7 +37,7 @@ http://digwp.com/2010/10/customize-wordpress-dashboard/
 function bones_rss_dashboard_widget() {
 	if(function_exists('fetch_feed')) {
 		include_once(ABSPATH . WPINC . '/feed.php');               // include the required file
-		$feed = fetch_feed('http://themble.com/feed/rss/');        // specify the source feed
+		$feed = fetch_feed('https://api.twitter.com/1/statuses/user_timeline.rss?screen_name=krisallen');        // specify the source feed
 		$limit = $feed->get_item_quantity(7);                      // specify number of items
 		$items = $feed->get_items(0, $limit);                      // create an array of items
 	}
@@ -75,11 +57,7 @@ function bones_rss_dashboard_widget() {
 
 // calling all custom dashboard widgets
 function bones_custom_dashboard_widgets() {
-	wp_add_dashboard_widget('bones_rss_dashboard_widget', __('Recently on Themble (Customize on admin.php)', 'bonestheme'), 'bones_rss_dashboard_widget');
-	/*
-	Be sure to drop any other created Dashboard Widgets
-	in this function and they will all load.
-	*/
+	wp_add_dashboard_widget('bones_rss_dashboard_widget', __('Recently tweets from Kris Allen', 'bonestheme'), 'bones_rss_dashboard_widget');
 }
 
 
@@ -91,18 +69,16 @@ add_action('wp_dashboard_setup', 'bones_custom_dashboard_widgets');
 
 /************* CUSTOM LOGIN PAGE *****************/
 
-// calling your own login css so you can style it
+// calling login css in order to style it
 
-//Updated to proper 'enqueue' method
-//http://codex.wordpress.org/Plugin_API/Action_Reference/login_enqueue_scripts
 function bones_login_css() {
 	wp_enqueue_style( 'bones_login_css', get_template_directory_uri() . '/library/css/login.css', false );
 }
 
-// changing the logo link from wordpress.org to your site
+// changing the logo link
 function bones_login_url() {  return home_url(); }
 
-// changing the alt text on the logo to show your site name
+// changing the alt text on the logo
 function bones_login_title() { return get_option('blogname'); }
 
 // calling it only on the login page
@@ -113,16 +89,9 @@ add_filter('login_headertitle', 'bones_login_title');
 
 /************* CUSTOMIZE ADMIN *******************/
 
-/*
-I don't really recommend editing the admin too much
-as things may get funky if WordPress updates. Here
-are a few funtions which you can choose to use if
-you like.
-*/
-
 // Custom Backend Footer
 function bones_custom_admin_footer() {
-	_e('<span id="footer-thankyou">Developed by <a href="http://yoursite.com" target="_blank">Your Site Name</a></span>. Built using <a href="http://themble.com/bones" target="_blank">Bones</a>.', 'bonestheme');
+	_e('<span id="footer-thankyou">Developed by <a href="http://ingsdesign.com" target="_blank">INGENIOUS Design</a></span>.', 'bonestheme');
 }
 
 // adding it to the admin area

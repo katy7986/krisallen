@@ -14,12 +14,12 @@ function tour_post() {
 			'edit_item' => __('Edit Tour Dates', 'bonestheme'), /* Edit Display Title */
 			'new_item' => __('New Tour Date', 'bonestheme'), /* New Display Title */
 			'view_item' => __('View Tour Date', 'bonestheme'), /* View Display Title */
-			'search_items' => __('Search Tour Date', 'bonestheme'), /* Search Tour Date Title */ 
+			'search_items' => __('Search Tour Dates', 'bonestheme'), /* Search Tour Date Title */ 
 			'not_found' =>  __('Nothing found in the Database.', 'bonestheme'), /* This displays if there are no entries yet */ 
 			'not_found_in_trash' => __('Nothing found in Trash', 'bonestheme'), /* This displays if there is nothing in the trash */
 			'parent_item_colon' => ''
 			), /* end of arrays */
-			'description' => __( 'This is the example custom Tour Date', 'bonestheme' ), /* Tour Date Description */
+			'description' => __( 'Tour Dates with Date, venue, ticket price, and FB page for RSVP', 'bonestheme' ), /* Tour Date Description */
 			'public' => true,
 			'publicly_queryable' => true,
 			'exclude_from_search' => false,
@@ -32,7 +32,7 @@ function tour_post() {
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'sticky')
+			'supports' => array( 'title', 'thumbnail', 'revisions', 'sticky')
 	 	) /* end of options */
 	); /* end of register post type */
 	
@@ -47,11 +47,92 @@ function tour_post() {
 	add_action( 'init', 'tour_post');
 	
     
-    /*
-    	looking for custom meta boxes?
-    	check out this fantastic tool:
-    	https://github.com/jaredatch/Custom-Metaboxes-and-Fields-for-WordPress
-    */
-	
+/**
+ * @category KrisAllen
+ * @package  Metaboxes
+ */
+
+
+add_filter( 'cmb_meta_boxes', 'ka_metaboxes' );
+/**
+ * Define the metabox and field configurations.
+ *
+ * @param  array $meta_boxes
+ * @return array
+ */
+function ka_metaboxes( array $meta_boxes ) {
+
+	// Start with an underscore to hide fields from custom fields list
+	$prefix = '_ka_';
+
+	$meta_boxes[] = array(
+		'id'         => 'ka_metabox',
+		'title'      => 'Tour Date Info',
+		'pages'      => array( 'tour', ), // Post type
+		'context'    => 'normal',
+		'priority'   => 'high',
+		'show_names' => true, // Show field names on the left
+		'fields'     => array(
+			array(
+				'name' => 'Venue',
+				'desc' => 'field description (optional)',
+				'id'   => $prefix . 'tour_text',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'City',
+				'desc' => 'field description (optional)',
+				'id'   => $prefix . 'tour_city',
+				'type' => 'text_medium',
+			),
+			array(
+				'name' => 'State',
+				'desc' => 'field description (optional)',
+				'id'   => $prefix . 'tour_state',
+				'type' => 'text_small',
+			),
+			array(
+				'name' => 'Date',
+				'desc' => 'field description (optional)',
+				'id'   => $prefix . 'tour_date',
+				'type' => 'text_date_timestamp',
+			),
+			array(
+	            'name' => 'Time',
+	            'desc' => 'field description (optional)',
+	            'id'   => $prefix . 'tour_time',
+	            'type' => 'text_time',
+	        ),
+			array(
+				'name' => 'Ticket Cost',
+				'desc' => 'What is the ticket price? (optional)',
+				'id'   => $prefix . 'tour_cost',
+				'type' => 'text_money',
+			),
+			array(
+				'name'    => 'Tour Date Description',
+				'desc'    => 'Describe any specifics about this tour date (optional)',
+				'id'      => $prefix . 'tour_desc',
+				'type'    => 'wysiwyg',
+				'options' => array(	'textarea_rows' => 5, ),
+			),
+		),
+	);
+
+	// Add other metaboxes as needed
+
+	return $meta_boxes;
+}
+
+add_action( 'init', 'cmb_initialize_cmb_meta_boxes', 9999 );
+/**
+ * Initialize the metabox class.
+ */
+function cmb_initialize_cmb_meta_boxes() {
+
+	if ( ! class_exists( 'cmb_Meta_Box' ) )
+		require_once 'metaboxes/init.php';
+
+}	
 
 ?>

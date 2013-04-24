@@ -28,7 +28,7 @@
 		<meta name="msapplication-TileColor" content="#f01d4f">
 		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/library/images/win8-tile-icon.png">
 
-  	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
+  		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
@@ -41,23 +41,21 @@
 
 	<body <?php body_class(); ?>>
 
-		<div id="container">
-
-			<header class="header" role="banner">
-
-				<div id="inner-header" class="wrap clearfix">
-
-					<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
-					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
-
-					<!-- if you'd like to use the site description you can un-comment it below -->
-					<?php // bloginfo('description'); ?>
-
-
-					<nav role="navigation">
-						<?php bones_main_nav(); ?>
-					</nav>
-
-				</div> <!-- end #inner-header -->
-
-			</header> <!-- end header -->
+	<div class="container-fluid">
+		<header class="row-fluid">
+			<div class="content">
+				<div class="content">
+				<a href="<?php echo home_url(); ?>" id="logo"><?php bloginfo('name'); ?></a>
+			</div>
+		</header>
+	
+		<nav>
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#news">News</a></li>
+				<li><a href="#events">Events</a></li>
+				<li><a href="#media">Media</a></li>
+			</ul>
+		</nav>	
+			
+		<div id="main">

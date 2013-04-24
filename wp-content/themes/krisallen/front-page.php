@@ -10,7 +10,7 @@
 					<?php while ( have_posts() ) : the_post(); ?>
 					<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' ); $url = $thumb['0']; ?>
 					<article class="span4">
-						<a href="#" class="img"><div style="background-image:url(<?php echo $thumb; ?>)"></div></a>
+						<a href="#" class="img"><div style="background-image:url(<?php echo $url; ?>)"></div></a>
 						<section>
 							<h3><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 							<p><?php the_excerpt(); ?></p>
@@ -75,12 +75,21 @@
 				$query = new WP_Query( $args ); 
 			?>				
 			<?php if ( $query->have_posts() ) : ?>
-				<?php while( have_posts() : the_post(); ) : ?>
+				<?php 
+					while ( $query->have_posts() ) : $query->the_post(); 
+					global $post;
+					$venue = get_post_meta( $post->ID, '_ka_tour_text', true );
+					$city = get_post_meta( $post->ID, '_ka_tour_city', true );
+					$state = get_post_meta( $post->ID, '_ka_tour_state', true );
+					$the_date = get_post_meta( $post->ID, '_ka_tour_date', true );
+					$the_time = get_post_meta( $post->ID, '_ka_tour_time', true );
+					$the_price = get_post_meta( $post->ID, '_ka_tour_cost', true );
+				?>
 				<section class="span3">
-					<h3>Atkinson Room - Frostburg State</h3>
-					<h4>Frostburg, Maryland</h4>
+					<h3><?php echo $venue; ?></h3>
+					<h4><?php echo $city; ?>, <?php echo $state; ?></h4>
 
-					<p>April 6, 2013 <span>&mdash;</span> 10:00pm</p>
+					<p><time datetime="<?php echo $the_date; ?>"><?php echo date( 'F j, Y', $the_date ); ?></time> <span>&mdash;</span> <?php echo $the_time; ?></p>
 				</section>
 				<?php endwhile; ?>				
 			<?php endif; ?>

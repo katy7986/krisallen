@@ -174,7 +174,7 @@ body {
 
 /* line 57, ../scss/style.scss */
 header {
-  background: url("../images/header.jpg") no-repeat 50% 50%;
+  background: url("img/header.jpg") no-repeat 50% 50%;
   height: 322px;
   width: 100%;
   position: fixed;
@@ -186,7 +186,7 @@ header {
 }
 /* line 67, ../scss/style.scss */
 header a {
-  background: url("../images/krisallen.png") no-repeat center center;
+  background: url("img/krisallen.png") no-repeat center center;
   background-size: 100%;
   height: 61px;
   width: 362px;
@@ -199,12 +199,6 @@ header a {
 }
 
 /* line 82, ../scss/style.scss */
-.fixed {
-  position: fixed;
-  top: 0;
-}
-
-/* line 87, ../scss/style.scss */
 nav {
   background: #fff;
   width: 100%;
@@ -213,14 +207,19 @@ nav {
   top: 322px;
   z-index: 20;
 }
-/* line 94, ../scss/style.scss */
+/* line 89, ../scss/style.scss */
+nav .fixed {
+  position: fixed;
+  top: 0;
+}
+/* line 93, ../scss/style.scss */
 nav ul {
   margin: 0px;
   padding: 0px;
   margin: 0 auto;
   text-align: center;
 }
-/* line 99, ../scss/style.scss */
+/* line 98, ../scss/style.scss */
 nav ul li {
   text-transform: uppercase;
   color: #b3b3b3;
@@ -228,37 +227,37 @@ nav ul li {
   display: inline-block;
   list-style: none;
 }
-/* line 105, ../scss/style.scss */
+/* line 104, ../scss/style.scss */
 nav ul li a {
   padding: 23px 0;
   width: 150px;
   display: block;
   font: 300 16px "Raleway";
 }
-/* line 110, ../scss/style.scss */
+/* line 109, ../scss/style.scss */
 nav ul li a:hover {
   font-weight: 400;
 }
 
-/* line 118, ../scss/style.scss */
+/* line 117, ../scss/style.scss */
 #main {
   background: #ededed;
   padding: 60px 0 0;
   margin: 262px 0 0;
 }
 
-/* line 120, ../scss/style.scss */
+/* line 119, ../scss/style.scss */
 #news {
   margin: 60px 0 0 0;
   width: 100%;
   overflow: hidden;
   position: relative;
 }
-/* line 125, ../scss/style.scss */
+/* line 124, ../scss/style.scss */
 #news .scrollarea {
   width: 2000px;
 }
-/* line 128, ../scss/style.scss */
+/* line 127, ../scss/style.scss */
 #news article {
   background: #fff;
   width: 545px;
@@ -269,14 +268,14 @@ nav ul li a:hover {
   -moz-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
 }
-/* line 138, ../scss/style.scss */
+/* line 137, ../scss/style.scss */
 #news article p {
   color: #acacac;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
 }
-/* line 146, ../scss/style.scss */
+/* line 145, ../scss/style.scss */
 #news article .img div {
   height: 307px;
   background-position: center center;
@@ -285,28 +284,28 @@ nav ul li a:hover {
   -moz-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
 }
-/* line 156, ../scss/style.scss */
+/* line 155, ../scss/style.scss */
 #news article section {
   padding: 40px 30px 30px 30px;
 }
-/* line 159, ../scss/style.scss */
+/* line 158, ../scss/style.scss */
 #news article:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
-/* line 161, ../scss/style.scss */
+/* line 160, ../scss/style.scss */
 #news article:hover p {
   color: #808080;
 }
-/* line 164, ../scss/style.scss */
+/* line 163, ../scss/style.scss */
 #news article:hover .img div {
   opacity: 0.8;
 }
 
-/* line 171, ../scss/style.scss */
+/* line 170, ../scss/style.scss */
 .next {
   width: 40px;
   height: 60px;
-  background: white url("../images/arrow-r.png") no-repeat center center;
+  background: white url("img/arrow-r.png") no-repeat center center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   position: absolute;
   right: 0;
@@ -315,39 +314,39 @@ nav ul li a:hover {
   margin: -30px 0 0 0;
 }
 
-/* line 183, ../scss/style.scss */
+/* line 182, ../scss/style.scss */
 #social {
   width: 100%;
   overflow: auto;
   background: #fff;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
-/* line 188, ../scss/style.scss */
+/* line 187, ../scss/style.scss */
 #social .embed {
   /*background: #f2f2f2;*/
   margin: 0 0 0 94px;
   height: 185px;
   position: relative;
 }
-/* line 194, ../scss/style.scss */
+/* line 193, ../scss/style.scss */
 #social .facebook {
-  background: url("../images/fb.jpg") no-repeat left top;
+  background: url("img/fb.jpg") no-repeat left top;
   background-size: auto;
 }
-/* line 195, ../scss/style.scss */
+/* line 194, ../scss/style.scss */
 #social .instagram {
-  background: url("../images/in.jpg") no-repeat left top;
+  background: url("img/in.jpg") no-repeat left top;
   background-size: auto;
 }
-/* line 197, ../scss/style.scss */
+/* line 196, ../scss/style.scss */
 #social .instagram .embed {
   padding: 0 0 5px;
 }
-/* line 198, ../scss/style.scss */
+/* line 197, ../scss/style.scss */
 #social .instagram .scrollarea {
   width: 500px;
 }
-/* line 201, ../scss/style.scss */
+/* line 200, ../scss/style.scss */
 #social .instagram article {
   height: 185px;
   width: 185px;
@@ -356,7 +355,7 @@ nav ul li a:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   position: relative;
 }
-/* line 208, ../scss/style.scss */
+/* line 207, ../scss/style.scss */
 #social .instagram article p {
   position: absolute;
   background: #fff;
@@ -369,21 +368,21 @@ nav ul li a:hover {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
 }
-/* line 222, ../scss/style.scss */
+/* line 221, ../scss/style.scss */
 #social .instagram article:hover p {
   bottom: 0;
 }
-/* line 227, ../scss/style.scss */
+/* line 226, ../scss/style.scss */
 #social .instagram img {
   height: 185px;
 }
-/* line 231, ../scss/style.scss */
+/* line 230, ../scss/style.scss */
 #social .twitter {
-  background: url("../images/tw.jpg") no-repeat left top;
+  background: url("img/tw.jpg") no-repeat left top;
   background-size: auto;
 }
 
-/* line 233, ../scss/style.scss */
+/* line 232, ../scss/style.scss */
 #social > div {
   width: 29%;
   margin: 50px 0 50px 50px;
@@ -392,36 +391,36 @@ nav ul li a:hover {
 }
 
 /* Twitter */
-/* line 242, ../scss/style.scss */
+/* line 241, ../scss/style.scss */
 #social .twitter .tweet_list {
   padding: 0px;
   margin: 0px;
   list-style: none;
 }
 
-/* line 248, ../scss/style.scss */
+/* line 247, ../scss/style.scss */
 #social .twitter .tweet_list li {
   margin: 0 0 20px;
 }
 
-/* line 252, ../scss/style.scss */
+/* line 251, ../scss/style.scss */
 #social .twitter .tweet_text {
   color: #acacac;
 }
 
-/* line 253, ../scss/style.scss */
+/* line 252, ../scss/style.scss */
 #social .twitter .tweet_time {
   display: block;
   margin: 0 0 5px;
 }
 
-/* line 255, ../scss/style.scss */
+/* line 254, ../scss/style.scss */
 #events {
   margin: 60px;
   width: auto !important;
 }
 
-/* line 260, ../scss/style.scss */
+/* line 259, ../scss/style.scss */
 #events section {
   background: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -433,13 +432,13 @@ nav ul li a:hover {
   position: relative;
 }
 
-/* line 271, ../scss/style.scss */
+/* line 270, ../scss/style.scss */
 #events h3, #events h4 {
   font-size: 18px;
   margin: 0px;
 }
 
-/* line 276, ../scss/style.scss */
+/* line 275, ../scss/style.scss */
 #events p {
   display: block;
   position: absolute;
@@ -451,58 +450,58 @@ nav ul li a:hover {
   -o-transition: all 0.25s ease;
 }
 
-/* line 288, ../scss/style.scss */
+/* line 287, ../scss/style.scss */
 #events section:hover p {
   color: #808080;
 }
 
 /*														-- (1285, infinity) */
 @media (min-width: 1285px) {
-  /* line 293, ../scss/style.scss */
+  /* line 292, ../scss/style.scss */
   #news article {
     width: 545px;
   }
 }
 /* Large desktop										-- (1200, infinity) */
 @media (min-width: 1200px) {
-  /* line 298, ../scss/style.scss */
+  /* line 297, ../scss/style.scss */
   #news {
     margin: 60px 0 0 !important;
   }
 
-  /* line 299, ../scss/style.scss */
+  /* line 298, ../scss/style.scss */
   #news article {
     margin: 0 0 60px 60px !important;
   }
 }
 /*														-- (768, infinity) */
 @media (min-width: 768px) {
-  /* line 304, ../scss/style.scss */
+  /* line 303, ../scss/style.scss */
   #news article {
     margin: 0 0 60px 60px !important;
   }
 
-  /* line 305, ../scss/style.scss */
+  /* line 304, ../scss/style.scss */
   #news {
     margin: 60px 0 0 !important;
   }
 
-  /* line 306, ../scss/style.scss */
+  /* line 305, ../scss/style.scss */
   #social > div {
     margin: 50px 0 50px 50px !important;
   }
 
-  /* line 307, ../scss/style.scss */
+  /* line 306, ../scss/style.scss */
   #social .embed {
     margin: 0 0 0 94px !important;
   }
 
-  /* line 308, ../scss/style.scss */
+  /* line 307, ../scss/style.scss */
   #events {
     margin: 60px !important;
   }
 
-  /* line 309, ../scss/style.scss */
+  /* line 308, ../scss/style.scss */
   #events section {
     width: 300px !important;
   }
@@ -510,45 +509,45 @@ nav ul li a:hover {
 /* Portrait tablet to landscape and desktop 			-- (768, 979) */
 /* Landscape phone to portrait tablet 					-- (0, 768) */
 @media (max-width: 767px) {
-  /* line 319, ../scss/style.scss */
+  /* line 318, ../scss/style.scss */
   body {
     padding: 0;
   }
 
-  /* line 321, ../scss/style.scss */
+  /* line 320, ../scss/style.scss */
   nav ul li a {
     font-size: 12px !important;
     width: 112px !important;
   }
 
-  /* line 326, ../scss/style.scss */
+  /* line 325, ../scss/style.scss */
   #news .scrollarea {
     width: 100%;
   }
 
-  /* line 328, ../scss/style.scss */
+  /* line 327, ../scss/style.scss */
   #social > div {
     background-size: 25px !important;
   }
 
-  /* line 330, ../scss/style.scss */
+  /* line 329, ../scss/style.scss */
   #events section {
     width: 100%;
   }
 }
 /* Landscape phones and down 							-- (0, 480) */
 @media (max-width: 480px) {
-  /* line 336, ../scss/style.scss */
+  /* line 335, ../scss/style.scss */
   #logo {
     background-size: 65%;
   }
 
-  /* line 337, ../scss/style.scss */
+  /* line 336, ../scss/style.scss */
   nav ul li a {
     width: 72px !important;
   }
 
-  /* line 341, ../scss/style.scss */
+  /* line 340, ../scss/style.scss */
   #events section {
     margin-right: 0px !important;
   }

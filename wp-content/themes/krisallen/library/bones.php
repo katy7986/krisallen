@@ -130,9 +130,9 @@ function bones_scripts_and_styles() {
     wp_register_script( 'modernizr', get_stylesheet_directory_uri() . '/library/js/vendor/modernizr-2.6.2.min.js', array(), '2.5.3', false );
 
     // register main stylesheet
-    wp_register_style( 'bootstrap-stylesheet', get_stylesheet_directory_uri() . '/library/css/bootstrap.min.css', array(), '', 'all' );
-    wp_register_style( 'bootstrap-responsive-stylesheet', get_stylesheet_directory_uri() . '/library/css/bootstrap-responsive.min.css', array(), '', 'all' );
-    wp_register_style( 'main-stylesheet', get_stylesheet_directory_uri() . '/library/css/main.css', array(), '', 'all' );
+    wp_register_style( 'main-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
+    wp_register_style( 'bootstrap-stylesheet', get_stylesheet_directory_uri() . '/css/bootstrap.min.css', array(), '', 'all' );
+    wp_register_style( 'bootstrap-responsive-stylesheet', get_stylesheet_directory_uri() . '/css/bootstrap-responsive.min.css', array(), '', 'all' );
 
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -143,13 +143,13 @@ function bones_scripts_and_styles() {
     wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
     wp_register_script( 'bootstrap-js', get_stylesheet_directory_uri() . '/library/js/vendor/bootstrap.min.js', array( 'jquery' ), '', true );
     wp_register_script( 'plugins-js', get_stylesheet_directory_uri() . '/library/js/plugins.js', array( 'jquery' ), '', true );
-    wp_register_script( 'main-js', get_stylesheet_directory_uri() . '/library/js/main.js', array( 'jquery' ), '', true );
+    wp_register_script( 'main-js', get_stylesheet_directory_uri() . '/library/js/main.js', '', '', true );
 
     // enqueue styles and scripts
     wp_enqueue_script( 'modernizr' );
-    wp_enqueue_style( 'main-stylesheet' );
     wp_enqueue_style( 'bootstrap-stylesheet' );
     wp_enqueue_style( 'bootstrap-responsive-stylesheet' );
+    wp_enqueue_style( 'main-stylesheet' );
     /*
     I recommend using a plugin to call jQuery
     using the google cdn. That way it stays cached

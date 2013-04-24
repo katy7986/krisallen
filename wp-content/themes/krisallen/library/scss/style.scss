@@ -55,7 +55,7 @@ body {
 }
 
 header {
-	background: url('img/header.jpg') no-repeat 50% 50%;
+	background: url('../images/header.jpg') no-repeat 50% 50%;
 	height: 322px;
 	width: 100%;
 	position: fixed;
@@ -65,7 +65,7 @@ header {
 	top: 0;
 	left: 0;
 	a {
-		background: url('img/krisallen.png') no-repeat center center;
+		background: url('../images/krisallen.png') no-repeat center center;
 		background-size: 100%;
 		height: 61px;
 		width: 362px;
@@ -79,6 +79,11 @@ header {
 }
 
 
+.fixed {
+	position: fixed;
+	top: 0;
+}
+
 nav {
 	background: #fff;
 	width: 100%;
@@ -86,10 +91,6 @@ nav {
 	position: relative;
 	top: 322px;
 	z-index: 20;
-	.fixed {
-		position: fixed;
-		top: 0;
-	}
 	ul {
 		margin: 0px;
 		padding: 0px;
@@ -170,7 +171,7 @@ nav {
 .next {
 	width: 40px;
 	height: 60px;
-	background: #fff url('img/arrow-r.png') no-repeat center center;
+	background: #fff url('../images/arrow-r.png') no-repeat center center;
 	box-shadow: 0 0 5px rgba(0,0,0,0.1);
 	position: absolute;
 	right: 0;
@@ -190,9 +191,9 @@ nav {
 		height: 185px;
 		position: relative;		
 	}
-	.facebook 	{	background: url('img/fb.jpg') no-repeat left top; background-size: auto; }
+	.facebook 	{	background: url('../images/fb.jpg') no-repeat left top; background-size: auto; }
 	.instagram 	{	
-		background: url('img/in.jpg') no-repeat left top; background-size: auto; 
+		background: url('../images/in.jpg') no-repeat left top; background-size: auto; 
 		.embed { padding: 0 0 5px; }
 		.scrollarea {
 			width: 500px;
@@ -227,7 +228,7 @@ nav {
 			height: 185px;
 		}
 	}
-	.twitter 	{	background: url('img/tw.jpg') no-repeat left top; background-size: auto; }
+	.twitter 	{	background: url('../images/tw.jpg') no-repeat left top; background-size: auto; }
 }
 #social > div {
 	width:29%;

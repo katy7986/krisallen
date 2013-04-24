@@ -20,6 +20,7 @@ jQuery(document).ready(function($){
 
 	$(window).scroll(function() {
 		var y = $(window).scrollTop();
+		var vScroll = y/2;	
 
 		console.log(y);
 
@@ -29,6 +30,7 @@ jQuery(document).ready(function($){
 		} else {
 			$("nav").removeClass('fixed');
 			$("#news").css({padding : '0'});
+			$("#logo").css("-webkit-transform", "translateY(" + vScroll + "px)");
 		}
 	});
 

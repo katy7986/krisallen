@@ -44,7 +44,6 @@
 	<div class="container-fluid">
 		<header class="row-fluid">
 			<div class="content">
-				<div class="content">
 				<a href="<?php echo home_url(); ?>" id="logo"><?php bloginfo('name'); ?></a>
 			</div>
 		</header>

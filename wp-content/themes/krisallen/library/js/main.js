@@ -33,7 +33,38 @@ jQuery(document).ready(function($){
 			$("#logo").css("-webkit-transform", "translateY(" + vScroll + "px)");
 		}
 	});
-
+	
+	//FlexSlider for post on front page
+	$('#news').flexslider({
+		animation:	'slide',
+		slideshow:	false,
+		minItems:	1,
+		maxItems:	5,
+		itemWidth:	545,
+		move:		1,
+		controlNav:	false,
+		selector:	".scrollarea > article"
+	});
+	
+	$('.nextarr').click(function(e) {
+		$('#news .flex-next').click();
+		e.preventDefault();
+	});
+	
+	$('.igfeed').flexslider({
+		animation:	'slide',
+		slideshow:	false,
+		minItems:	1,
+		maxItems:	3,
+		itemWidth:	185,
+		itemMargin: 10,
+		controlNav:	false,
+		selector:	".scrollarea > a"
+	});
+	$('.instanext').click(function(e) {
+		$('.igfeed .flex-next').click();
+		e.preventDefault();
+	});
 
 	function onResize() {
 		var w = $(window).width(),

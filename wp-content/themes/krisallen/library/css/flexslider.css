@@ -1,0 +1,138 @@
+/* ==========================================================================
+   Flex Slider
+   ========================================================================== */
+/* Browser Resets */
+/* line 9, ../scss/flexslider.scss */
+.flex-container a:active,
+#news a:active,
+.flex-container a:focus,
+#news a:focus {
+  outline: none;
+}
+
+/* line 12, ../scss/flexslider.scss */
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+/* line 16, ../scss/flexslider.scss */
+#news {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 17, ../scss/flexslider.scss */
+#news .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+/* line 18, ../scss/flexslider.scss */
+#news .slides img {
+  width: 100%;
+  display: block;
+}
+
+/* line 19, ../scss/flexslider.scss */
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+/* line 22, ../scss/flexslider.scss */
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 23, ../scss/flexslider.scss */
+html[xmlns] .slides {
+  display: block;
+}
+
+/* line 24, ../scss/flexslider.scss */
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+/* line 29, ../scss/flexslider.scss */
+.no-js .slides > li:first-child {
+  display: block;
+}
+
+/* Direction Nav */
+/* line 32, ../scss/flexslider.scss */
+.flex-direction-nav {
+  *height: 0;
+  display: none;
+}
+
+/* line 33, ../scss/flexslider.scss */
+.flex-direction-nav a {
+  width: 13px;
+  height: 24px;
+  margin: -20px 0 0;
+  display: block;
+  background: url(img/arrow-r.png) no-repeat 0 0;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  cursor: pointer;
+  text-indent: -9999px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+}
+
+/* line 34, ../scss/flexslider.scss */
+.flex-direction-nav .flex-next {
+  background-position: 100% 0;
+  right: -36px;
+}
+
+/* line 35, ../scss/flexslider.scss */
+.flex-direction-nav .flex-prev {
+  left: -36px;
+}
+
+/* line 36, ../scss/flexslider.scss */
+.flexslider:hover .flex-next {
+  opacity: 0.8;
+  right: 5px;
+}
+
+/* line 37, ../scss/flexslider.scss */
+.flexslider:hover .flex-prev {
+  opacity: 0.8;
+  left: 5px;
+}
+
+/* line 38, ../scss/flexslider.scss */
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
+  opacity: 1;
+}
+
+/* line 39, ../scss/flexslider.scss */
+.flex-direction-nav .flex-disabled {
+  opacity: .3!important;
+  filter: alpha(opacity=30);
+  cursor: default;
+}
+
+/* line 41, ../scss/flexslider.scss */
+.igfeed .scrollarea a {
+  margin-right: 10px;
+}

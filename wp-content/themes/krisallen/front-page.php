@@ -2,7 +2,7 @@
 			
 			<section id="news" class="container">
 
-				<a href="#"><div class="next hidden-phone"></div></a>
+				<a href="#" class="nextarr"><div class="next hidden-phone"></div></a>
 
 				<div class="scrollarea row-fluid">
 				<?php if ( have_posts() ) : ?>
@@ -29,23 +29,45 @@
 
 				<div class="facebook">
 					<div class="embed">
-						<!--iframe src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fkrisallen&amp;width=480&amp;height=395&amp;show_faces=false&amp;colorscheme=light&amp;stream=true&amp;border_color&amp;header=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:480px; height:395px;" allowTransparency="true"></iframe-->
+						<iframe src="http://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fkrisallen&width=350&height=258&show_faces=true&colorscheme=light&stream=false&border_color=%23fff&header=false&appId=258628480941047" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:100%;" allowTransparency="true"></iframe>
 					</div>
 				</div>
 
 				<div class="instagram">
-					<div class="embed">
-						<a href="#"><div class="next"></div></a>
+					<div class="embed igfeed">
+						<a href="#" class="instanext"><div class="next"></div></a>
 						<div class="scrollarea">
-							<article>
-								<img src="http://distilleryimage0.s3.amazonaws.com/fd6043289e7711e282a322000a1f9709_7.jpg"/>
-								<p>Thanks Dayton for havin us out. We had an awesome time. Especially with this frog.</p>
-							</article>
-
-							<article>
-								<img src="http://distilleryimage0.s3.amazonaws.com/61cd3ed69e3e11e293a322000a1f92e9_7.jpg"/>
-								<p>You think kids one day will find their dads old CDs and play them. #doubtit</p>
-							</article>
+						<?php 
+							$transient = get_transient('instagramz');
+							if ( empty( $transient ) ) {
+								// declare the variables for instagram 
+								$userid = 7924810;
+								$access_token = '21611949.200a12c.deaad557dfee46ca8c28ec49c0c97608';
+								$count = 6;
+								
+								// Call two WordPress functions to receive data and to parse the body
+								$response = wp_remote_retrieve_body( wp_remote_get( "https://api.instagram.com/v1/users/7924810/media/recent/?access_token=21611949.200a12c.deaad557dfee46ca8c28ec49c0c97608&count=$count" ) );
+								
+								// Call json_decode function that will return object with data
+								$data = json_decode($response, true);
+								$html_output = '';
+								
+								foreach ( $data["data"] as $value ) {
+									$html_output .= '<a href="'.$value['link'].' target="_blank">';
+									$html_output .= '<article>';
+									$html_output .= '<img src="' .$value['images']['standard_resolution']['url']. '"/>';
+									$html_output .= '<p>' .$value['caption']['text']. '</p>';
+									$html_output .= '</article>';
+									$html_output .= '</a>';
+								}						
+								echo $html_output;
+								
+								set_transient('instagramz', $html_output, 60*60*4 );
+								
+							} else {
+								echo $transient;
+							}
+						?>
 						</div>
 					</div>
 				</div>

@@ -18,6 +18,9 @@ Here's where the magic happens.
 // import flexslider styles
 @import "flexslider";
 
+// import font awesome styles
+@import "font-awesome";
+
 // import Raleway webfont
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,900,800,600,500,700);
 
@@ -158,6 +161,35 @@ nav {
 		section {
 			padding: 40px 30px 30px 30px;
 		}
+		.article-footer {
+			padding: 8px 0;
+			font-size: 0.7em;
+			border-top: 1px solid #e8e8e8;
+			zoom: 1;
+			font-size: 10px;
+			width: 90%;
+			margin: 10px auto;
+			height: 30px;
+			div {
+				float: left;
+				padding-left: 10px;
+				margin-right: 10px;
+				border-left: 1px solid #e8e8e8;
+				&:first-child {
+					border-left: none;
+				}
+				span {
+					color: #404040;
+					padding: 0 7px;
+					display: inline-block;
+					border: 1px solid #e5e5e5;
+					-webkit-border-radius: 4px;
+					-moz-border-radius: 4px;
+					border-radius: 4px;
+					background-color: #f5f5f5;
+				}
+			}
+		}
 		&:hover {
 			box-shadow: 0 0 5px rgba(0,0,0,0.2);
 			p {
@@ -165,6 +197,93 @@ nav {
 			}
 			.img div {
 				opacity: 0.8;
+			}
+		}
+	}
+}
+
+#post {
+	article {
+		margin: 0px auto 50px auto;
+		width: 100%;
+		.media {
+			min-height: 300px;
+			text-align: center;
+			background: #111;
+			img {
+				height: 100%;
+				width: auto;
+			}
+		}
+		.post-text {
+			color: #acacac;
+			padding: 40px 30px 30px 30px;
+			background: #fff;
+			box-shadow: 0 0 5px rgba(0,0,0,0.1);
+			display: inline-block;
+			-webkit-transition: all 0.25s ease;
+			-moz-transition: all 0.25s ease;
+			-o-transition: all 0.25s ease;
+			.divider {
+				display: block;
+				border-top: 1px solid #b8b8b8;
+				width: 60px;
+				margin: 15px 0;
+			}
+			.article-footer {
+				padding: 8px 0;
+				font-size: 0.7em;
+				border-top: 1px solid #e8e8e8;
+				zoom: 1;
+				font-size: 10px;
+				div {
+					float: left;
+					padding-left: 10px;
+					margin-right: 10px;
+					border-left: 1px solid #e8e8e8;
+					&:first-child {
+						border-left: none;
+					}
+					span {
+						color: #404040;
+						padding: 0 7px;
+						display: inline-block;
+						border: 1px solid #e5e5e5;
+						-webkit-border-radius: 4px;
+						-moz-border-radius: 4px;
+						border-radius: 4px;
+						background-color: #f5f5f5;
+					}
+				}
+			}
+		}
+		.post-social {
+			margin-left: 0;
+			.row {
+				margin-left: 0;
+				a {
+					background: #303030;
+					display: block;
+					position: relative;
+					float: left;
+					width: 146px;
+					height: 130px;
+					border-bottom: 1px solid;
+					border-right: 1px solid;
+					&:hover .icon-2x { color: #08c; }
+					.icon-2x {
+						color: #f1f1f1;
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						margin-top: -12px;
+						transition: all 0.5s ease;
+					}
+					.icon-angle-right { margin-left: -5px; }
+					.icon-angle-left { margin-left: -5px; }
+					.icon-facebook { margin-left: -5px; }
+					.icon-twitter { margin-left: -13px; }
+				}
 			}
 		}
 	}
@@ -299,6 +418,18 @@ nav {
 @media (min-width: 1200px) {
 	#news { margin: 60px 0 0 !important; }
 	#news article { margin: 0 0 60px 60px !important; }
+	.post-social { width: 292px; }
+	.post-text { width: 878px; }
+}
+
+@media ( max-width: 1199px ) {
+	.post-social { width: 292px; }
+	.post-text { width: 648px; }
+}
+
+@media (max-width: 979px) {
+	#post article .post-text { width: 100%; }
+	.post-social { display: none; }
 }
 
 /*														-- (768, infinity) */
@@ -313,6 +444,9 @@ nav {
 
 /* Portrait tablet to landscape and desktop 			-- (768, 979) */
 @media (min-width: 768px) and (max-width: 979px) { 
+	#post article .post-text {
+		width: 724px;
+	}
 }
  
 /* Landscape phone to portrait tablet 					-- (0, 768) */
@@ -329,7 +463,15 @@ nav {
 
 	#social > div { background-size: 25px !important; }
 
-	#events section { width: 100%; }
+	#events section { width: 100%; margin: 0 auto 30px auto !important; }		
+	
+	#post article { width: 90%; }
+	
+	#post article .post-text { width: 100%; }
+	
+	div.span12 img { height: auto; }
+	
+	.post-social { display: none; }
 }
  
 /* Landscape phones and down 							-- (0, 480) */
@@ -340,6 +482,6 @@ nav {
 		width: 72px !important;
 	}
 	
-	#events section { margin-right: 0px !important; }
+	#events section { margin-right: 0px !important; margin: 0 auto 30px auto !important; }
 
 }

@@ -15,6 +15,30 @@
 							<h3><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 							<p><?php the_excerpt(); ?></p>
 						</section>
+							
+						<footer class="article-footer">
+							<div>
+								<span><time><?php echo get_the_time('j'); ?></time></span> <?php echo get_the_time('M'); ?>
+							</div>
+							
+							<div>
+								<a href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="facebook"><i class="icon-facebook"></i></a>
+							</div>
+							
+							<div>
+								<a href="https://twitter.com/share?status=<?php rawurlencode('Currently reading ' . the_permalink(false) . ' via @KrisAllen'); ?>" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="twiter"><i class="icon-twitter"></i></a>
+							</div>
+							
+							<div>
+								<a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="google"><i class="icon-google-plus"></i></a>
+							</div>
+							
+							<div>
+								<a href="<?php the_permalink(); ?>" class="read-more">Read More</a> &rarr;
+							</div>		
+				
+					</footer> <!-- end article footer -->
+						
 					</article>
 					<?php endwhile; ?>
 		

@@ -50,7 +50,7 @@
 	
 		<nav>
 			<ul>
-				<li><a href="#home">Home</a></li>
+				<li><a href="<?php bloginfo('url'); ?>">Home</a></li>
 				<li><a href="#news">News</a></li>
 				<li><a href="#events">Events</a></li>
 				<li><a href="#media">Media</a></li>

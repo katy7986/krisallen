@@ -28,7 +28,7 @@
 					</div>
 							
 					<div>
-						<a href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="facebook"><i class="icon-facebook"></i></a>
+						<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="facebook"><i class="icon-facebook"></i></a>
 					</div>
 					
 					<div>
@@ -45,8 +45,8 @@
 		
 		<section class="post-social span4">
 			<div class="row">
-				<a href="#" class="prev-post"><i class="icon-angle-left icon-white icon-2x"></i></a>
-				<a href="#" class="next-post"><i class="icon-angle-right icon-white icon-2x"></i></a>
+				<a href="<?php echo get_permalink(get_adjacent_post(false,'',false)); ?>" class="prev-post"><i class="icon-angle-left icon-white icon-2x"></i></a>
+				<a href="<?php echo get_permalink(get_adjacent_post(false,'',true)); ?>" class="next-post"><i class="icon-angle-right icon-white icon-2x"></i></a>
 			</div>
 			<div class="row">
 				<a href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="fb"><i class="icon-facebook icon-white icon-2x"></i></a>

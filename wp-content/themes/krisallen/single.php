@@ -46,7 +46,7 @@
 								$html_output = '';
 								
 								foreach ( $data["data"] as $value ) {
-									$html_output .= '<a href="'.$value['link'].' target="_blank">';
+									$html_output .= '<a href="'.$value['link'].'" target="_blank">';
 									$html_output .= '<article>';
 									$html_output .= '<img src="' .$value['images']['standard_resolution']['url']. '"/>';
 									$html_output .= '<p>' .$value['caption']['text']. '</p>';

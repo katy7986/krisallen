@@ -10,7 +10,7 @@
 					<?php while ( have_posts() ) : the_post(); ?>
 					<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' ); $url = $thumb['0']; ?>
 					<article class="span4">
-						<a href="#" class="img"><div style="background-image:url(<?php echo $url; ?>)"></div></a>
+						<a href="<?php the_permalink(); ?>" class="img"><div style="background-image:url(<?php echo $url; ?>)"></div></a>
 						<section>
 							<h3><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 							<p><?php the_excerpt(); ?></p>

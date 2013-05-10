@@ -65,6 +65,8 @@ jQuery(document).ready(function($){
 		$('.igfeed .flex-next').click();
 		e.preventDefault();
 	});
+	
+	$('.fitvids').fitVids();
 
 	function onResize() {
 		var w = $(window).width(),
@@ -98,7 +100,8 @@ jQuery(document).ready(function($){
 			$('#events').css({ margin : m });
 			$('#events section').css({ width : w-m*2, marginBottom : m });
 		}
-
+	
+		$('.fitvids').fitVids();
 	}
 
 	$(window).resize(function() { onResize(); });

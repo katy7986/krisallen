@@ -135,7 +135,7 @@
 					<h3><?php echo $venue; ?></h3>
 					<h4><?php echo $city; ?>, <?php echo $state; ?></h4>
 
-					<p><time datetime="<?php echo $the_date; ?>"><?php echo date( 'F j, Y', $the_date ); ?></time> <span>&mdash;</span> <?php echo $the_time; ?></p>
+					<p><time datetime="<?php echo $the_date; ?>"><?php echo date( 'F j, Y', $the_date ); ?></time> <span>&mdash;</span> <?php echo $the_time; ?> <span style="margin-left:5px;"></span><a href="#tickets">Buy Tickets</a> <a href="#">RSVP</a></p>
 				</section>
 				<?php endwhile; ?>				
 			<?php endif; ?>

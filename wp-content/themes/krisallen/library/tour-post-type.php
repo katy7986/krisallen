@@ -75,31 +75,31 @@ function ka_metaboxes( array $meta_boxes ) {
 		'fields'     => array(
 			array(
 				'name' => 'Venue',
-				'desc' => 'field description (optional)',
+				'desc' => 'Please enter the name of the venue',
 				'id'   => $prefix . 'tour_text',
 				'type' => 'text',
 			),
 			array(
 				'name' => 'City',
-				'desc' => 'field description (optional)',
+				'desc' => 'Please enter the city',
 				'id'   => $prefix . 'tour_city',
 				'type' => 'text_medium',
 			),
 			array(
 				'name' => 'State',
-				'desc' => 'field description (optional)',
+				'desc' => 'Please enter the state',
 				'id'   => $prefix . 'tour_state',
 				'type' => 'text_small',
 			),
 			array(
 				'name' => 'Date',
-				'desc' => 'field description (optional)',
+				'desc' => 'What date is this event?',
 				'id'   => $prefix . 'tour_date',
 				'type' => 'text_date_timestamp',
 			),
 			array(
 	            'name' => 'Time',
-	            'desc' => 'field description (optional)',
+	            'desc' => 'What time does this event start?',
 	            'id'   => $prefix . 'tour_time',
 	            'type' => 'text_time',
 	        ),
@@ -108,6 +108,18 @@ function ka_metaboxes( array $meta_boxes ) {
 				'desc' => 'What is the ticket price? (optional)',
 				'id'   => $prefix . 'tour_cost',
 				'type' => 'text_money',
+			),
+			array(
+				'name' => 'Ticket Purchase URL',
+				'desc' => 'Please enter the URL to where tickets can be purchased',
+				'id'   => $prefix . 'buy_tix_url',
+				'type' => 'text',
+			),
+			array(
+				'name' => 'Facebook RSVP URL',
+				'desc' => 'Please past the URL to the Facebook Event page',
+				'id'   => $prefix . 'fb_rsvp_url',
+				'type' => 'text',
 			),
 			array(
 				'name'    => 'Tour Date Description',

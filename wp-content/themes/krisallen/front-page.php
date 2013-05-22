@@ -130,12 +130,14 @@
 					$the_date = get_post_meta( $post->ID, '_ka_tour_date', true );
 					$the_time = get_post_meta( $post->ID, '_ka_tour_time', true );
 					$the_price = get_post_meta( $post->ID, '_ka_tour_cost', true );
+					$the_rsvp = get_post_meta( $post->ID, '_ka_fb_rsvp_url', true );
+					$the_tix = get_post_meta( $post->ID, '_ka_buy_tix_url', true );
 				?>
 				<section class="span3">
 					<h3><?php echo $venue; ?></h3>
 					<h4><?php echo $city; ?>, <?php echo $state; ?></h4>
 
-					<p><time datetime="<?php echo $the_date; ?>"><?php echo date( 'F j, Y', $the_date ); ?></time> <span>&mdash;</span> <?php echo $the_time; ?> <span style="margin-left:5px;"></span><a href="#tickets">Buy Tickets</a> <a href="#">RSVP</a></p>
+					<p><time datetime="<?php echo $the_date; ?>"><?php echo date( 'F j, Y', $the_date ); ?></time> <span>&mdash;</span> <?php echo $the_time; ?> <span style="margin-left:5px;"></span><a href="<?php echo $the_tix; ?>">Buy Tickets</a> <a href="<?php echo $the_rsvp; ?>">RSVP</a></p>
 				</section>
 				<?php endwhile; ?>				
 			<?php endif; ?>

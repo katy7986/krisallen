@@ -279,6 +279,33 @@ nav {
 	}
 }
 
+.post-type-archive-tour {
+	#tour {
+		margin: 0 auto 60px;
+		.table {
+			background: #fff;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+			color: rgb(128, 128, 128);
+			.title {
+				text-align: center;
+				font-weight: 100;
+				text-transform: uppercase;
+				font: 300 18px "Raleway";
+				font-size: 2em;
+			}
+			th {
+				text-transform: uppercase;
+			}
+			td {
+				font-family: "Raleway";
+				font-weight: 300;
+				font-size: 1.2em;
+				padding: 25px 10px;
+			}
+		}
+	}
+}
+
 #post {
 	article {
 		margin: 0px auto 50px auto;

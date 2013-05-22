@@ -51,9 +51,9 @@
 		<nav>
 			<ul>
 				<li><a href="<?php bloginfo('url'); ?>">Home</a></li>
-				<li><a href="#news">News</a></li>
-				<li><a href="#events">Events</a></li>
-				<li><a href="#media">Media</a></li>
+				<li><a href="<?php echo home_url(); ?>/category/news/">News</a></li>
+				<li><a href="<?php echo home_url(); ?>/tour">Events</a></li>
+				<li><a href="<?php echo home_url(); ?>/category/media/">Media</a></li>
 			</ul>
 		</nav>	
 			

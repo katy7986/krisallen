@@ -10,7 +10,7 @@
 								<a href="#" class="img"><div style="background-image:url(http://distilleryimage0.s3.amazonaws.com/d85e01c86f2e11e2b92122000a9e0727_7.jpg)"></div></a>
 								<section>
 									<h3><?php _e("", "bonestheme"); ?></span> <?php single_cat_title(); ?></h3>
-									<p>In Wellington Street my brother met a couple of sturdy roughs who had just been rushed out of Fleet Street with still-wet newspapers and staring placards. "Dreadful catastrophe!" they bawled one to the other down Wellington Street.</p>
+									<p><?php echo category_description(); ?></p>
 								</section>
 									
 								<footer class="article-footer">
@@ -19,15 +19,15 @@
 									</div>
 									
 									<div>
-										<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="facebook"><i class="icon-facebook"></i></a>
+										<a href="http://www.facebook.com/sharer.php?u=http://<?php echo $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] ?>" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="facebook"><i class="icon-facebook"></i></a>
 									</div>
 									
 									<div>
-										<a href="https://twitter.com/share?status=<?php rawurlencode('Currently reading ' . the_permalink(false) . ' via @KrisAllen'); ?>" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="twiter"><i class="icon-twitter"></i></a>
+										<a href="https://twitter.com/share?status=Currently reading http://<?php echo $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] ?> via @KrisAllen" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="twiter"><i class="icon-twitter"></i></a>
 									</div>
 									
 									<div>
-										<a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="google"><i class="icon-google-plus"></i></a>
+										<a href="https://plus.google.com/share?url=http://<?php echo $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"] ?>" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="google"><i class="icon-google-plus"></i></a>
 									</div>
 									
 									<div>
@@ -71,7 +71,7 @@
 					    
 							<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' ); $url = $thumb['0']; ?>
 							<article class="span4">
-								<a href="#" class="img"><div style="background-image:url(<?php echo $url; ?>)"></div></a>
+								<a href="<?php the_permalink(); ?>" class="img"><div style="background-image:url(<?php echo $url; ?>)"></div></a>
 								<section>
 									<h3><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h3>
 									<p><?php the_excerpt(); ?></p>

@@ -208,6 +208,11 @@ nav {
 		article {
 			margin: 0 0.85% 60px;
 			width: 450px;
+			.excerpt {
+				height: 60px;
+				overflow: hidden;
+				margin: 0 0 10px;
+			}
 		}
 	}
 	article {

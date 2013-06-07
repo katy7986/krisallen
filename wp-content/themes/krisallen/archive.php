@@ -10,7 +10,7 @@
 								<a href="#" class="img"><div style="background-image:url(http://distilleryimage0.s3.amazonaws.com/d85e01c86f2e11e2b92122000a9e0727_7.jpg)"></div></a>
 								<section>
 									<h3><?php _e("", "bonestheme"); ?></span> <?php single_cat_title(); ?></h3>
-									<p><?php echo category_description(); ?></p>
+									<?php echo category_description(); ?>
 								</section>
 									
 								<footer class="article-footer">

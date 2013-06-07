@@ -50,10 +50,11 @@
 	
 		<nav>
 			<ul>
-				<li><a href="<?php bloginfo('url'); ?>">Home</a></li>
 				<li><a href="<?php echo home_url(); ?>/category/news/">News</a></li>
 				<li><a href="<?php echo home_url(); ?>/tour">Events</a></li>
 				<li><a href="<?php echo home_url(); ?>/category/media/">Media</a></li>
+				<li><a href="https://itunes.apple.com/us/artist/kris-allen/id305374342#" target="_blank">Music</a></li>
+				<li><a href="https://itunes.apple.com/us/artist/kris-allen/id305374342#">Merch</a></li>
 			</ul>
 		</nav>	
 			

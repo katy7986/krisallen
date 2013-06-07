@@ -2113,7 +2113,7 @@ nav ul li a:hover {
 #archive article .img div {
   height: 307px;
   background-position: center center;
-  background-size: 95%;
+  background-size: cover;
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;

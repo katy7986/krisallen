@@ -40,7 +40,7 @@ jQuery(document).ready(function($){
 		slideshow:	false,
 		minItems:	1,
 		maxItems:	5,
-		itemWidth:	545,
+		itemWidth:	400,
 		move:		1,
 		controlNav:	false,
 		selector:	".scrollarea > article"
@@ -65,6 +65,20 @@ jQuery(document).ready(function($){
 		$('.igfeed .flex-next').click();
 		e.preventDefault();
 	});
+	
+	$('#events').flexslider({
+		animation:	'slide',
+		slideshow:	false,
+		minItems:	1,
+		maxItems:	4,
+		itemWidth:	300,
+		controlNav:	false,
+		selector:	".scrollarea > section"
+	});
+	$('.eventsnext').click(function(e) {
+		$('#events .flex-next').click();
+		e.preventDefault();
+	});	
 	
 	$('.fitvids').fitVids();
 

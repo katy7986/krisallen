@@ -404,6 +404,22 @@ nav {
 	}
 }
 
+footer.footer {
+	background: rgb(255, 255, 255);
+	padding: 20px 0 5px;
+	.pull-right {
+		a {
+			font-size: 16px;
+			margin: 0 10px;
+			&:hover {
+				.icon-rss {
+					color: #80B719;
+				}
+			}
+		}
+	}
+}
+
 .next {
 	width: 40px;
 	height: 60px;

@@ -124,43 +124,47 @@
 			</section>
 
 			<section id="events" class="row-fluid">
-			
-			<?php
-				$args = array(
-					'meta_key' => '_ka_tour_date',
-					'order' => 'ASC',
-					'post_type' => 'tour',
-					'orderby' => 'meta_value_num', 
-					'meta_query' => array(
-					    array(
-					        'key' => '_ka_tour_date', // Check the start date field
-					        'value' => time(),  
-					        'compare' => '>'
-					    )
-					)
-				); 
-				$query = new WP_Query( $args ); 
-			?>				
-			<?php if ( $query->have_posts() ) : ?>
-				<?php 
-					while ( $query->have_posts() ) : $query->the_post(); 
-					global $post;
-					$venue = get_post_meta( $post->ID, '_ka_tour_text', true );
-					$city = get_post_meta( $post->ID, '_ka_tour_city', true );
-					$state = get_post_meta( $post->ID, '_ka_tour_state', true );
-					$the_date = get_post_meta( $post->ID, '_ka_tour_date', true );
-					$the_time = get_post_meta( $post->ID, '_ka_tour_time', true );
-					$the_price = get_post_meta( $post->ID, '_ka_tour_cost', true );
-				?>
-				<section class="span3">
-					<h3><?php echo $venue; ?></h3>
-					<h4><?php echo $city; ?>, <?php echo $state; ?></h4>
-
-					<p><time datetime="<?php echo $the_date; ?>"><?php echo date( 'F j, Y', $the_date ); ?></time> <span>&mdash;</span> <?php echo $the_time; ?> <span style="margin-left:5px;"></span><a href="#tickets">Buy Tickets</a> <a href="#">RSVP</a></p>
-				</section>
-				<?php endwhile; ?>				
-			<?php endif; ?>
-			
+				<a href="#" class="eventsnext"><div class="next"></div></a>
+				<div class="scrollarea">
+				
+				<?php
+					$args = array(
+						'meta_key' => '_ka_tour_date',
+						'order' => 'ASC',
+						'post_type' => 'tour',
+						'orderby' => 'meta_value_num', 
+						'meta_query' => array(
+						    array(
+						        'key' => '_ka_tour_date', // Check the start date field
+						        'value' => time(),  
+						        'compare' => '>'
+						    )
+						)
+					); 
+					$query = new WP_Query( $args ); 
+				?>				
+				<?php if ( $query->have_posts() ) : ?>
+					<?php 
+						while ( $query->have_posts() ) : $query->the_post(); 
+						global $post;
+						$venue = get_post_meta( $post->ID, '_ka_tour_text', true );
+						$city = get_post_meta( $post->ID, '_ka_tour_city', true );
+						$state = get_post_meta( $post->ID, '_ka_tour_state', true );
+						$the_date = get_post_meta( $post->ID, '_ka_tour_date', true );
+						$the_time = get_post_meta( $post->ID, '_ka_tour_time', true );
+						$the_price = get_post_meta( $post->ID, '_ka_tour_cost', true );
+						$the_rsvp = get_post_meta( $post->ID, '_ka_fb_rsvp_url', true );
+						$the_tix = get_post_meta( $post->ID, '_ka_buy_tix_url', true );
+					?>
+					<section class="span3">
+						<h3><?php echo $venue; ?></h3>
+						<h4><?php echo $city; ?>, <?php echo $state; ?></h4>
+	
+						<p><time datetime="<?php echo $the_date; ?>"><?php echo date( 'F j, Y', $the_date ); ?></time> <span>&mdash;</span> <?php echo $the_time; ?> <span style="margin-left:5px;"></span><a href="<?php echo $the_tix; ?>">Buy Tickets</a> <a href="<?php echo $the_rsvp; ?>">RSVP</a></p>
+					</section>
+					<?php endwhile; ?>				
+				<?php endif; ?>
+				</div>
 			</section>	
 
 <?php get_footer(); ?>

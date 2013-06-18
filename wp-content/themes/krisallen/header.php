@@ -54,7 +54,7 @@
 				<li><a href="<?php echo home_url(); ?>/tour">Shows</a></li>
 				<li><a href="<?php echo home_url(); ?>/category/media/">Media</a></li>
 				<li><a href="https://itunes.apple.com/us/artist/kris-allen/id305374342#" target="_blank">Music</a></li>
-				<li><a href="https://itunes.apple.com/us/artist/kris-allen/id305374342#">Merch</a></li>
+				<li><a href="http://merch.krisallenofficial.com">Merch</a></li>
 			</ul>
 		</nav>	
 			

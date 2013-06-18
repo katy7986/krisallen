@@ -106,3 +106,7 @@ jQuery(document).ready(function($) {
 	w.addEventListener( "orientationchange", restoreZoom, false );
 	w.addEventListener( "devicemotion", checkTilt, false );
 })( this );
+
+jQuery(document).ready(function(){
+	jQuery("[rel='tooltip']").tooltip();
+});

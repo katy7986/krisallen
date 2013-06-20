@@ -39,8 +39,8 @@ jQuery(document).ready(function($){
 		animation:	'slide',
 		slideshow:	false,
 		minItems:	1,
-		maxItems:	5,
-		itemWidth:	400,
+		maxItems:	3,
+		itemWidth:	545,
 		move:		1,
 		controlNav:	false,
 		selector:	".scrollarea > article"
@@ -48,6 +48,11 @@ jQuery(document).ready(function($){
 	
 	$('.nextarr').click(function(e) {
 		$('#news .flex-next').click();
+		e.preventDefault();
+	});
+
+	$('.prevarr').click(function(e) {
+		$('#news .flex-prev').click();
 		e.preventDefault();
 	});
 	

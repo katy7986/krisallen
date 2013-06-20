@@ -3,12 +3,13 @@
 			<section id="news" class="container">
 
 				<a href="#" class="nextarr"><div class="next hidden-phone"></div></a>
+				<a href="#" class="prevarr"><div class="prev hidden-phone"></div></a>
 
 				<div class="scrollarea row-fluid">
 				<?php if ( have_posts() ) : ?>
 				
 					<?php while ( have_posts() ) : the_post(); ?>
-					<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' ); $url = $thumb['0']; ?>
+					<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); $url = $thumb['0']; ?>
 					<article class="span3">
 						<a href="<?php the_permalink(); ?>" class="img"><div style="background-image:url(<?php echo $url; ?>)"></div></a>
 						<section>

@@ -79,7 +79,7 @@ header {
 		background-size: 100%;
 		height: 72px;
 		width: 90%;
-		max-width: 400px;
+		max-width: 375px;
 		text-indent: -9999px;
 		display: block;	
 		text-align: center;
@@ -138,7 +138,7 @@ nav {
 		width: 400px;
 		box-shadow: 0 0 5px rgba(0,0,0,0.1);
 		display: inline-block;
-		margin: 0 0 40px 40px;
+		margin: 0 0 20px 20px;
 	
 		-webkit-transition: all 0.25s ease;
 		-moz-transition: all 0.25s ease;
@@ -321,7 +321,7 @@ nav {
 		.media {
 			min-height: 300px;
 			text-align: center;
-			background: #111;
+			background: #dedede;
 			img {
 				height: 100%;
 				width: auto;
@@ -345,6 +345,14 @@ nav {
 			.video-post .post-format-content {
 				display: none;
 			}	
+			.single-title {
+				font-size: 24px;
+			}
+			.entry-content {
+				line-height: 2em;
+				color: #686868;
+				font-size: 1.2em;
+			}
 			.article-footer {
 				padding: 8px 0;
 				font-size: 0.7em;
@@ -427,6 +435,18 @@ footer.footer {
 	box-shadow: 0 0 5px rgba(0,0,0,0.1);
 	position: absolute;
 	right: 0;
+	z-index: 5;
+	top: 50%;
+	margin: -30px 0 0 0;
+}
+
+.prev {
+	width: 40px;
+	height: 60px;
+	background: white url("../images/arrow-l.png") no-repeat center center;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	position: absolute;
+	left: 0;
 	z-index: 5;
 	top: 50%;
 	margin: -30px 0 0 0;
@@ -552,13 +572,13 @@ footer.footer {
 
 /*														-- (1285, infinity) */
 @media (min-width: 1285px) {
-	#news article { width: 400px; }
+	#news article { width: 375px; }
 }
 
 /* Large desktop										-- (1200, infinity) */
 @media (min-width: 1200px) {
 	#news { margin: 60px 0 0 !important; }
-	#news article { margin: 0 0 60px 60px !important; }
+	#news article { margin: 0 0 30px 30px !important; }
 	#archive .archive article { width: 31.623931623931625%; }
 	.post-social { width: 292px; }
 	.post-text { width: 878px; }
@@ -582,7 +602,7 @@ footer.footer {
 
 /*														-- (768, infinity) */
 @media (min-width: 768px) { 
-	#news article { margin: 0 0 60px 60px !important; }
+	#news article { margin: 0 0 30px 30px !important; }
 	#news { margin: 60px 0 0 !important; }
 	#social > div { margin: 50px 0 50px 50px !important; }
 	#social .embed { margin: 0 0 0 94px !important; }

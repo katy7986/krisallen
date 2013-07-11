@@ -6,8 +6,44 @@
 				<a href="#" class="prevarr"><div class="prev hidden-phone"></div></a>
 
 				<div class="scrollarea row-fluid">
-				<?php if ( have_posts() ) : ?>
 				
+				<!-- Start Lastest News  -->
+				<?php if ( have_posts() ) : ?>
+					
+					<!-- Welcome Message -->
+					<article class="span3 first">
+						<a href="<?php bloginfo('url') ?>/category/news" class="img"><div style="background-image:url('<?php bloginfo('template_directory') ?>/library/images/kris-hat.jpg')"></div></a>
+						<section>
+							<h3><a href="#" title="Welcome to Kris Allen.com" rel="bookmark">Welcome to KrisAllenOfficial.com</a></h3>
+							<p>Click the right arrow, or swipe, to read the latest news updates on Kris! </p>
+						</section>
+							
+						<footer class="article-footer">
+							<div>
+								<span><time>KrisAllenOffical.com</time></span>
+							</div>
+							
+							<div>
+								<a href="http://www.facebook.com/sharer.php?u=http://krisallenofficial.com" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="facebook"><i class="icon-facebook"></i></a>
+							</div>
+							
+							<div>
+								<a href="https://twitter.com/share?status=<?php rawurlencode('Kris Allen - http://krisallenofficial.com via @KrisAllen'); ?>" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="twiter"><i class="icon-twitter"></i></a>
+							</div>
+							
+							<div>
+								<a href="https://plus.google.com/share?url=http://krisallenofficial.com" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="google"><i class="icon-google-plus"></i></a>
+							</div>
+							
+							<div>
+								<a href="<?php bloginfo('url') ?>/category/news" class="read-more">Read More</a> &rarr;
+							</div>		
+				
+					</footer> <!-- end article footer -->
+						
+					</article>
+					
+					<!-- start the loop -->
 					<?php while ( have_posts() ) : the_post(); ?>
 					<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); $url = $thumb['0']; ?>
 					<article class="span3">
@@ -42,6 +78,38 @@
 						
 					</article>
 					<?php endwhile; ?>
+					
+					<!-- NEWS PAGE CTA -->
+					<article class="span3 last">
+						<a href="<?php bloginfo('url') ?>/category/news"  class="img"><div style="background-image:url('<?php bloginfo('template_directory') ?>/library/images/read-more.jpg')"></div></a>
+						<section>
+							<h3><a href="<?php bloginfo('url') ?>/category/news" title="Welcome to Kris Allen.com" rel="bookmark">Read More. Click Here.</a></h3>
+						</section>
+							
+						<footer class="article-footer">
+							<div>
+								<span><time>KrisAllenOffical</time></span>.com
+							</div>
+							
+							<div>
+								<a href="http://www.facebook.com/sharer.php?u=http://krisallenofficial.com" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="facebook"><i class="icon-facebook"></i></a>
+							</div>
+							
+							<div>
+								<a href="https://twitter.com/share?status=<?php rawurlencode('Kris Allen - http://krisallenofficial.com via @KrisAllen'); ?>" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="twiter"><i class="icon-twitter"></i></a>
+							</div>
+							
+							<div>
+								<a href="https://plus.google.com/share?url=http://krisallenofficial.com" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="google"><i class="icon-google-plus"></i></a>
+							</div>
+							
+							<div>
+								<a href="<?php bloginfo('url') ?>/category/news" class="read-more">Read More</a> &rarr;
+							</div>		
+				
+					</footer> <!-- end article footer -->
+						
+					</article>
 		
 				<?php else : ?>
 					<?php get_template_part( 'content', 'none' ); ?>

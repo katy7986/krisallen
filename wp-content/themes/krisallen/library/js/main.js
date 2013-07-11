@@ -1,25 +1,5 @@
 jQuery(document).ready(function($){
 
-
-	//Init Jquery Tweet	
-/*
-	jQuery(function($){
-		$(".twitter .embed").tweet({
-			username: "KrisAllen",
-			join_text: "auto",
-			avatar_size: 32,
-			count: 1,
-			auto_join_text_default: "I said,", 
-			auto_join_text_ed: "I",
-			auto_join_text_ing: "I was",
-			auto_join_text_reply: "I replied to",
-			auto_join_text_url: "I was checking out",
-			loading_text: "loading.",
-			template: "{time} {text}"
-		});
-	});
-*/
-
 	$(window).scroll(function() {
 		var y = $(window).scrollTop();
 		var vScroll = y/2;	
@@ -41,10 +21,12 @@ jQuery(document).ready(function($){
 		animation:	'slide',
 		slideshow:	false,
 		minItems:	1,
-		maxItems:	4,
-		itemWidth:	400,
+		maxItems:	5,
+		itemWidth:	375,
+		itemMargin: 40,
 		move:		1,
 		controlNav:	false,
+		animationLoop: true,
 		selector:	".scrollarea > article"
 	});
 	

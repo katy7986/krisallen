@@ -124,7 +124,7 @@ jQuery(document).ready(function($){
 	var showretweetindicator = true;
 	
 	
-    $.getJSON('/wp-content/themes/krisallen/library/twitteroauth/get-tweets.php', 
+    $.getJSON('/cms/krisallen/wp-content/themes/krisallen/library/twitteroauth/get-tweets.php', 
         function(feeds) {   
 		   //alert(feeds);
             var feedHTML = '';

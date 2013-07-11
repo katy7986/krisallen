@@ -42,6 +42,7 @@ h3 {
 	margin:0 0 20px;
 	font-weight: normal;
 	line-height: 1em;
+	height: 36px;
 }
 
 h4  {
@@ -51,8 +52,8 @@ h4  {
 body {
 	background: #ededed;
 	color: #686868;
-	font: 14px HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-	line-height: 24px;
+	font: 12px HelveticaNeue, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+	line-height: 21px;
 }
 
 .container-fluid {
@@ -125,19 +126,19 @@ nav {
 #main { background:#ededed; padding: 60px 0 0; margin: 0 0; }
 
 #news {
+	margin: 60px 0 0 0;
 	width: 100%;
 	overflow: hidden;
 	position: relative;
-	margin: 0px;
 	.scrollarea {
 		width: 2000px;
 	}
 	article {
 		background: #fff;
-		width: 545px;
+		width: 400px;
 		box-shadow: 0 0 5px rgba(0,0,0,0.1);
 		display: inline-block;
-		margin: 0 0 60px 60px;
+		margin: 0 0 40px 40px;
 	
 		-webkit-transition: all 0.25s ease;
 		-moz-transition: all 0.25s ease;
@@ -154,7 +155,6 @@ nav {
 				height: 307px;
 				background-position: center center;
 				background-size: cover;
-				background-size: 110%;
 			
 				-webkit-transition: all 0.25s ease;
 				-moz-transition: all 0.25s ease;	
@@ -163,30 +163,27 @@ nav {
 		}
 		section {
 			padding: 40px 30px 30px 30px;
-			min-height: 230px;
 		}
 		.article-footer {
-			padding: 10px 0;
+			padding: 8px 0;
 			font-size: 0.7em;
 			border-top: 1px solid #e8e8e8;
 			zoom: 1;
 			font-size: 10px;
 			width: 90%;
 			margin: 10px auto;
-			height: 42px;
+			height: 30px;
 			div {
 				float: left;
 				padding-left: 10px;
 				margin-right: 10px;
 				border-left: 1px solid #e8e8e8;
 				&:first-child {
-					border-left: 0px;
-					padding-left: 0px;
+					border-left: none;
 				}
 				span {
 					color: #404040;
 					padding: 0 7px;
-					margin: 0 5px 0 0;
 					display: inline-block;
 					border: 1px solid #e5e5e5;
 					-webkit-border-radius: 4px;
@@ -194,10 +191,6 @@ nav {
 					border-radius: 4px;
 					background-color: #f5f5f5;
 				}
-			}
-
-			i {
-				font-size: 10px;
 			}
 		}
 		&:hover {
@@ -427,29 +420,17 @@ footer.footer {
 	}
 }
 
-@mixin arrows {
+.next {
 	width: 40px;
 	height: 60px;
+	background: #fff url('../images/arrow-r.png') no-repeat center center;
 	box-shadow: 0 0 5px rgba(0,0,0,0.1);
 	position: absolute;
+	right: 0;
 	z-index: 5;
 	top: 50%;
 	margin: -30px 0 0 0;
 }
-
-.next {
-	@include arrows;
-	background: #fff url('../images/arrow-r.png') no-repeat center center;
-	right: 0;
-}
-
-.prev {
-	@include arrows;
-	background: #fff url('../images/arrow-l.png') no-repeat center center;
-	left: 0;
-}
-
-
 
 #social {
 	width: 100%;
@@ -521,7 +502,7 @@ footer.footer {
 }
 
 #social .twitter .tweet_text { color: #acacac; }
-#social .twitter .tweet_time { display: block; margin: 0 0 5px; }
+#social .twitter .tweet_time { display: block; margin: 0 0 5px; font-size: 12px; font-style: italic; }
 
 #events {
 	margin: 60px;
@@ -571,11 +552,12 @@ footer.footer {
 
 /*														-- (1285, infinity) */
 @media (min-width: 1285px) {
-	#news article { width: 545px; }
+	#news article { width: 400px; }
 }
 
 /* Large desktop										-- (1200, infinity) */
 @media (min-width: 1200px) {
+	#news { margin: 60px 0 0 !important; }
 	#news article { margin: 0 0 60px 60px !important; }
 	#archive .archive article { width: 31.623931623931625%; }
 	.post-social { width: 292px; }
@@ -601,6 +583,7 @@ footer.footer {
 /*														-- (768, infinity) */
 @media (min-width: 768px) { 
 	#news article { margin: 0 0 60px 60px !important; }
+	#news { margin: 60px 0 0 !important; }
 	#social > div { margin: 50px 0 50px 50px !important; }
 	#social .embed { margin: 0 0 0 94px !important; }
 	#events { margin: 60px !important; }

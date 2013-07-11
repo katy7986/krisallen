@@ -27,20 +27,35 @@ remember less is more.
 CLEARFIXIN'
 *********************/
 /* line 23, ../scss/_mixins.scss */
-.clearfix { zoom: 1; }
+.clearfix {
+  zoom: 1;
+}
 /* line 25, ../scss/_mixins.scss */
-.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
 /* line 26, ../scss/_mixins.scss */
-.clearfix:after { clear: both; }
+.clearfix:after {
+  clear: both;
+}
 
 /*********************
 TOOLS
 *********************/
 /* line 34, ../scss/_mixins.scss */
-* { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 /* line 41, ../scss/_mixins.scss */
-.image-replacement { text-indent: 100%; white-space: nowrap; overflow: hidden; }
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
 /*********************
 COLORS
@@ -62,7 +77,15 @@ TYPOGRAPHY
 	http://www.fontsquirrel.com/
 	Be sure to remove the comment brackets.
 */
-/*	@font-face { 	font-family: 'Font Name'; 	src: url('library/fonts/font-name.eot'); 	src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'), url('library/fonts/font-name.woff') format('woff'), url('library/fonts/font-name.ttf') format('truetype'), url('library/fonts/font-name.svg#font-name') format('svg'); 	font-weight: normal; 	font-style: normal;
+/*	@font-face {
+    	font-family: 'Font Name';
+    	src: url('library/fonts/font-name.eot');
+    	src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+    	font-weight: normal;
+    	font-style: normal;
 	}
 */
 /*
@@ -70,16 +93,25 @@ use the best ampersand
 http://simplebits.com/notebook/2008/08/14/ampersands-2/
 */
 /* line 107, ../scss/_mixins.scss */
-span.amp { font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important; font-style: italic; }
+span.amp {
+  font-family: Baskerville, "Goudy Old Style", Palatino, "Book Antiqua", serif !important;
+  font-style: italic;
+}
 
 /* line 113, ../scss/_mixins.scss */
-.text-left { text-align: left; }
+.text-left {
+  text-align: left;
+}
 
 /* line 114, ../scss/_mixins.scss */
-.text-center { text-align: center; }
+.text-center {
+  text-align: center;
+}
 
 /* line 115, ../scss/_mixins.scss */
-.text-right { text-align: right; }
+.text-right {
+  text-align: right;
+}
 
 /*********************
 TRANSITION
@@ -96,71 +128,144 @@ Be careful with these since they can
 really slow down your CSS. Don't overdue it.
 *********************/
 /* @include css-gradient(#dfdfdf,#f8f8f8); */
-/* ========================================================================== Flex Slider ========================================================================== */
+/* ==========================================================================
+   Flex Slider
+   ========================================================================== */
 /* Browser Resets */
 /* line 9, ../scss/flexslider.scss */
-.flex-container a:active, #news a:active, .flex-container a:focus, #news a:focus { outline: none; }
+.flex-container a:active,
+#news a:active,
+.flex-container a:focus,
+#news a:focus {
+  outline: none;
+}
 
 /* line 12, ../scss/flexslider.scss */
-.slides, .flex-control-nav, .flex-direction-nav { margin: 0; padding: 0; list-style: none; }
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 /* FlexSlider Necessary Styles
 *********************************/
 /* line 16, ../scss/flexslider.scss */
-#news { margin: 0; padding: 0; }
+#news {
+  margin: 0;
+  padding: 0;
+}
 
 /* line 17, ../scss/flexslider.scss */
-#news .slides > li { display: none; -webkit-backface-visibility: hidden; }
+#news .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
 /* line 18, ../scss/flexslider.scss */
-#news .slides img { width: 100%; display: block; }
+#news .slides img {
+  width: 100%;
+  display: block;
+}
 
 /* line 19, ../scss/flexslider.scss */
-.flex-pauseplay span { text-transform: capitalize; }
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
 
 /* Clearfix for the .slides element */
 /* line 22, ../scss/flexslider.scss */
-.slides:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
 
 /* line 23, ../scss/flexslider.scss */
-html[xmlns] .slides { display: block; }
+html[xmlns] .slides {
+  display: block;
+}
 
 /* line 24, ../scss/flexslider.scss */
-* html .slides { height: 1%; }
+* html .slides {
+  height: 1%;
+}
 
 /* No JavaScript Fallback */
-/* If you are not using another script, such as Modernizr, make sure you include js that eliminates this class on page load */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
 /* line 29, ../scss/flexslider.scss */
-.no-js .slides > li:first-child { display: block; }
+.no-js .slides > li:first-child {
+  display: block;
+}
 
 /* Direction Nav */
 /* line 32, ../scss/flexslider.scss */
-.flex-direction-nav { *height: 0; display: none; }
+.flex-direction-nav {
+  *height: 0;
+  display: none;
+}
 
 /* line 33, ../scss/flexslider.scss */
-.flex-direction-nav a { width: 13px; height: 24px; margin: -20px 0 0; display: block; background: url(img/arrow-r.png) no-repeat 0 0; position: absolute; top: 50%; z-index: 10; cursor: pointer; text-indent: -9999px; opacity: 0; -webkit-transition: all .3s ease; }
+.flex-direction-nav a {
+  width: 13px;
+  height: 24px;
+  margin: -20px 0 0;
+  display: block;
+  background: url(img/arrow-r.png) no-repeat 0 0;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  cursor: pointer;
+  text-indent: -9999px;
+  opacity: 0;
+  -webkit-transition: all 0.3s ease;
+}
 
 /* line 34, ../scss/flexslider.scss */
-.flex-direction-nav .flex-next { background-position: 100% 0; right: -36px; }
+.flex-direction-nav .flex-next {
+  background-position: 100% 0;
+  right: -36px;
+}
 
 /* line 35, ../scss/flexslider.scss */
-.flex-direction-nav .flex-prev { left: -36px; }
+.flex-direction-nav .flex-prev {
+  left: -36px;
+}
 
 /* line 36, ../scss/flexslider.scss */
-.flexslider:hover .flex-next { opacity: 0.8; right: 5px; }
+.flexslider:hover .flex-next {
+  opacity: 0.8;
+  right: 5px;
+}
 
 /* line 37, ../scss/flexslider.scss */
-.flexslider:hover .flex-prev { opacity: 0.8; left: 5px; }
+.flexslider:hover .flex-prev {
+  opacity: 0.8;
+  left: 5px;
+}
 
 /* line 38, ../scss/flexslider.scss */
-.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover { opacity: 1; }
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
+  opacity: 1;
+}
 
 /* line 39, ../scss/flexslider.scss */
-.flex-direction-nav .flex-disabled { opacity: .3!important; filter: alpha(opacity=30); cursor: default; }
+.flex-direction-nav .flex-disabled {
+  opacity: .3!important;
+  filter: alpha(opacity=30);
+  cursor: default;
+}
 
 /* line 41, ../scss/flexslider.scss */
-.igfeed .scrollarea a { margin-right: 10px; }
+.igfeed .scrollarea a {
+  margin-right: 10px;
+}
 
 /*
  *  Font Awesome 3.2.0
@@ -187,1562 +292,3098 @@ html[xmlns] .slides { display: block; }
  *  Twitter: http://twitter.com/byscuits
  *  Work: Lead Product Designer @ Kyruus - http://kyruus.com
  */
-/* FONT PATH -------------------------- */
-@font-face { font-family: 'FontAwesome'; src: url("../font/fontawesome-webfont.eot?v=3.2.0"); src: url("../font/fontawesome-webfont.eot?#iefix&v=3.2.0") format("embedded-opentype"), url("../font/fontawesome-webfont.woff?v=3.2.0") format("woff"), url("../font/fontawesome-webfont.ttf?v=3.2.0") format("truetype"), url("../font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.0") format("svg"); font-weight: normal; font-style: normal; }
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../font/fontawesome-webfont.eot?v=3.2.0");
+  src: url("../font/fontawesome-webfont.eot?#iefix&v=3.2.0") format("embedded-opentype"), url("../font/fontawesome-webfont.woff?v=3.2.0") format("woff"), url("../font/fontawesome-webfont.ttf?v=3.2.0") format("truetype"), url("../font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.0") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 
-/* FONT AWESOME CORE -------------------------- */
+/* FONT AWESOME CORE
+ * -------------------------- */
 /* line 38, ../scss/font-awesome.scss */
-[class^="icon-"], [class*=" icon-"] { font-family: FontAwesome; font-weight: normal; font-style: normal; text-decoration: inherit; -webkit-font-smoothing: antialiased; *margin-right: .3em; }
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em;
+}
 
 /* line 47, ../scss/font-awesome.scss */
-[class^="icon-"]:before, [class*=" icon-"]:before { text-decoration: inherit; display: inline-block; cursor: default; speak: none; }
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  cursor: default;
+  speak: none;
+}
 
 /* makes the font 33% larger relative to the icon container */
 /* line 54, ../scss/font-awesome.scss */
-.icon-large:before { vertical-align: -10%; font-size: 1.3333333333333333em; }
+.icon-large:before {
+  vertical-align: -10%;
+  font-size: 1.3333333333333333em;
+}
 
 /* makes sure icons active on rollover in links */
 /* line 60, ../scss/font-awesome.scss */
-a [class^="icon-"], a [class*=" icon-"] { display: inline; }
+a [class^="icon-"],
+a [class*=" icon-"] {
+  display: inline;
+}
 
 /* increased font size for icon-large */
 /* line 65, ../scss/font-awesome.scss */
-[class^="icon-"].icon-fixed-width, [class*=" icon-"].icon-fixed-width { display: inline-block; width: 1.1428571428571428em; text-align: right; padding-right: 0.2857142857142857em; }
+[class^="icon-"].icon-fixed-width,
+[class*=" icon-"].icon-fixed-width {
+  display: inline-block;
+  width: 1.1428571428571428em;
+  text-align: right;
+  padding-right: 0.2857142857142857em;
+}
 
 /* line 72, ../scss/font-awesome.scss */
-[class^="icon-"].icon-fixed-width.icon-large, [class*=" icon-"].icon-fixed-width.icon-large { width: 1.4285714285714286em; }
+[class^="icon-"].icon-fixed-width.icon-large,
+[class*=" icon-"].icon-fixed-width.icon-large {
+  width: 1.4285714285714286em;
+}
 
 /* line 75, ../scss/font-awesome.scss */
-.icons-ul { margin-left: 2.142857142857143em; list-style-type: none; }
+.icons-ul {
+  margin-left: 2.142857142857143em;
+  list-style-type: none;
+}
 
 /* line 79, ../scss/font-awesome.scss */
-.icons-ul > li { position: relative; }
+.icons-ul > li {
+  position: relative;
+}
 
 /* line 82, ../scss/font-awesome.scss */
-.icons-ul .icon-li { position: absolute; left: -2.14286em; width: 2.142857142857143em; text-align: center; line-height: inherit; }
+.icons-ul .icon-li {
+  position: absolute;
+  left: -2.142857142857143em;
+  width: 2.142857142857143em;
+  text-align: center;
+  line-height: inherit;
+}
 
 /* line 90, ../scss/font-awesome.scss */
-[class^="icon-"].hide, [class*=" icon-"].hide { display: none; }
+[class^="icon-"].hide,
+[class*=" icon-"].hide {
+  display: none;
+}
 
 /* line 93, ../scss/font-awesome.scss */
-.icon-muted { color: #eeeeee; }
+.icon-muted {
+  color: #eeeeee;
+}
 
 /* line 96, ../scss/font-awesome.scss */
-.icon-light { color: #ffffff; }
+.icon-light {
+  color: #ffffff;
+}
 
 /* line 99, ../scss/font-awesome.scss */
-.icon-dark { color: #333333; }
+.icon-dark {
+  color: #333333;
+}
 
 /* line 102, ../scss/font-awesome.scss */
-.icon-border { border: solid 1px #eeeeee; padding: .2em .25em .15em; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+.icon-border {
+  border: solid 1px #eeeeee;
+  padding: 0.2em 0.25em 0.15em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
 
 /* line 109, ../scss/font-awesome.scss */
-.icon-2x { font-size: 2em; }
+.icon-2x {
+  font-size: 2em;
+}
 
 /* line 112, ../scss/font-awesome.scss */
-.icon-2x.icon-border { border-width: 2px; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; }
+.icon-2x.icon-border {
+  border-width: 2px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
 
 /* line 118, ../scss/font-awesome.scss */
-.icon-3x { font-size: 3em; }
+.icon-3x {
+  font-size: 3em;
+}
 
 /* line 121, ../scss/font-awesome.scss */
-.icon-3x.icon-border { border-width: 3px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+.icon-3x.icon-border {
+  border-width: 3px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
 
 /* line 127, ../scss/font-awesome.scss */
-.icon-4x { font-size: 4em; }
+.icon-4x {
+  font-size: 4em;
+}
 
 /* line 130, ../scss/font-awesome.scss */
-.icon-4x.icon-border { border-width: 4px; -webkit-border-radius: 6px; -moz-border-radius: 6px; border-radius: 6px; }
+.icon-4x.icon-border {
+  border-width: 4px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
 
 /* line 136, ../scss/font-awesome.scss */
-.icon-5x { font-size: 5em; }
+.icon-5x {
+  font-size: 5em;
+}
 
 /* line 139, ../scss/font-awesome.scss */
-.icon-5x.icon-border { border-width: 5px; -webkit-border-radius: 7px; -moz-border-radius: 7px; border-radius: 7px; }
+.icon-5x.icon-border {
+  border-width: 5px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+}
 
 /* line 145, ../scss/font-awesome.scss */
-.pull-right { float: right; }
+.pull-right {
+  float: right;
+}
 
 /* line 148, ../scss/font-awesome.scss */
-.pull-left { float: left; }
+.pull-left {
+  float: left;
+}
 
 /* line 152, ../scss/font-awesome.scss */
-[class^="icon-"].pull-left, [class*=" icon-"].pull-left { margin-right: .3em; }
+[class^="icon-"].pull-left,
+[class*=" icon-"].pull-left {
+  margin-right: .3em;
+}
 
 /* line 156, ../scss/font-awesome.scss */
-[class^="icon-"].pull-right, [class*=" icon-"].pull-right { margin-left: .3em; }
+[class^="icon-"].pull-right,
+[class*=" icon-"].pull-right {
+  margin-left: .3em;
+}
 
-/* BOOTSTRAP SPECIFIC CLASSES -------------------------- */
+/* BOOTSTRAP SPECIFIC CLASSES
+ * -------------------------- */
 /* Bootstrap 2.0 sprites.less reset */
 /* line 163, ../scss/font-awesome.scss */
-[class^="icon-"], [class*=" icon-"] { display: inline; width: auto; height: auto; line-height: normal; vertical-align: baseline; background-image: none; background-position: 0% 0%; background-repeat: repeat; margin-top: 0; }
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline;
+  width: auto;
+  height: auto;
+  line-height: normal;
+  vertical-align: baseline;
+  background-image: none;
+  background-position: 0% 0%;
+  background-repeat: repeat;
+  margin-top: 0;
+}
 
 /* more sprites.less reset */
 /* line 187, ../scss/font-awesome.scss */
-.icon-white, .nav-pills > .active > a > [class^="icon-"], .nav-pills > .active > a > [class*=" icon-"], .nav-list > .active > a > [class^="icon-"], .nav-list > .active > a > [class*=" icon-"], .navbar-inverse .nav > .active > a > [class^="icon-"], .navbar-inverse .nav > .active > a > [class*=" icon-"], .dropdown-menu > li > a:hover > [class^="icon-"], .dropdown-menu > li > a:hover > [class*=" icon-"], .dropdown-menu > .active > a > [class^="icon-"], .dropdown-menu > .active > a > [class*=" icon-"], .dropdown-submenu:hover > a > [class^="icon-"], .dropdown-submenu:hover > a > [class*=" icon-"] { background-image: none; }
+.icon-white,
+.nav-pills > .active > a > [class^="icon-"],
+.nav-pills > .active > a > [class*=" icon-"],
+.nav-list > .active > a > [class^="icon-"],
+.nav-list > .active > a > [class*=" icon-"],
+.navbar-inverse .nav > .active > a > [class^="icon-"],
+.navbar-inverse .nav > .active > a > [class*=" icon-"],
+.dropdown-menu > li > a:hover > [class^="icon-"],
+.dropdown-menu > li > a:hover > [class*=" icon-"],
+.dropdown-menu > .active > a > [class^="icon-"],
+.dropdown-menu > .active > a > [class*=" icon-"],
+.dropdown-submenu:hover > a > [class^="icon-"],
+.dropdown-submenu:hover > a > [class*=" icon-"] {
+  background-image: none;
+}
 
 /* keeps Bootstrap styles with and without icons the same */
 /* line 194, ../scss/font-awesome.scss */
-.btn [class^="icon-"].icon-large, .nav [class^="icon-"].icon-large, .btn [class*=" icon-"].icon-large, .nav [class*=" icon-"].icon-large { line-height: .9em; }
+.btn [class^="icon-"].icon-large,
+.nav [class^="icon-"].icon-large,
+.btn [class*=" icon-"].icon-large,
+.nav [class*=" icon-"].icon-large {
+  line-height: .9em;
+}
 
 /* line 200, ../scss/font-awesome.scss */
-.btn [class^="icon-"].icon-spin, .nav [class^="icon-"].icon-spin, .btn [class*=" icon-"].icon-spin, .nav [class*=" icon-"].icon-spin { display: inline-block; }
+.btn [class^="icon-"].icon-spin,
+.nav [class^="icon-"].icon-spin,
+.btn [class*=" icon-"].icon-spin,
+.nav [class*=" icon-"].icon-spin {
+  display: inline-block;
+}
 
 /* line 210, ../scss/font-awesome.scss */
-.nav-tabs [class^="icon-"], .nav-pills [class^="icon-"], .nav-tabs [class*=" icon-"], .nav-pills [class*=" icon-"], .nav-tabs [class^="icon-"].icon-large, .nav-pills [class^="icon-"].icon-large, .nav-tabs [class*=" icon-"].icon-large, .nav-pills [class*=" icon-"].icon-large { line-height: .9em; }
+.nav-tabs [class^="icon-"],
+.nav-pills [class^="icon-"],
+.nav-tabs [class*=" icon-"],
+.nav-pills [class*=" icon-"],
+.nav-tabs [class^="icon-"].icon-large,
+.nav-pills [class^="icon-"].icon-large,
+.nav-tabs [class*=" icon-"].icon-large,
+.nav-pills [class*=" icon-"].icon-large {
+  line-height: .9em;
+}
 
 /* line 216, ../scss/font-awesome.scss */
-.btn [class^="icon-"].pull-left.icon-2x, .btn [class*=" icon-"].pull-left.icon-2x, .btn [class^="icon-"].pull-right.icon-2x, .btn [class*=" icon-"].pull-right.icon-2x { margin-top: .18em; }
+.btn [class^="icon-"].pull-left.icon-2x,
+.btn [class*=" icon-"].pull-left.icon-2x,
+.btn [class^="icon-"].pull-right.icon-2x,
+.btn [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .18em;
+}
 
 /* line 220, ../scss/font-awesome.scss */
-.btn [class^="icon-"].icon-spin.icon-large, .btn [class*=" icon-"].icon-spin.icon-large { line-height: .8em; }
+.btn [class^="icon-"].icon-spin.icon-large,
+.btn [class*=" icon-"].icon-spin.icon-large {
+  line-height: .8em;
+}
 
 /* line 226, ../scss/font-awesome.scss */
-.btn.btn-small [class^="icon-"].pull-left.icon-2x, .btn.btn-small [class*=" icon-"].pull-left.icon-2x, .btn.btn-small [class^="icon-"].pull-right.icon-2x, .btn.btn-small [class*=" icon-"].pull-right.icon-2x { margin-top: .25em; }
+.btn.btn-small [class^="icon-"].pull-left.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-left.icon-2x,
+.btn.btn-small [class^="icon-"].pull-right.icon-2x,
+.btn.btn-small [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .25em;
+}
 
 /* line 230, ../scss/font-awesome.scss */
-.btn.btn-large [class^="icon-"], .btn.btn-large [class*=" icon-"] { margin-top: 0; }
+.btn.btn-large [class^="icon-"],
+.btn.btn-large [class*=" icon-"] {
+  margin-top: 0;
+}
 
 /* line 236, ../scss/font-awesome.scss */
-.btn.btn-large [class^="icon-"].pull-left.icon-2x, .btn.btn-large [class*=" icon-"].pull-left.icon-2x, .btn.btn-large [class^="icon-"].pull-right.icon-2x, .btn.btn-large [class*=" icon-"].pull-right.icon-2x { margin-top: .05em; }
+.btn.btn-large [class^="icon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-left.icon-2x,
+.btn.btn-large [class^="icon-"].pull-right.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+  margin-top: .05em;
+}
 
 /* line 240, ../scss/font-awesome.scss */
-.btn.btn-large [class^="icon-"].pull-left.icon-2x, .btn.btn-large [class*=" icon-"].pull-left.icon-2x { margin-right: .2em; }
+.btn.btn-large [class^="icon-"].pull-left.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-left.icon-2x {
+  margin-right: .2em;
+}
 
 /* line 244, ../scss/font-awesome.scss */
-.btn.btn-large [class^="icon-"].pull-right.icon-2x, .btn.btn-large [class*=" icon-"].pull-right.icon-2x { margin-left: .2em; }
+.btn.btn-large [class^="icon-"].pull-right.icon-2x,
+.btn.btn-large [class*=" icon-"].pull-right.icon-2x {
+  margin-left: .2em;
+}
 
-/* EXTRAS -------------------------- */
+/* EXTRAS
+ * -------------------------- */
 /* Stacked and layered icon */
 /* line 250, ../scss/font-awesome.scss */
-.icon-stack { position: relative; display: inline-block; width: 2em; height: 2em; line-height: 2em; vertical-align: -35%; }
+.icon-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: -35%;
+}
 
 /* line 259, ../scss/font-awesome.scss */
-.icon-stack [class^="icon-"], .icon-stack [class*=" icon-"] { display: block; text-align: center; position: absolute; width: 100%; height: 100%; font-size: 1em; line-height: inherit; *line-height: 2em; }
+.icon-stack [class^="icon-"],
+.icon-stack [class*=" icon-"] {
+  display: block;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 1em;
+  line-height: inherit;
+  *line-height: 2em;
+}
 
 /* line 269, ../scss/font-awesome.scss */
-.icon-stack .icon-stack-base { font-size: 2em; *line-height: 1em; }
+.icon-stack .icon-stack-base {
+  font-size: 2em;
+  *line-height: 1em;
+}
 
 /* Animated rotating icon */
 /* line 274, ../scss/font-awesome.scss */
-.icon-spin { display: inline-block; -moz-animation: spin 2s infinite linear; -o-animation: spin 2s infinite linear; -webkit-animation: spin 2s infinite linear; animation: spin 2s infinite linear; }
+.icon-spin {
+  display: inline-block;
+  -moz-animation: spin 2s infinite linear;
+  -o-animation: spin 2s infinite linear;
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
+}
 
 /* line 281, ../scss/font-awesome.scss */
-a .icon-spin { display: inline-block; text-decoration: none; }
+a .icon-spin {
+  display: inline-block;
+  text-decoration: none;
+}
 
-@-moz-keyframes spin { /* line 286, ../scss/font-awesome.scss */
-  0% { -moz-transform: rotate(0deg); }
+@-moz-keyframes spin {
+  /* line 286, ../scss/font-awesome.scss */
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+
   /* line 289, ../scss/font-awesome.scss */
-  100% { -moz-transform: rotate(359deg); } }
+  100% {
+    -moz-transform: rotate(359deg);
+  }
+}
 
-@-webkit-keyframes spin { /* line 294, ../scss/font-awesome.scss */
-  0% { -webkit-transform: rotate(0deg); }
+@-webkit-keyframes spin {
+  /* line 294, ../scss/font-awesome.scss */
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+
   /* line 297, ../scss/font-awesome.scss */
-  100% { -webkit-transform: rotate(359deg); } }
+  100% {
+    -webkit-transform: rotate(359deg);
+  }
+}
 
-@-o-keyframes spin { /* line 302, ../scss/font-awesome.scss */
-  0% { -o-transform: rotate(0deg); }
+@-o-keyframes spin {
+  /* line 302, ../scss/font-awesome.scss */
+  0% {
+    -o-transform: rotate(0deg);
+  }
+
   /* line 305, ../scss/font-awesome.scss */
-  100% { -o-transform: rotate(359deg); } }
+  100% {
+    -o-transform: rotate(359deg);
+  }
+}
 
-@-ms-keyframes spin { /* line 310, ../scss/font-awesome.scss */
-  0% { -ms-transform: rotate(0deg); }
+@-ms-keyframes spin {
+  /* line 310, ../scss/font-awesome.scss */
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+
   /* line 313, ../scss/font-awesome.scss */
-  100% { -ms-transform: rotate(359deg); } }
+  100% {
+    -ms-transform: rotate(359deg);
+  }
+}
 
-@keyframes spin { /* line 318, ../scss/font-awesome.scss */
-  0% { transform: rotate(0deg); }
+@keyframes spin {
+  /* line 318, ../scss/font-awesome.scss */
+  0% {
+    transform: rotate(0deg);
+  }
+
   /* line 321, ../scss/font-awesome.scss */
-  100% { transform: rotate(359deg); } }
+  100% {
+    transform: rotate(359deg);
+  }
+}
 
 /* Icon rotations and mirroring */
 /* line 326, ../scss/font-awesome.scss */
-.icon-rotate-90:before { -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1); }
+.icon-rotate-90:before {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
 
 /* line 334, ../scss/font-awesome.scss */
-.icon-rotate-180:before { -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); -o-transform: rotate(180deg); transform: rotate(180deg); filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); }
+.icon-rotate-180:before {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+}
 
 /* line 342, ../scss/font-awesome.scss */
-.icon-rotate-270:before { -webkit-transform: rotate(270deg); -moz-transform: rotate(270deg); -ms-transform: rotate(270deg); -o-transform: rotate(270deg); transform: rotate(270deg); filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3); }
+.icon-rotate-270:before {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
 
 /* line 350, ../scss/font-awesome.scss */
-.icon-flip-horizontal:before { -webkit-transform: scale(-1, 1); -moz-transform: scale(-1, 1); -ms-transform: scale(-1, 1); -o-transform: scale(-1, 1); transform: scale(-1, 1); }
+.icon-flip-horizontal:before {
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
 
 /* line 357, ../scss/font-awesome.scss */
-.icon-flip-vertical:before { -webkit-transform: scale(1, -1); -moz-transform: scale(1, -1); -ms-transform: scale(1, -1); -o-transform: scale(1, -1); transform: scale(1, -1); }
+.icon-flip-vertical:before {
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
 
 /* ensure rotation occurs inside anchor tags */
 /* line 369, ../scss/font-awesome.scss */
-a .icon-rotate-90:before, a .icon-rotate-180:before, a .icon-rotate-270:before, a .icon-flip-horizontal:before, a .icon-flip-vertical:before { display: inline-block; }
+a .icon-rotate-90:before,
+a .icon-rotate-180:before,
+a .icon-rotate-270:before,
+a .icon-flip-horizontal:before,
+a .icon-flip-vertical:before {
+  display: inline-block;
+}
 
-/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen readers do not read off random characters that represent icons */
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
 /* line 374, ../scss/font-awesome.scss */
-.icon-glass:before { content: "\f000"; }
+.icon-glass:before {
+  content: "\f000";
+}
 
 /* line 377, ../scss/font-awesome.scss */
-.icon-music:before { content: "\f001"; }
+.icon-music:before {
+  content: "\f001";
+}
 
 /* line 380, ../scss/font-awesome.scss */
-.icon-search:before { content: "\f002"; }
+.icon-search:before {
+  content: "\f002";
+}
 
 /* line 383, ../scss/font-awesome.scss */
-.icon-envelope-alt:before { content: "\f003"; }
+.icon-envelope-alt:before {
+  content: "\f003";
+}
 
 /* line 386, ../scss/font-awesome.scss */
-.icon-heart:before { content: "\f004"; }
+.icon-heart:before {
+  content: "\f004";
+}
 
 /* line 389, ../scss/font-awesome.scss */
-.icon-star:before { content: "\f005"; }
+.icon-star:before {
+  content: "\f005";
+}
 
 /* line 392, ../scss/font-awesome.scss */
-.icon-star-empty:before { content: "\f006"; }
+.icon-star-empty:before {
+  content: "\f006";
+}
 
 /* line 395, ../scss/font-awesome.scss */
-.icon-user:before { content: "\f007"; }
+.icon-user:before {
+  content: "\f007";
+}
 
 /* line 398, ../scss/font-awesome.scss */
-.icon-film:before { content: "\f008"; }
+.icon-film:before {
+  content: "\f008";
+}
 
 /* line 401, ../scss/font-awesome.scss */
-.icon-th-large:before { content: "\f009"; }
+.icon-th-large:before {
+  content: "\f009";
+}
 
 /* line 404, ../scss/font-awesome.scss */
-.icon-th:before { content: "\f00a"; }
+.icon-th:before {
+  content: "\f00a";
+}
 
 /* line 407, ../scss/font-awesome.scss */
-.icon-th-list:before { content: "\f00b"; }
+.icon-th-list:before {
+  content: "\f00b";
+}
 
 /* line 410, ../scss/font-awesome.scss */
-.icon-ok:before { content: "\f00c"; }
+.icon-ok:before {
+  content: "\f00c";
+}
 
 /* line 413, ../scss/font-awesome.scss */
-.icon-remove:before { content: "\f00d"; }
+.icon-remove:before {
+  content: "\f00d";
+}
 
 /* line 416, ../scss/font-awesome.scss */
-.icon-zoom-in:before { content: "\f00e"; }
+.icon-zoom-in:before {
+  content: "\f00e";
+}
 
 /* line 419, ../scss/font-awesome.scss */
-.icon-zoom-out:before { content: "\f010"; }
+.icon-zoom-out:before {
+  content: "\f010";
+}
 
 /* line 423, ../scss/font-awesome.scss */
-.icon-power-off:before, .icon-off:before { content: "\f011"; }
+.icon-power-off:before,
+.icon-off:before {
+  content: "\f011";
+}
 
 /* line 426, ../scss/font-awesome.scss */
-.icon-signal:before { content: "\f012"; }
+.icon-signal:before {
+  content: "\f012";
+}
 
 /* line 429, ../scss/font-awesome.scss */
-.icon-cog:before { content: "\f013"; }
+.icon-cog:before {
+  content: "\f013";
+}
 
 /* line 432, ../scss/font-awesome.scss */
-.icon-trash:before { content: "\f014"; }
+.icon-trash:before {
+  content: "\f014";
+}
 
 /* line 435, ../scss/font-awesome.scss */
-.icon-home:before { content: "\f015"; }
+.icon-home:before {
+  content: "\f015";
+}
 
 /* line 438, ../scss/font-awesome.scss */
-.icon-file-alt:before { content: "\f016"; }
+.icon-file-alt:before {
+  content: "\f016";
+}
 
 /* line 441, ../scss/font-awesome.scss */
-.icon-time:before { content: "\f017"; }
+.icon-time:before {
+  content: "\f017";
+}
 
 /* line 444, ../scss/font-awesome.scss */
-.icon-road:before { content: "\f018"; }
+.icon-road:before {
+  content: "\f018";
+}
 
 /* line 447, ../scss/font-awesome.scss */
-.icon-download-alt:before { content: "\f019"; }
+.icon-download-alt:before {
+  content: "\f019";
+}
 
 /* line 450, ../scss/font-awesome.scss */
-.icon-download:before { content: "\f01a"; }
+.icon-download:before {
+  content: "\f01a";
+}
 
 /* line 453, ../scss/font-awesome.scss */
-.icon-upload:before { content: "\f01b"; }
+.icon-upload:before {
+  content: "\f01b";
+}
 
 /* line 456, ../scss/font-awesome.scss */
-.icon-inbox:before { content: "\f01c"; }
+.icon-inbox:before {
+  content: "\f01c";
+}
 
 /* line 459, ../scss/font-awesome.scss */
-.icon-play-circle:before { content: "\f01d"; }
+.icon-play-circle:before {
+  content: "\f01d";
+}
 
 /* line 463, ../scss/font-awesome.scss */
-.icon-rotate-right:before, .icon-repeat:before { content: "\f01e"; }
+.icon-rotate-right:before,
+.icon-repeat:before {
+  content: "\f01e";
+}
 
 /* line 466, ../scss/font-awesome.scss */
-.icon-refresh:before { content: "\f021"; }
+.icon-refresh:before {
+  content: "\f021";
+}
 
 /* line 469, ../scss/font-awesome.scss */
-.icon-list-alt:before { content: "\f022"; }
+.icon-list-alt:before {
+  content: "\f022";
+}
 
 /* line 472, ../scss/font-awesome.scss */
-.icon-lock:before { content: "\f023"; }
+.icon-lock:before {
+  content: "\f023";
+}
 
 /* line 475, ../scss/font-awesome.scss */
-.icon-flag:before { content: "\f024"; }
+.icon-flag:before {
+  content: "\f024";
+}
 
 /* line 478, ../scss/font-awesome.scss */
-.icon-headphones:before { content: "\f025"; }
+.icon-headphones:before {
+  content: "\f025";
+}
 
 /* line 481, ../scss/font-awesome.scss */
-.icon-volume-off:before { content: "\f026"; }
+.icon-volume-off:before {
+  content: "\f026";
+}
 
 /* line 484, ../scss/font-awesome.scss */
-.icon-volume-down:before { content: "\f027"; }
+.icon-volume-down:before {
+  content: "\f027";
+}
 
 /* line 487, ../scss/font-awesome.scss */
-.icon-volume-up:before { content: "\f028"; }
+.icon-volume-up:before {
+  content: "\f028";
+}
 
 /* line 490, ../scss/font-awesome.scss */
-.icon-qrcode:before { content: "\f029"; }
+.icon-qrcode:before {
+  content: "\f029";
+}
 
 /* line 493, ../scss/font-awesome.scss */
-.icon-barcode:before { content: "\f02a"; }
+.icon-barcode:before {
+  content: "\f02a";
+}
 
 /* line 496, ../scss/font-awesome.scss */
-.icon-tag:before { content: "\f02b"; }
+.icon-tag:before {
+  content: "\f02b";
+}
 
 /* line 499, ../scss/font-awesome.scss */
-.icon-tags:before { content: "\f02c"; }
+.icon-tags:before {
+  content: "\f02c";
+}
 
 /* line 502, ../scss/font-awesome.scss */
-.icon-book:before { content: "\f02d"; }
+.icon-book:before {
+  content: "\f02d";
+}
 
 /* line 505, ../scss/font-awesome.scss */
-.icon-bookmark:before { content: "\f02e"; }
+.icon-bookmark:before {
+  content: "\f02e";
+}
 
 /* line 508, ../scss/font-awesome.scss */
-.icon-print:before { content: "\f02f"; }
+.icon-print:before {
+  content: "\f02f";
+}
 
 /* line 511, ../scss/font-awesome.scss */
-.icon-camera:before { content: "\f030"; }
+.icon-camera:before {
+  content: "\f030";
+}
 
 /* line 514, ../scss/font-awesome.scss */
-.icon-font:before { content: "\f031"; }
+.icon-font:before {
+  content: "\f031";
+}
 
 /* line 517, ../scss/font-awesome.scss */
-.icon-bold:before { content: "\f032"; }
+.icon-bold:before {
+  content: "\f032";
+}
 
 /* line 520, ../scss/font-awesome.scss */
-.icon-italic:before { content: "\f033"; }
+.icon-italic:before {
+  content: "\f033";
+}
 
 /* line 523, ../scss/font-awesome.scss */
-.icon-text-height:before { content: "\f034"; }
+.icon-text-height:before {
+  content: "\f034";
+}
 
 /* line 526, ../scss/font-awesome.scss */
-.icon-text-width:before { content: "\f035"; }
+.icon-text-width:before {
+  content: "\f035";
+}
 
 /* line 529, ../scss/font-awesome.scss */
-.icon-align-left:before { content: "\f036"; }
+.icon-align-left:before {
+  content: "\f036";
+}
 
 /* line 532, ../scss/font-awesome.scss */
-.icon-align-center:before { content: "\f037"; }
+.icon-align-center:before {
+  content: "\f037";
+}
 
 /* line 535, ../scss/font-awesome.scss */
-.icon-align-right:before { content: "\f038"; }
+.icon-align-right:before {
+  content: "\f038";
+}
 
 /* line 538, ../scss/font-awesome.scss */
-.icon-align-justify:before { content: "\f039"; }
+.icon-align-justify:before {
+  content: "\f039";
+}
 
 /* line 541, ../scss/font-awesome.scss */
-.icon-list:before { content: "\f03a"; }
+.icon-list:before {
+  content: "\f03a";
+}
 
 /* line 544, ../scss/font-awesome.scss */
-.icon-indent-left:before { content: "\f03b"; }
+.icon-indent-left:before {
+  content: "\f03b";
+}
 
 /* line 547, ../scss/font-awesome.scss */
-.icon-indent-right:before { content: "\f03c"; }
+.icon-indent-right:before {
+  content: "\f03c";
+}
 
 /* line 550, ../scss/font-awesome.scss */
-.icon-facetime-video:before { content: "\f03d"; }
+.icon-facetime-video:before {
+  content: "\f03d";
+}
 
 /* line 553, ../scss/font-awesome.scss */
-.icon-picture:before { content: "\f03e"; }
+.icon-picture:before {
+  content: "\f03e";
+}
 
 /* line 556, ../scss/font-awesome.scss */
-.icon-pencil:before { content: "\f040"; }
+.icon-pencil:before {
+  content: "\f040";
+}
 
 /* line 559, ../scss/font-awesome.scss */
-.icon-map-marker:before { content: "\f041"; }
+.icon-map-marker:before {
+  content: "\f041";
+}
 
 /* line 562, ../scss/font-awesome.scss */
-.icon-adjust:before { content: "\f042"; }
+.icon-adjust:before {
+  content: "\f042";
+}
 
 /* line 565, ../scss/font-awesome.scss */
-.icon-tint:before { content: "\f043"; }
+.icon-tint:before {
+  content: "\f043";
+}
 
 /* line 568, ../scss/font-awesome.scss */
-.icon-edit:before { content: "\f044"; }
+.icon-edit:before {
+  content: "\f044";
+}
 
 /* line 571, ../scss/font-awesome.scss */
-.icon-share:before { content: "\f045"; }
+.icon-share:before {
+  content: "\f045";
+}
 
 /* line 574, ../scss/font-awesome.scss */
-.icon-check:before { content: "\f046"; }
+.icon-check:before {
+  content: "\f046";
+}
 
 /* line 577, ../scss/font-awesome.scss */
-.icon-move:before { content: "\f047"; }
+.icon-move:before {
+  content: "\f047";
+}
 
 /* line 580, ../scss/font-awesome.scss */
-.icon-step-backward:before { content: "\f048"; }
+.icon-step-backward:before {
+  content: "\f048";
+}
 
 /* line 583, ../scss/font-awesome.scss */
-.icon-fast-backward:before { content: "\f049"; }
+.icon-fast-backward:before {
+  content: "\f049";
+}
 
 /* line 586, ../scss/font-awesome.scss */
-.icon-backward:before { content: "\f04a"; }
+.icon-backward:before {
+  content: "\f04a";
+}
 
 /* line 589, ../scss/font-awesome.scss */
-.icon-play:before { content: "\f04b"; }
+.icon-play:before {
+  content: "\f04b";
+}
 
 /* line 592, ../scss/font-awesome.scss */
-.icon-pause:before { content: "\f04c"; }
+.icon-pause:before {
+  content: "\f04c";
+}
 
 /* line 595, ../scss/font-awesome.scss */
-.icon-stop:before { content: "\f04d"; }
+.icon-stop:before {
+  content: "\f04d";
+}
 
 /* line 598, ../scss/font-awesome.scss */
-.icon-forward:before { content: "\f04e"; }
+.icon-forward:before {
+  content: "\f04e";
+}
 
 /* line 601, ../scss/font-awesome.scss */
-.icon-fast-forward:before { content: "\f050"; }
+.icon-fast-forward:before {
+  content: "\f050";
+}
 
 /* line 604, ../scss/font-awesome.scss */
-.icon-step-forward:before { content: "\f051"; }
+.icon-step-forward:before {
+  content: "\f051";
+}
 
 /* line 607, ../scss/font-awesome.scss */
-.icon-eject:before { content: "\f052"; }
+.icon-eject:before {
+  content: "\f052";
+}
 
 /* line 610, ../scss/font-awesome.scss */
-.icon-chevron-left:before { content: "\f053"; }
+.icon-chevron-left:before {
+  content: "\f053";
+}
 
 /* line 613, ../scss/font-awesome.scss */
-.icon-chevron-right:before { content: "\f054"; }
+.icon-chevron-right:before {
+  content: "\f054";
+}
 
 /* line 616, ../scss/font-awesome.scss */
-.icon-plus-sign:before { content: "\f055"; }
+.icon-plus-sign:before {
+  content: "\f055";
+}
 
 /* line 619, ../scss/font-awesome.scss */
-.icon-minus-sign:before { content: "\f056"; }
+.icon-minus-sign:before {
+  content: "\f056";
+}
 
 /* line 622, ../scss/font-awesome.scss */
-.icon-remove-sign:before { content: "\f057"; }
+.icon-remove-sign:before {
+  content: "\f057";
+}
 
 /* line 625, ../scss/font-awesome.scss */
-.icon-ok-sign:before { content: "\f058"; }
+.icon-ok-sign:before {
+  content: "\f058";
+}
 
 /* line 628, ../scss/font-awesome.scss */
-.icon-question-sign:before { content: "\f059"; }
+.icon-question-sign:before {
+  content: "\f059";
+}
 
 /* line 631, ../scss/font-awesome.scss */
-.icon-info-sign:before { content: "\f05a"; }
+.icon-info-sign:before {
+  content: "\f05a";
+}
 
 /* line 634, ../scss/font-awesome.scss */
-.icon-screenshot:before { content: "\f05b"; }
+.icon-screenshot:before {
+  content: "\f05b";
+}
 
 /* line 637, ../scss/font-awesome.scss */
-.icon-remove-circle:before { content: "\f05c"; }
+.icon-remove-circle:before {
+  content: "\f05c";
+}
 
 /* line 640, ../scss/font-awesome.scss */
-.icon-ok-circle:before { content: "\f05d"; }
+.icon-ok-circle:before {
+  content: "\f05d";
+}
 
 /* line 643, ../scss/font-awesome.scss */
-.icon-ban-circle:before { content: "\f05e"; }
+.icon-ban-circle:before {
+  content: "\f05e";
+}
 
 /* line 646, ../scss/font-awesome.scss */
-.icon-arrow-left:before { content: "\f060"; }
+.icon-arrow-left:before {
+  content: "\f060";
+}
 
 /* line 649, ../scss/font-awesome.scss */
-.icon-arrow-right:before { content: "\f061"; }
+.icon-arrow-right:before {
+  content: "\f061";
+}
 
 /* line 652, ../scss/font-awesome.scss */
-.icon-arrow-up:before { content: "\f062"; }
+.icon-arrow-up:before {
+  content: "\f062";
+}
 
 /* line 655, ../scss/font-awesome.scss */
-.icon-arrow-down:before { content: "\f063"; }
+.icon-arrow-down:before {
+  content: "\f063";
+}
 
 /* line 659, ../scss/font-awesome.scss */
-.icon-mail-forward:before, .icon-share-alt:before { content: "\f064"; }
+.icon-mail-forward:before,
+.icon-share-alt:before {
+  content: "\f064";
+}
 
 /* line 662, ../scss/font-awesome.scss */
-.icon-resize-full:before { content: "\f065"; }
+.icon-resize-full:before {
+  content: "\f065";
+}
 
 /* line 665, ../scss/font-awesome.scss */
-.icon-resize-small:before { content: "\f066"; }
+.icon-resize-small:before {
+  content: "\f066";
+}
 
 /* line 668, ../scss/font-awesome.scss */
-.icon-plus:before { content: "\f067"; }
+.icon-plus:before {
+  content: "\f067";
+}
 
 /* line 671, ../scss/font-awesome.scss */
-.icon-minus:before { content: "\f068"; }
+.icon-minus:before {
+  content: "\f068";
+}
 
 /* line 674, ../scss/font-awesome.scss */
-.icon-asterisk:before { content: "\f069"; }
+.icon-asterisk:before {
+  content: "\f069";
+}
 
 /* line 677, ../scss/font-awesome.scss */
-.icon-exclamation-sign:before { content: "\f06a"; }
+.icon-exclamation-sign:before {
+  content: "\f06a";
+}
 
 /* line 680, ../scss/font-awesome.scss */
-.icon-gift:before { content: "\f06b"; }
+.icon-gift:before {
+  content: "\f06b";
+}
 
 /* line 683, ../scss/font-awesome.scss */
-.icon-leaf:before { content: "\f06c"; }
+.icon-leaf:before {
+  content: "\f06c";
+}
 
 /* line 686, ../scss/font-awesome.scss */
-.icon-fire:before { content: "\f06d"; }
+.icon-fire:before {
+  content: "\f06d";
+}
 
 /* line 689, ../scss/font-awesome.scss */
-.icon-eye-open:before { content: "\f06e"; }
+.icon-eye-open:before {
+  content: "\f06e";
+}
 
 /* line 692, ../scss/font-awesome.scss */
-.icon-eye-close:before { content: "\f070"; }
+.icon-eye-close:before {
+  content: "\f070";
+}
 
 /* line 695, ../scss/font-awesome.scss */
-.icon-warning-sign:before { content: "\f071"; }
+.icon-warning-sign:before {
+  content: "\f071";
+}
 
 /* line 698, ../scss/font-awesome.scss */
-.icon-plane:before { content: "\f072"; }
+.icon-plane:before {
+  content: "\f072";
+}
 
 /* line 701, ../scss/font-awesome.scss */
-.icon-calendar:before { content: "\f073"; }
+.icon-calendar:before {
+  content: "\f073";
+}
 
 /* line 704, ../scss/font-awesome.scss */
-.icon-random:before { content: "\f074"; }
+.icon-random:before {
+  content: "\f074";
+}
 
 /* line 707, ../scss/font-awesome.scss */
-.icon-comment:before { content: "\f075"; }
+.icon-comment:before {
+  content: "\f075";
+}
 
 /* line 710, ../scss/font-awesome.scss */
-.icon-magnet:before { content: "\f076"; }
+.icon-magnet:before {
+  content: "\f076";
+}
 
 /* line 713, ../scss/font-awesome.scss */
-.icon-chevron-up:before { content: "\f077"; }
+.icon-chevron-up:before {
+  content: "\f077";
+}
 
 /* line 716, ../scss/font-awesome.scss */
-.icon-chevron-down:before { content: "\f078"; }
+.icon-chevron-down:before {
+  content: "\f078";
+}
 
 /* line 719, ../scss/font-awesome.scss */
-.icon-retweet:before { content: "\f079"; }
+.icon-retweet:before {
+  content: "\f079";
+}
 
 /* line 722, ../scss/font-awesome.scss */
-.icon-shopping-cart:before { content: "\f07a"; }
+.icon-shopping-cart:before {
+  content: "\f07a";
+}
 
 /* line 725, ../scss/font-awesome.scss */
-.icon-folder-close:before { content: "\f07b"; }
+.icon-folder-close:before {
+  content: "\f07b";
+}
 
 /* line 728, ../scss/font-awesome.scss */
-.icon-folder-open:before { content: "\f07c"; }
+.icon-folder-open:before {
+  content: "\f07c";
+}
 
 /* line 731, ../scss/font-awesome.scss */
-.icon-resize-vertical:before { content: "\f07d"; }
+.icon-resize-vertical:before {
+  content: "\f07d";
+}
 
 /* line 734, ../scss/font-awesome.scss */
-.icon-resize-horizontal:before { content: "\f07e"; }
+.icon-resize-horizontal:before {
+  content: "\f07e";
+}
 
 /* line 737, ../scss/font-awesome.scss */
-.icon-bar-chart:before { content: "\f080"; }
+.icon-bar-chart:before {
+  content: "\f080";
+}
 
 /* line 740, ../scss/font-awesome.scss */
-.icon-twitter-sign:before { content: "\f081"; }
+.icon-twitter-sign:before {
+  content: "\f081";
+}
 
 /* line 743, ../scss/font-awesome.scss */
-.icon-facebook-sign:before { content: "\f082"; }
+.icon-facebook-sign:before {
+  content: "\f082";
+}
 
 /* line 746, ../scss/font-awesome.scss */
-.icon-camera-retro:before { content: "\f083"; }
+.icon-camera-retro:before {
+  content: "\f083";
+}
 
 /* line 749, ../scss/font-awesome.scss */
-.icon-key:before { content: "\f084"; }
+.icon-key:before {
+  content: "\f084";
+}
 
 /* line 752, ../scss/font-awesome.scss */
-.icon-cogs:before { content: "\f085"; }
+.icon-cogs:before {
+  content: "\f085";
+}
 
 /* line 755, ../scss/font-awesome.scss */
-.icon-comments:before { content: "\f086"; }
+.icon-comments:before {
+  content: "\f086";
+}
 
 /* line 758, ../scss/font-awesome.scss */
-.icon-thumbs-up-alt:before { content: "\f087"; }
+.icon-thumbs-up-alt:before {
+  content: "\f087";
+}
 
 /* line 761, ../scss/font-awesome.scss */
-.icon-thumbs-down-alt:before { content: "\f088"; }
+.icon-thumbs-down-alt:before {
+  content: "\f088";
+}
 
 /* line 764, ../scss/font-awesome.scss */
-.icon-star-half:before { content: "\f089"; }
+.icon-star-half:before {
+  content: "\f089";
+}
 
 /* line 767, ../scss/font-awesome.scss */
-.icon-heart-empty:before { content: "\f08a"; }
+.icon-heart-empty:before {
+  content: "\f08a";
+}
 
 /* line 770, ../scss/font-awesome.scss */
-.icon-signout:before { content: "\f08b"; }
+.icon-signout:before {
+  content: "\f08b";
+}
 
 /* line 773, ../scss/font-awesome.scss */
-.icon-linkedin-sign:before { content: "\f08c"; }
+.icon-linkedin-sign:before {
+  content: "\f08c";
+}
 
 /* line 776, ../scss/font-awesome.scss */
-.icon-pushpin:before { content: "\f08d"; }
+.icon-pushpin:before {
+  content: "\f08d";
+}
 
 /* line 779, ../scss/font-awesome.scss */
-.icon-external-link:before { content: "\f08e"; }
+.icon-external-link:before {
+  content: "\f08e";
+}
 
 /* line 782, ../scss/font-awesome.scss */
-.icon-signin:before { content: "\f090"; }
+.icon-signin:before {
+  content: "\f090";
+}
 
 /* line 785, ../scss/font-awesome.scss */
-.icon-trophy:before { content: "\f091"; }
+.icon-trophy:before {
+  content: "\f091";
+}
 
 /* line 788, ../scss/font-awesome.scss */
-.icon-github-sign:before { content: "\f092"; }
+.icon-github-sign:before {
+  content: "\f092";
+}
 
 /* line 791, ../scss/font-awesome.scss */
-.icon-upload-alt:before { content: "\f093"; }
+.icon-upload-alt:before {
+  content: "\f093";
+}
 
 /* line 794, ../scss/font-awesome.scss */
-.icon-lemon:before { content: "\f094"; }
+.icon-lemon:before {
+  content: "\f094";
+}
 
 /* line 797, ../scss/font-awesome.scss */
-.icon-phone:before { content: "\f095"; }
+.icon-phone:before {
+  content: "\f095";
+}
 
 /* line 801, ../scss/font-awesome.scss */
-.icon-unchecked:before, .icon-check-empty:before { content: "\f096"; }
+.icon-unchecked:before,
+.icon-check-empty:before {
+  content: "\f096";
+}
 
 /* line 804, ../scss/font-awesome.scss */
-.icon-bookmark-empty:before { content: "\f097"; }
+.icon-bookmark-empty:before {
+  content: "\f097";
+}
 
 /* line 807, ../scss/font-awesome.scss */
-.icon-phone-sign:before { content: "\f098"; }
+.icon-phone-sign:before {
+  content: "\f098";
+}
 
 /* line 810, ../scss/font-awesome.scss */
-.icon-twitter:before { content: "\f099"; }
+.icon-twitter:before {
+  content: "\f099";
+}
 
 /* line 813, ../scss/font-awesome.scss */
-.icon-facebook:before { content: "\f09a"; }
+.icon-facebook:before {
+  content: "\f09a";
+}
 
 /* line 816, ../scss/font-awesome.scss */
-.icon-github:before { content: "\f09b"; }
+.icon-github:before {
+  content: "\f09b";
+}
 
 /* line 819, ../scss/font-awesome.scss */
-.icon-unlock:before { content: "\f09c"; }
+.icon-unlock:before {
+  content: "\f09c";
+}
 
 /* line 822, ../scss/font-awesome.scss */
-.icon-credit-card:before { content: "\f09d"; }
+.icon-credit-card:before {
+  content: "\f09d";
+}
 
 /* line 825, ../scss/font-awesome.scss */
-.icon-rss:before { content: "\f09e"; }
+.icon-rss:before {
+  content: "\f09e";
+}
 
 /* line 828, ../scss/font-awesome.scss */
-.icon-hdd:before { content: "\f0a0"; }
+.icon-hdd:before {
+  content: "\f0a0";
+}
 
 /* line 831, ../scss/font-awesome.scss */
-.icon-bullhorn:before { content: "\f0a1"; }
+.icon-bullhorn:before {
+  content: "\f0a1";
+}
 
 /* line 834, ../scss/font-awesome.scss */
-.icon-bell:before { content: "\f0a2"; }
+.icon-bell:before {
+  content: "\f0a2";
+}
 
 /* line 837, ../scss/font-awesome.scss */
-.icon-certificate:before { content: "\f0a3"; }
+.icon-certificate:before {
+  content: "\f0a3";
+}
 
 /* line 840, ../scss/font-awesome.scss */
-.icon-hand-right:before { content: "\f0a4"; }
+.icon-hand-right:before {
+  content: "\f0a4";
+}
 
 /* line 843, ../scss/font-awesome.scss */
-.icon-hand-left:before { content: "\f0a5"; }
+.icon-hand-left:before {
+  content: "\f0a5";
+}
 
 /* line 846, ../scss/font-awesome.scss */
-.icon-hand-up:before { content: "\f0a6"; }
+.icon-hand-up:before {
+  content: "\f0a6";
+}
 
 /* line 849, ../scss/font-awesome.scss */
-.icon-hand-down:before { content: "\f0a7"; }
+.icon-hand-down:before {
+  content: "\f0a7";
+}
 
 /* line 852, ../scss/font-awesome.scss */
-.icon-circle-arrow-left:before { content: "\f0a8"; }
+.icon-circle-arrow-left:before {
+  content: "\f0a8";
+}
 
 /* line 855, ../scss/font-awesome.scss */
-.icon-circle-arrow-right:before { content: "\f0a9"; }
+.icon-circle-arrow-right:before {
+  content: "\f0a9";
+}
 
 /* line 858, ../scss/font-awesome.scss */
-.icon-circle-arrow-up:before { content: "\f0aa"; }
+.icon-circle-arrow-up:before {
+  content: "\f0aa";
+}
 
 /* line 861, ../scss/font-awesome.scss */
-.icon-circle-arrow-down:before { content: "\f0ab"; }
+.icon-circle-arrow-down:before {
+  content: "\f0ab";
+}
 
 /* line 864, ../scss/font-awesome.scss */
-.icon-globe:before { content: "\f0ac"; }
+.icon-globe:before {
+  content: "\f0ac";
+}
 
 /* line 867, ../scss/font-awesome.scss */
-.icon-wrench:before { content: "\f0ad"; }
+.icon-wrench:before {
+  content: "\f0ad";
+}
 
 /* line 870, ../scss/font-awesome.scss */
-.icon-tasks:before { content: "\f0ae"; }
+.icon-tasks:before {
+  content: "\f0ae";
+}
 
 /* line 873, ../scss/font-awesome.scss */
-.icon-filter:before { content: "\f0b0"; }
+.icon-filter:before {
+  content: "\f0b0";
+}
 
 /* line 876, ../scss/font-awesome.scss */
-.icon-briefcase:before { content: "\f0b1"; }
+.icon-briefcase:before {
+  content: "\f0b1";
+}
 
 /* line 879, ../scss/font-awesome.scss */
-.icon-fullscreen:before { content: "\f0b2"; }
+.icon-fullscreen:before {
+  content: "\f0b2";
+}
 
 /* line 882, ../scss/font-awesome.scss */
-.icon-group:before { content: "\f0c0"; }
+.icon-group:before {
+  content: "\f0c0";
+}
 
 /* line 885, ../scss/font-awesome.scss */
-.icon-link:before { content: "\f0c1"; }
+.icon-link:before {
+  content: "\f0c1";
+}
 
 /* line 888, ../scss/font-awesome.scss */
-.icon-cloud:before { content: "\f0c2"; }
+.icon-cloud:before {
+  content: "\f0c2";
+}
 
 /* line 891, ../scss/font-awesome.scss */
-.icon-beaker:before { content: "\f0c3"; }
+.icon-beaker:before {
+  content: "\f0c3";
+}
 
 /* line 894, ../scss/font-awesome.scss */
-.icon-cut:before { content: "\f0c4"; }
+.icon-cut:before {
+  content: "\f0c4";
+}
 
 /* line 897, ../scss/font-awesome.scss */
-.icon-copy:before { content: "\f0c5"; }
+.icon-copy:before {
+  content: "\f0c5";
+}
 
 /* line 901, ../scss/font-awesome.scss */
-.icon-paperclip:before, .icon-paper-clip:before { content: "\f0c6"; }
+.icon-paperclip:before,
+.icon-paper-clip:before {
+  content: "\f0c6";
+}
 
 /* line 904, ../scss/font-awesome.scss */
-.icon-save:before { content: "\f0c7"; }
+.icon-save:before {
+  content: "\f0c7";
+}
 
 /* line 907, ../scss/font-awesome.scss */
-.icon-sign-blank:before { content: "\f0c8"; }
+.icon-sign-blank:before {
+  content: "\f0c8";
+}
 
 /* line 910, ../scss/font-awesome.scss */
-.icon-reorder:before { content: "\f0c9"; }
+.icon-reorder:before {
+  content: "\f0c9";
+}
 
 /* line 913, ../scss/font-awesome.scss */
-.icon-list-ul:before { content: "\f0ca"; }
+.icon-list-ul:before {
+  content: "\f0ca";
+}
 
 /* line 916, ../scss/font-awesome.scss */
-.icon-list-ol:before { content: "\f0cb"; }
+.icon-list-ol:before {
+  content: "\f0cb";
+}
 
 /* line 919, ../scss/font-awesome.scss */
-.icon-strikethrough:before { content: "\f0cc"; }
+.icon-strikethrough:before {
+  content: "\f0cc";
+}
 
 /* line 922, ../scss/font-awesome.scss */
-.icon-underline:before { content: "\f0cd"; }
+.icon-underline:before {
+  content: "\f0cd";
+}
 
 /* line 925, ../scss/font-awesome.scss */
-.icon-table:before { content: "\f0ce"; }
+.icon-table:before {
+  content: "\f0ce";
+}
 
 /* line 928, ../scss/font-awesome.scss */
-.icon-magic:before { content: "\f0d0"; }
+.icon-magic:before {
+  content: "\f0d0";
+}
 
 /* line 931, ../scss/font-awesome.scss */
-.icon-truck:before { content: "\f0d1"; }
+.icon-truck:before {
+  content: "\f0d1";
+}
 
 /* line 934, ../scss/font-awesome.scss */
-.icon-pinterest:before { content: "\f0d2"; }
+.icon-pinterest:before {
+  content: "\f0d2";
+}
 
 /* line 937, ../scss/font-awesome.scss */
-.icon-pinterest-sign:before { content: "\f0d3"; }
+.icon-pinterest-sign:before {
+  content: "\f0d3";
+}
 
 /* line 940, ../scss/font-awesome.scss */
-.icon-google-plus-sign:before { content: "\f0d4"; }
+.icon-google-plus-sign:before {
+  content: "\f0d4";
+}
 
 /* line 943, ../scss/font-awesome.scss */
-.icon-google-plus:before { content: "\f0d5"; }
+.icon-google-plus:before {
+  content: "\f0d5";
+}
 
 /* line 946, ../scss/font-awesome.scss */
-.icon-money:before { content: "\f0d6"; }
+.icon-money:before {
+  content: "\f0d6";
+}
 
 /* line 949, ../scss/font-awesome.scss */
-.icon-caret-down:before { content: "\f0d7"; }
+.icon-caret-down:before {
+  content: "\f0d7";
+}
 
 /* line 952, ../scss/font-awesome.scss */
-.icon-caret-up:before { content: "\f0d8"; }
+.icon-caret-up:before {
+  content: "\f0d8";
+}
 
 /* line 955, ../scss/font-awesome.scss */
-.icon-caret-left:before { content: "\f0d9"; }
+.icon-caret-left:before {
+  content: "\f0d9";
+}
 
 /* line 958, ../scss/font-awesome.scss */
-.icon-caret-right:before { content: "\f0da"; }
+.icon-caret-right:before {
+  content: "\f0da";
+}
 
 /* line 961, ../scss/font-awesome.scss */
-.icon-columns:before { content: "\f0db"; }
+.icon-columns:before {
+  content: "\f0db";
+}
 
 /* line 964, ../scss/font-awesome.scss */
-.icon-sort:before { content: "\f0dc"; }
+.icon-sort:before {
+  content: "\f0dc";
+}
 
 /* line 967, ../scss/font-awesome.scss */
-.icon-sort-down:before { content: "\f0dd"; }
+.icon-sort-down:before {
+  content: "\f0dd";
+}
 
 /* line 970, ../scss/font-awesome.scss */
-.icon-sort-up:before { content: "\f0de"; }
+.icon-sort-up:before {
+  content: "\f0de";
+}
 
 /* line 973, ../scss/font-awesome.scss */
-.icon-envelope:before { content: "\f0e0"; }
+.icon-envelope:before {
+  content: "\f0e0";
+}
 
 /* line 976, ../scss/font-awesome.scss */
-.icon-linkedin:before { content: "\f0e1"; }
+.icon-linkedin:before {
+  content: "\f0e1";
+}
 
 /* line 980, ../scss/font-awesome.scss */
-.icon-rotate-left:before, .icon-undo:before { content: "\f0e2"; }
+.icon-rotate-left:before,
+.icon-undo:before {
+  content: "\f0e2";
+}
 
 /* line 983, ../scss/font-awesome.scss */
-.icon-legal:before { content: "\f0e3"; }
+.icon-legal:before {
+  content: "\f0e3";
+}
 
 /* line 986, ../scss/font-awesome.scss */
-.icon-dashboard:before { content: "\f0e4"; }
+.icon-dashboard:before {
+  content: "\f0e4";
+}
 
 /* line 989, ../scss/font-awesome.scss */
-.icon-comment-alt:before { content: "\f0e5"; }
+.icon-comment-alt:before {
+  content: "\f0e5";
+}
 
 /* line 992, ../scss/font-awesome.scss */
-.icon-comments-alt:before { content: "\f0e6"; }
+.icon-comments-alt:before {
+  content: "\f0e6";
+}
 
 /* line 995, ../scss/font-awesome.scss */
-.icon-bolt:before { content: "\f0e7"; }
+.icon-bolt:before {
+  content: "\f0e7";
+}
 
 /* line 998, ../scss/font-awesome.scss */
-.icon-sitemap:before { content: "\f0e8"; }
+.icon-sitemap:before {
+  content: "\f0e8";
+}
 
 /* line 1001, ../scss/font-awesome.scss */
-.icon-umbrella:before { content: "\f0e9"; }
+.icon-umbrella:before {
+  content: "\f0e9";
+}
 
 /* line 1004, ../scss/font-awesome.scss */
-.icon-paste:before { content: "\f0ea"; }
+.icon-paste:before {
+  content: "\f0ea";
+}
 
 /* line 1007, ../scss/font-awesome.scss */
-.icon-lightbulb:before { content: "\f0eb"; }
+.icon-lightbulb:before {
+  content: "\f0eb";
+}
 
 /* line 1010, ../scss/font-awesome.scss */
-.icon-exchange:before { content: "\f0ec"; }
+.icon-exchange:before {
+  content: "\f0ec";
+}
 
 /* line 1013, ../scss/font-awesome.scss */
-.icon-cloud-download:before { content: "\f0ed"; }
+.icon-cloud-download:before {
+  content: "\f0ed";
+}
 
 /* line 1016, ../scss/font-awesome.scss */
-.icon-cloud-upload:before { content: "\f0ee"; }
+.icon-cloud-upload:before {
+  content: "\f0ee";
+}
 
 /* line 1019, ../scss/font-awesome.scss */
-.icon-user-md:before { content: "\f0f0"; }
+.icon-user-md:before {
+  content: "\f0f0";
+}
 
 /* line 1022, ../scss/font-awesome.scss */
-.icon-stethoscope:before { content: "\f0f1"; }
+.icon-stethoscope:before {
+  content: "\f0f1";
+}
 
 /* line 1025, ../scss/font-awesome.scss */
-.icon-suitcase:before { content: "\f0f2"; }
+.icon-suitcase:before {
+  content: "\f0f2";
+}
 
 /* line 1028, ../scss/font-awesome.scss */
-.icon-bell-alt:before { content: "\f0f3"; }
+.icon-bell-alt:before {
+  content: "\f0f3";
+}
 
 /* line 1031, ../scss/font-awesome.scss */
-.icon-coffee:before { content: "\f0f4"; }
+.icon-coffee:before {
+  content: "\f0f4";
+}
 
 /* line 1034, ../scss/font-awesome.scss */
-.icon-food:before { content: "\f0f5"; }
+.icon-food:before {
+  content: "\f0f5";
+}
 
 /* line 1037, ../scss/font-awesome.scss */
-.icon-file-text-alt:before { content: "\f0f6"; }
+.icon-file-text-alt:before {
+  content: "\f0f6";
+}
 
 /* line 1040, ../scss/font-awesome.scss */
-.icon-building:before { content: "\f0f7"; }
+.icon-building:before {
+  content: "\f0f7";
+}
 
 /* line 1043, ../scss/font-awesome.scss */
-.icon-hospital:before { content: "\f0f8"; }
+.icon-hospital:before {
+  content: "\f0f8";
+}
 
 /* line 1046, ../scss/font-awesome.scss */
-.icon-ambulance:before { content: "\f0f9"; }
+.icon-ambulance:before {
+  content: "\f0f9";
+}
 
 /* line 1049, ../scss/font-awesome.scss */
-.icon-medkit:before { content: "\f0fa"; }
+.icon-medkit:before {
+  content: "\f0fa";
+}
 
 /* line 1052, ../scss/font-awesome.scss */
-.icon-fighter-jet:before { content: "\f0fb"; }
+.icon-fighter-jet:before {
+  content: "\f0fb";
+}
 
 /* line 1055, ../scss/font-awesome.scss */
-.icon-beer:before { content: "\f0fc"; }
+.icon-beer:before {
+  content: "\f0fc";
+}
 
 /* line 1058, ../scss/font-awesome.scss */
-.icon-h-sign:before { content: "\f0fd"; }
+.icon-h-sign:before {
+  content: "\f0fd";
+}
 
 /* line 1061, ../scss/font-awesome.scss */
-.icon-plus-sign-alt:before { content: "\f0fe"; }
+.icon-plus-sign-alt:before {
+  content: "\f0fe";
+}
 
 /* line 1064, ../scss/font-awesome.scss */
-.icon-double-angle-left:before { content: "\f100"; }
+.icon-double-angle-left:before {
+  content: "\f100";
+}
 
 /* line 1067, ../scss/font-awesome.scss */
-.icon-double-angle-right:before { content: "\f101"; }
+.icon-double-angle-right:before {
+  content: "\f101";
+}
 
 /* line 1070, ../scss/font-awesome.scss */
-.icon-double-angle-up:before { content: "\f102"; }
+.icon-double-angle-up:before {
+  content: "\f102";
+}
 
 /* line 1073, ../scss/font-awesome.scss */
-.icon-double-angle-down:before { content: "\f103"; }
+.icon-double-angle-down:before {
+  content: "\f103";
+}
 
 /* line 1076, ../scss/font-awesome.scss */
-.icon-angle-left:before { content: "\f104"; }
+.icon-angle-left:before {
+  content: "\f104";
+}
 
 /* line 1079, ../scss/font-awesome.scss */
-.icon-angle-right:before { content: "\f105"; }
+.icon-angle-right:before {
+  content: "\f105";
+}
 
 /* line 1082, ../scss/font-awesome.scss */
-.icon-angle-up:before { content: "\f106"; }
+.icon-angle-up:before {
+  content: "\f106";
+}
 
 /* line 1085, ../scss/font-awesome.scss */
-.icon-angle-down:before { content: "\f107"; }
+.icon-angle-down:before {
+  content: "\f107";
+}
 
 /* line 1088, ../scss/font-awesome.scss */
-.icon-desktop:before { content: "\f108"; }
+.icon-desktop:before {
+  content: "\f108";
+}
 
 /* line 1091, ../scss/font-awesome.scss */
-.icon-laptop:before { content: "\f109"; }
+.icon-laptop:before {
+  content: "\f109";
+}
 
 /* line 1094, ../scss/font-awesome.scss */
-.icon-tablet:before { content: "\f10a"; }
+.icon-tablet:before {
+  content: "\f10a";
+}
 
 /* line 1097, ../scss/font-awesome.scss */
-.icon-mobile-phone:before { content: "\f10b"; }
+.icon-mobile-phone:before {
+  content: "\f10b";
+}
 
 /* line 1100, ../scss/font-awesome.scss */
-.icon-circle-blank:before { content: "\f10c"; }
+.icon-circle-blank:before {
+  content: "\f10c";
+}
 
 /* line 1103, ../scss/font-awesome.scss */
-.icon-quote-left:before { content: "\f10d"; }
+.icon-quote-left:before {
+  content: "\f10d";
+}
 
 /* line 1106, ../scss/font-awesome.scss */
-.icon-quote-right:before { content: "\f10e"; }
+.icon-quote-right:before {
+  content: "\f10e";
+}
 
 /* line 1109, ../scss/font-awesome.scss */
-.icon-spinner:before { content: "\f110"; }
+.icon-spinner:before {
+  content: "\f110";
+}
 
 /* line 1112, ../scss/font-awesome.scss */
-.icon-circle:before { content: "\f111"; }
+.icon-circle:before {
+  content: "\f111";
+}
 
 /* line 1116, ../scss/font-awesome.scss */
-.icon-mail-reply:before, .icon-reply:before { content: "\f112"; }
+.icon-mail-reply:before,
+.icon-reply:before {
+  content: "\f112";
+}
 
 /* line 1119, ../scss/font-awesome.scss */
-.icon-github-alt:before { content: "\f113"; }
+.icon-github-alt:before {
+  content: "\f113";
+}
 
 /* line 1122, ../scss/font-awesome.scss */
-.icon-folder-close-alt:before { content: "\f114"; }
+.icon-folder-close-alt:before {
+  content: "\f114";
+}
 
 /* line 1125, ../scss/font-awesome.scss */
-.icon-folder-open-alt:before { content: "\f115"; }
+.icon-folder-open-alt:before {
+  content: "\f115";
+}
 
 /* line 1128, ../scss/font-awesome.scss */
-.icon-expand-alt:before { content: "\f116"; }
+.icon-expand-alt:before {
+  content: "\f116";
+}
 
 /* line 1131, ../scss/font-awesome.scss */
-.icon-collapse-alt:before { content: "\f117"; }
+.icon-collapse-alt:before {
+  content: "\f117";
+}
 
 /* line 1134, ../scss/font-awesome.scss */
-.icon-smile:before { content: "\f118"; }
+.icon-smile:before {
+  content: "\f118";
+}
 
 /* line 1137, ../scss/font-awesome.scss */
-.icon-frown:before { content: "\f119"; }
+.icon-frown:before {
+  content: "\f119";
+}
 
 /* line 1140, ../scss/font-awesome.scss */
-.icon-meh:before { content: "\f11a"; }
+.icon-meh:before {
+  content: "\f11a";
+}
 
 /* line 1143, ../scss/font-awesome.scss */
-.icon-gamepad:before { content: "\f11b"; }
+.icon-gamepad:before {
+  content: "\f11b";
+}
 
 /* line 1146, ../scss/font-awesome.scss */
-.icon-keyboard:before { content: "\f11c"; }
+.icon-keyboard:before {
+  content: "\f11c";
+}
 
 /* line 1149, ../scss/font-awesome.scss */
-.icon-flag-alt:before { content: "\f11d"; }
+.icon-flag-alt:before {
+  content: "\f11d";
+}
 
 /* line 1152, ../scss/font-awesome.scss */
-.icon-flag-checkered:before { content: "\f11e"; }
+.icon-flag-checkered:before {
+  content: "\f11e";
+}
 
 /* line 1155, ../scss/font-awesome.scss */
-.icon-terminal:before { content: "\f120"; }
+.icon-terminal:before {
+  content: "\f120";
+}
 
 /* line 1158, ../scss/font-awesome.scss */
-.icon-code:before { content: "\f121"; }
+.icon-code:before {
+  content: "\f121";
+}
 
 /* line 1161, ../scss/font-awesome.scss */
-.icon-reply-all:before { content: "\f122"; }
+.icon-reply-all:before {
+  content: "\f122";
+}
 
 /* line 1164, ../scss/font-awesome.scss */
-.icon-mail-reply-all:before { content: "\f122"; }
+.icon-mail-reply-all:before {
+  content: "\f122";
+}
 
 /* line 1168, ../scss/font-awesome.scss */
-.icon-star-half-full:before, .icon-star-half-empty:before { content: "\f123"; }
+.icon-star-half-full:before,
+.icon-star-half-empty:before {
+  content: "\f123";
+}
 
 /* line 1171, ../scss/font-awesome.scss */
-.icon-location-arrow:before { content: "\f124"; }
+.icon-location-arrow:before {
+  content: "\f124";
+}
 
 /* line 1174, ../scss/font-awesome.scss */
-.icon-crop:before { content: "\f125"; }
+.icon-crop:before {
+  content: "\f125";
+}
 
 /* line 1177, ../scss/font-awesome.scss */
-.icon-code-fork:before { content: "\f126"; }
+.icon-code-fork:before {
+  content: "\f126";
+}
 
 /* line 1180, ../scss/font-awesome.scss */
-.icon-unlink:before { content: "\f127"; }
+.icon-unlink:before {
+  content: "\f127";
+}
 
 /* line 1183, ../scss/font-awesome.scss */
-.icon-question:before { content: "\f128"; }
+.icon-question:before {
+  content: "\f128";
+}
 
 /* line 1186, ../scss/font-awesome.scss */
-.icon-info:before { content: "\f129"; }
+.icon-info:before {
+  content: "\f129";
+}
 
 /* line 1189, ../scss/font-awesome.scss */
-.icon-exclamation:before { content: "\f12a"; }
+.icon-exclamation:before {
+  content: "\f12a";
+}
 
 /* line 1192, ../scss/font-awesome.scss */
-.icon-superscript:before { content: "\f12b"; }
+.icon-superscript:before {
+  content: "\f12b";
+}
 
 /* line 1195, ../scss/font-awesome.scss */
-.icon-subscript:before { content: "\f12c"; }
+.icon-subscript:before {
+  content: "\f12c";
+}
 
 /* line 1198, ../scss/font-awesome.scss */
-.icon-eraser:before { content: "\f12d"; }
+.icon-eraser:before {
+  content: "\f12d";
+}
 
 /* line 1201, ../scss/font-awesome.scss */
-.icon-puzzle-piece:before { content: "\f12e"; }
+.icon-puzzle-piece:before {
+  content: "\f12e";
+}
 
 /* line 1204, ../scss/font-awesome.scss */
-.icon-microphone:before { content: "\f130"; }
+.icon-microphone:before {
+  content: "\f130";
+}
 
 /* line 1207, ../scss/font-awesome.scss */
-.icon-microphone-off:before { content: "\f131"; }
+.icon-microphone-off:before {
+  content: "\f131";
+}
 
 /* line 1210, ../scss/font-awesome.scss */
-.icon-shield:before { content: "\f132"; }
+.icon-shield:before {
+  content: "\f132";
+}
 
 /* line 1213, ../scss/font-awesome.scss */
-.icon-calendar-empty:before { content: "\f133"; }
+.icon-calendar-empty:before {
+  content: "\f133";
+}
 
 /* line 1216, ../scss/font-awesome.scss */
-.icon-fire-extinguisher:before { content: "\f134"; }
+.icon-fire-extinguisher:before {
+  content: "\f134";
+}
 
 /* line 1219, ../scss/font-awesome.scss */
-.icon-rocket:before { content: "\f135"; }
+.icon-rocket:before {
+  content: "\f135";
+}
 
 /* line 1222, ../scss/font-awesome.scss */
-.icon-maxcdn:before { content: "\f136"; }
+.icon-maxcdn:before {
+  content: "\f136";
+}
 
 /* line 1225, ../scss/font-awesome.scss */
-.icon-chevron-sign-left:before { content: "\f137"; }
+.icon-chevron-sign-left:before {
+  content: "\f137";
+}
 
 /* line 1228, ../scss/font-awesome.scss */
-.icon-chevron-sign-right:before { content: "\f138"; }
+.icon-chevron-sign-right:before {
+  content: "\f138";
+}
 
 /* line 1231, ../scss/font-awesome.scss */
-.icon-chevron-sign-up:before { content: "\f139"; }
+.icon-chevron-sign-up:before {
+  content: "\f139";
+}
 
 /* line 1234, ../scss/font-awesome.scss */
-.icon-chevron-sign-down:before { content: "\f13a"; }
+.icon-chevron-sign-down:before {
+  content: "\f13a";
+}
 
 /* line 1237, ../scss/font-awesome.scss */
-.icon-html5:before { content: "\f13b"; }
+.icon-html5:before {
+  content: "\f13b";
+}
 
 /* line 1240, ../scss/font-awesome.scss */
-.icon-css3:before { content: "\f13c"; }
+.icon-css3:before {
+  content: "\f13c";
+}
 
 /* line 1243, ../scss/font-awesome.scss */
-.icon-anchor:before { content: "\f13d"; }
+.icon-anchor:before {
+  content: "\f13d";
+}
 
 /* line 1246, ../scss/font-awesome.scss */
-.icon-unlock-alt:before { content: "\f13e"; }
+.icon-unlock-alt:before {
+  content: "\f13e";
+}
 
 /* line 1249, ../scss/font-awesome.scss */
-.icon-bullseye:before { content: "\f140"; }
+.icon-bullseye:before {
+  content: "\f140";
+}
 
 /* line 1252, ../scss/font-awesome.scss */
-.icon-ellipsis-horizontal:before { content: "\f141"; }
+.icon-ellipsis-horizontal:before {
+  content: "\f141";
+}
 
 /* line 1255, ../scss/font-awesome.scss */
-.icon-ellipsis-vertical:before { content: "\f142"; }
+.icon-ellipsis-vertical:before {
+  content: "\f142";
+}
 
 /* line 1258, ../scss/font-awesome.scss */
-.icon-rss-sign:before { content: "\f143"; }
+.icon-rss-sign:before {
+  content: "\f143";
+}
 
 /* line 1261, ../scss/font-awesome.scss */
-.icon-play-sign:before { content: "\f144"; }
+.icon-play-sign:before {
+  content: "\f144";
+}
 
 /* line 1264, ../scss/font-awesome.scss */
-.icon-ticket:before { content: "\f145"; }
+.icon-ticket:before {
+  content: "\f145";
+}
 
 /* line 1267, ../scss/font-awesome.scss */
-.icon-minus-sign-alt:before { content: "\f146"; }
+.icon-minus-sign-alt:before {
+  content: "\f146";
+}
 
 /* line 1270, ../scss/font-awesome.scss */
-.icon-check-minus:before { content: "\f147"; }
+.icon-check-minus:before {
+  content: "\f147";
+}
 
 /* line 1273, ../scss/font-awesome.scss */
-.icon-level-up:before { content: "\f148"; }
+.icon-level-up:before {
+  content: "\f148";
+}
 
 /* line 1276, ../scss/font-awesome.scss */
-.icon-level-down:before { content: "\f149"; }
+.icon-level-down:before {
+  content: "\f149";
+}
 
 /* line 1279, ../scss/font-awesome.scss */
-.icon-check-sign:before { content: "\f14a"; }
+.icon-check-sign:before {
+  content: "\f14a";
+}
 
 /* line 1282, ../scss/font-awesome.scss */
-.icon-edit-sign:before { content: "\f14b"; }
+.icon-edit-sign:before {
+  content: "\f14b";
+}
 
 /* line 1285, ../scss/font-awesome.scss */
-.icon-external-link-sign:before { content: "\f14c"; }
+.icon-external-link-sign:before {
+  content: "\f14c";
+}
 
 /* line 1288, ../scss/font-awesome.scss */
-.icon-share-sign:before { content: "\f14d"; }
+.icon-share-sign:before {
+  content: "\f14d";
+}
 
 /* line 1291, ../scss/font-awesome.scss */
-.icon-compass:before { content: "\f14e"; }
+.icon-compass:before {
+  content: "\f14e";
+}
 
 /* line 1294, ../scss/font-awesome.scss */
-.icon-collapse:before { content: "\f150"; }
+.icon-collapse:before {
+  content: "\f150";
+}
 
 /* line 1297, ../scss/font-awesome.scss */
-.icon-collapse-top:before { content: "\f151"; }
+.icon-collapse-top:before {
+  content: "\f151";
+}
 
 /* line 1300, ../scss/font-awesome.scss */
-.icon-expand:before { content: "\f152"; }
+.icon-expand:before {
+  content: "\f152";
+}
 
 /* line 1304, ../scss/font-awesome.scss */
-.icon-euro:before, .icon-eur:before { content: "\f153"; }
+.icon-euro:before,
+.icon-eur:before {
+  content: "\f153";
+}
 
 /* line 1307, ../scss/font-awesome.scss */
-.icon-gbp:before { content: "\f154"; }
+.icon-gbp:before {
+  content: "\f154";
+}
 
 /* line 1311, ../scss/font-awesome.scss */
-.icon-dollar:before, .icon-usd:before { content: "\f155"; }
+.icon-dollar:before,
+.icon-usd:before {
+  content: "\f155";
+}
 
 /* line 1315, ../scss/font-awesome.scss */
-.icon-rupee:before, .icon-inr:before { content: "\f156"; }
+.icon-rupee:before,
+.icon-inr:before {
+  content: "\f156";
+}
 
 /* line 1319, ../scss/font-awesome.scss */
-.icon-yen:before, .icon-jpy:before { content: "\f157"; }
+.icon-yen:before,
+.icon-jpy:before {
+  content: "\f157";
+}
 
 /* line 1323, ../scss/font-awesome.scss */
-.icon-renminbi:before, .icon-cny:before { content: "\f158"; }
+.icon-renminbi:before,
+.icon-cny:before {
+  content: "\f158";
+}
 
 /* line 1327, ../scss/font-awesome.scss */
-.icon-won:before, .icon-krw:before { content: "\f159"; }
+.icon-won:before,
+.icon-krw:before {
+  content: "\f159";
+}
 
 /* line 1331, ../scss/font-awesome.scss */
-.icon-bitcoin:before, .icon-btc:before { content: "\f15a"; }
+.icon-bitcoin:before,
+.icon-btc:before {
+  content: "\f15a";
+}
 
 /* line 1334, ../scss/font-awesome.scss */
-.icon-file:before { content: "\f15b"; }
+.icon-file:before {
+  content: "\f15b";
+}
 
 /* line 1337, ../scss/font-awesome.scss */
-.icon-file-text:before { content: "\f15c"; }
+.icon-file-text:before {
+  content: "\f15c";
+}
 
 /* line 1340, ../scss/font-awesome.scss */
-.icon-sort-by-alphabet:before { content: "\f15d"; }
+.icon-sort-by-alphabet:before {
+  content: "\f15d";
+}
 
 /* line 1343, ../scss/font-awesome.scss */
-.icon-sort-by-alphabet-alt:before { content: "\f15e"; }
+.icon-sort-by-alphabet-alt:before {
+  content: "\f15e";
+}
 
 /* line 1346, ../scss/font-awesome.scss */
-.icon-sort-by-attributes:before { content: "\f160"; }
+.icon-sort-by-attributes:before {
+  content: "\f160";
+}
 
 /* line 1349, ../scss/font-awesome.scss */
-.icon-sort-by-attributes-alt:before { content: "\f161"; }
+.icon-sort-by-attributes-alt:before {
+  content: "\f161";
+}
 
 /* line 1352, ../scss/font-awesome.scss */
-.icon-sort-by-order:before { content: "\f162"; }
+.icon-sort-by-order:before {
+  content: "\f162";
+}
 
 /* line 1355, ../scss/font-awesome.scss */
-.icon-sort-by-order-alt:before { content: "\f163"; }
+.icon-sort-by-order-alt:before {
+  content: "\f163";
+}
 
 /* line 1358, ../scss/font-awesome.scss */
-.icon-thumbs-up:before { content: "\f164"; }
+.icon-thumbs-up:before {
+  content: "\f164";
+}
 
 /* line 1361, ../scss/font-awesome.scss */
-.icon-thumbs-down:before { content: "\f165"; }
+.icon-thumbs-down:before {
+  content: "\f165";
+}
 
 /* line 1364, ../scss/font-awesome.scss */
-.icon-youtube-sign:before { content: "\f166"; }
+.icon-youtube-sign:before {
+  content: "\f166";
+}
 
 /* line 1367, ../scss/font-awesome.scss */
-.icon-youtube:before { content: "\f167"; }
+.icon-youtube:before {
+  content: "\f167";
+}
 
 /* line 1370, ../scss/font-awesome.scss */
-.icon-xing:before { content: "\f168"; }
+.icon-xing:before {
+  content: "\f168";
+}
 
 /* line 1373, ../scss/font-awesome.scss */
-.icon-xing-sign:before { content: "\f169"; }
+.icon-xing-sign:before {
+  content: "\f169";
+}
 
 /* line 1376, ../scss/font-awesome.scss */
-.icon-youtube-play:before { content: "\f16a"; }
+.icon-youtube-play:before {
+  content: "\f16a";
+}
 
 /* line 1379, ../scss/font-awesome.scss */
-.icon-dropbox:before { content: "\f16b"; }
+.icon-dropbox:before {
+  content: "\f16b";
+}
 
 /* line 1382, ../scss/font-awesome.scss */
-.icon-stackexchange:before { content: "\f16c"; }
+.icon-stackexchange:before {
+  content: "\f16c";
+}
 
 /* line 1385, ../scss/font-awesome.scss */
-.icon-instagram:before { content: "\f16d"; }
+.icon-instagram:before {
+  content: "\f16d";
+}
 
 /* line 1388, ../scss/font-awesome.scss */
-.icon-flickr:before { content: "\f16e"; }
+.icon-flickr:before {
+  content: "\f16e";
+}
 
 /* line 1391, ../scss/font-awesome.scss */
-.icon-adn:before { content: "\f170"; }
+.icon-adn:before {
+  content: "\f170";
+}
 
 /* line 1394, ../scss/font-awesome.scss */
-.icon-bitbucket:before { content: "\f171"; }
+.icon-bitbucket:before {
+  content: "\f171";
+}
 
 /* line 1397, ../scss/font-awesome.scss */
-.icon-bitbucket-sign:before { content: "\f172"; }
+.icon-bitbucket-sign:before {
+  content: "\f172";
+}
 
 /* line 1400, ../scss/font-awesome.scss */
-.icon-tumblr:before { content: "\f173"; }
+.icon-tumblr:before {
+  content: "\f173";
+}
 
 /* line 1403, ../scss/font-awesome.scss */
-.icon-tumblr-sign:before { content: "\f174"; }
+.icon-tumblr-sign:before {
+  content: "\f174";
+}
 
 /* line 1406, ../scss/font-awesome.scss */
-.icon-long-arrow-down:before { content: "\f175"; }
+.icon-long-arrow-down:before {
+  content: "\f175";
+}
 
 /* line 1409, ../scss/font-awesome.scss */
-.icon-long-arrow-up:before { content: "\f176"; }
+.icon-long-arrow-up:before {
+  content: "\f176";
+}
 
 /* line 1412, ../scss/font-awesome.scss */
-.icon-long-arrow-left:before { content: "\f177"; }
+.icon-long-arrow-left:before {
+  content: "\f177";
+}
 
 /* line 1415, ../scss/font-awesome.scss */
-.icon-long-arrow-right:before { content: "\f178"; }
+.icon-long-arrow-right:before {
+  content: "\f178";
+}
 
 /* line 1418, ../scss/font-awesome.scss */
-.icon-apple:before { content: "\f179"; }
+.icon-apple:before {
+  content: "\f179";
+}
 
 /* line 1421, ../scss/font-awesome.scss */
-.icon-windows:before { content: "\f17a"; }
+.icon-windows:before {
+  content: "\f17a";
+}
 
 /* line 1424, ../scss/font-awesome.scss */
-.icon-android:before { content: "\f17b"; }
+.icon-android:before {
+  content: "\f17b";
+}
 
 /* line 1427, ../scss/font-awesome.scss */
-.icon-linux:before { content: "\f17c"; }
+.icon-linux:before {
+  content: "\f17c";
+}
 
 /* line 1430, ../scss/font-awesome.scss */
-.icon-dribble:before { content: "\f17d"; }
+.icon-dribble:before {
+  content: "\f17d";
+}
 
 /* line 1433, ../scss/font-awesome.scss */
-.icon-skype:before { content: "\f17e"; }
+.icon-skype:before {
+  content: "\f17e";
+}
 
 /* line 1436, ../scss/font-awesome.scss */
-.icon-foursquare:before { content: "\f180"; }
+.icon-foursquare:before {
+  content: "\f180";
+}
 
 /* line 1439, ../scss/font-awesome.scss */
-.icon-trello:before { content: "\f181"; }
+.icon-trello:before {
+  content: "\f181";
+}
 
 /* line 1442, ../scss/font-awesome.scss */
-.icon-female:before { content: "\f182"; }
+.icon-female:before {
+  content: "\f182";
+}
 
 /* line 1445, ../scss/font-awesome.scss */
-.icon-male:before { content: "\f183"; }
+.icon-male:before {
+  content: "\f183";
+}
 
 /* line 1448, ../scss/font-awesome.scss */
-.icon-gittip:before { content: "\f184"; }
+.icon-gittip:before {
+  content: "\f184";
+}
 
 /* line 1451, ../scss/font-awesome.scss */
-.icon-sun:before { content: "\f185"; }
+.icon-sun:before {
+  content: "\f185";
+}
 
 /* line 1454, ../scss/font-awesome.scss */
-.icon-moon:before { content: "\f186"; }
+.icon-moon:before {
+  content: "\f186";
+}
 
 /* line 1457, ../scss/font-awesome.scss */
-.icon-archive:before { content: "\f187"; }
+.icon-archive:before {
+  content: "\f187";
+}
 
 /* line 1460, ../scss/font-awesome.scss */
-.icon-bug:before { content: "\f188"; }
+.icon-bug:before {
+  content: "\f188";
+}
 
 /* line 1463, ../scss/font-awesome.scss */
-.icon-vk:before { content: "\f189"; }
+.icon-vk:before {
+  content: "\f189";
+}
 
 /* line 1466, ../scss/font-awesome.scss */
-.icon-weibo:before { content: "\f18a"; }
+.icon-weibo:before {
+  content: "\f18a";
+}
 
 /* line 1469, ../scss/font-awesome.scss */
-.icon-renren:before { content: "\f18b"; }
+.icon-renren:before {
+  content: "\f18b";
+}
 
 /* line 27, ../scss/style.scss */
-a { color: #737373; -webkit-transition: all 0.25s ease; -moz-transition: all 0.25s ease; -o-transition: all 0.25s ease; }
+a {
+  color: #737373;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+}
 /* line 33, ../scss/style.scss */
-a:hover { text-decoration: none; }
+a:hover {
+  text-decoration: none;
+}
 
 /* line 38, ../scss/style.scss */
-h1, h2, h3 { line-height: 1em; }
+h1, h2, h3 {
+  line-height: 1em;
+}
 
 /* line 40, ../scss/style.scss */
-h3 { font: 300 18px "Raleway"; margin: 0 0 20px; font-weight: normal; line-height: 1em; }
+h3 {
+  font: 300 18px "Raleway";
+  margin: 0 0 20px;
+  font-weight: normal;
+  line-height: 1em;
+  height: 36px;
+}
 
-/* line 47, ../scss/style.scss */
-h4 { font: 200 18px "Raleway"; }
+/* line 48, ../scss/style.scss */
+h4 {
+  font: 200 18px "Raleway";
+}
 
-/* line 51, ../scss/style.scss */
-body { background: #ededed; color: #686868; font: 14px HelveticaNeue, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; line-height: 24px; }
+/* line 52, ../scss/style.scss */
+body {
+  background: #ededed;
+  color: #686868;
+  font: 12px HelveticaNeue, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  line-height: 21px;
+}
 
-/* line 58, ../scss/style.scss */
-.container-fluid { padding-right: 0; padding-left: 0; }
+/* line 59, ../scss/style.scss */
+.container-fluid {
+  padding-right: 0;
+  padding-left: 0;
+}
 
-/* line 63, ../scss/style.scss */
-header { background: url("../images/header.jpg") no-repeat 50% 50%; background-size: cover; height: 322px; width: 100%; display: table; overflow: hidden; z-index: -1; }
-/* line 71, ../scss/style.scss */
-header .content { display: table-cell; vertical-align: middle; text-align: center; }
-/* line 76, ../scss/style.scss */
-header a { background: url("../images/krisallen.png") no-repeat center center; background-size: 100%; height: 72px; width: 90%; max-width: 400px; text-indent: -9999px; display: block; text-align: center; margin: auto; }
+/* line 64, ../scss/style.scss */
+header {
+  background: url("../images/header.jpg") no-repeat 50% 50%;
+  background-size: cover;
+  height: 322px;
+  width: 100%;
+  display: table;
+  overflow: hidden;
+  z-index: -1;
+}
+/* line 72, ../scss/style.scss */
+header .content {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+/* line 77, ../scss/style.scss */
+header a {
+  background: url("../images/krisallen.png") no-repeat center center;
+  background-size: 100%;
+  height: 72px;
+  width: 90%;
+  max-width: 400px;
+  text-indent: -9999px;
+  display: block;
+  text-align: center;
+  margin: auto;
+}
 
-/* line 90, ../scss/style.scss */
-.fixed { position: fixed; top: 0; }
+/* line 91, ../scss/style.scss */
+.fixed {
+  position: fixed;
+  top: 0;
+}
 
-/* line 95, ../scss/style.scss */
-nav { background: #fff; width: 100%; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); position: relative; z-index: 20; }
-/* line 101, ../scss/style.scss */
-nav ul { margin: 0px; padding: 0px; margin: 0 auto; text-align: center; }
-/* line 106, ../scss/style.scss */
-nav ul li { text-transform: uppercase; color: #b3b3b3; letter-spacing: 0.2em; display: inline-block; list-style: none; }
-/* line 112, ../scss/style.scss */
-nav ul li a { padding: 23px 0; width: 150px; display: block; font: 300 16px "Raleway"; }
-/* line 117, ../scss/style.scss */
-nav ul li a:hover { font-weight: 400; }
+/* line 96, ../scss/style.scss */
+nav {
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 20;
+}
+/* line 102, ../scss/style.scss */
+nav ul {
+  margin: 0px;
+  padding: 0px;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 107, ../scss/style.scss */
+nav ul li {
+  text-transform: uppercase;
+  color: #b3b3b3;
+  letter-spacing: 0.2em;
+  display: inline-block;
+  list-style: none;
+}
+/* line 113, ../scss/style.scss */
+nav ul li a {
+  padding: 23px 0;
+  width: 150px;
+  display: block;
+  font: 300 16px "Raleway";
+}
+/* line 118, ../scss/style.scss */
+nav ul li a:hover {
+  font-weight: 400;
+}
 
-/* line 125, ../scss/style.scss */
-#main { background: #ededed; padding: 60px 0 0; margin: 0 0; }
+/* line 126, ../scss/style.scss */
+#main {
+  background: #ededed;
+  padding: 60px 0 0;
+  margin: 0 0;
+}
 
-/* line 127, ../scss/style.scss */
-#news { width: 100%; overflow: hidden; position: relative; margin: 0px; }
-/* line 132, ../scss/style.scss */
-#news .scrollarea { width: 2000px; }
-/* line 135, ../scss/style.scss */
-#news article { background: #fff; width: 545px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); display: inline-block; margin: 0 0 60px 60px; -webkit-transition: all 0.25s ease; -moz-transition: all 0.25s ease; -o-transition: all 0.25s ease; }
-/* line 145, ../scss/style.scss */
-#news article p { color: #acacac; -webkit-transition: all 0.25s ease; -moz-transition: all 0.25s ease; -o-transition: all 0.25s ease; }
-/* line 153, ../scss/style.scss */
-#news article .img div { height: 307px; background-position: center center; background-size: cover; background-size: 110%; -webkit-transition: all 0.25s ease; -moz-transition: all 0.25s ease; -o-transition: all 0.25s ease; }
+/* line 128, ../scss/style.scss */
+#news {
+  margin: 60px 0 0 0;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+/* line 133, ../scss/style.scss */
+#news .scrollarea {
+  width: 2000px;
+}
+/* line 136, ../scss/style.scss */
+#news article {
+  background: #fff;
+  width: 400px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  margin: 0 0 40px 40px;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+}
+/* line 146, ../scss/style.scss */
+#news article p {
+  color: #acacac;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+}
+/* line 154, ../scss/style.scss */
+#news article .img div {
+  height: 307px;
+  background-position: center center;
+  background-size: cover;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+}
 /* line 164, ../scss/style.scss */
-#news article section { padding: 40px 30px 30px 30px; min-height: 230px; }
-/* line 168, ../scss/style.scss */
-#news article .article-footer { padding: 10px 0; font-size: 0.7em; border-top: 1px solid #e8e8e8; zoom: 1; font-size: 10px; width: 90%; margin: 10px auto; height: 42px; }
-/* line 177, ../scss/style.scss */
-#news article .article-footer div { float: left; padding-left: 10px; margin-right: 10px; border-left: 1px solid #e8e8e8; }
-/* line 182, ../scss/style.scss */
-#news article .article-footer div:first-child { border-left: 0px; padding-left: 0px; }
-/* line 186, ../scss/style.scss */
-#news article .article-footer div span { color: #404040; padding: 0 7px; margin: 0 5px 0 0; display: inline-block; border: 1px solid #e5e5e5; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; background-color: #f5f5f5; }
-/* line 199, ../scss/style.scss */
-#news article .article-footer i { font-size: 10px; }
-/* line 203, ../scss/style.scss */
-#news article:hover { box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
-/* line 205, ../scss/style.scss */
-#news article:hover p { color: #808080; }
-/* line 208, ../scss/style.scss */
-#news article:hover .img div { opacity: 0.8; }
+#news article section {
+  padding: 40px 30px 30px 30px;
+}
+/* line 167, ../scss/style.scss */
+#news article .article-footer {
+  padding: 8px 0;
+  font-size: 0.7em;
+  border-top: 1px solid #e8e8e8;
+  zoom: 1;
+  font-size: 10px;
+  width: 90%;
+  margin: 10px auto;
+  height: 30px;
+}
+/* line 176, ../scss/style.scss */
+#news article .article-footer div {
+  float: left;
+  padding-left: 10px;
+  margin-right: 10px;
+  border-left: 1px solid #e8e8e8;
+}
+/* line 181, ../scss/style.scss */
+#news article .article-footer div:first-child {
+  border-left: none;
+}
+/* line 184, ../scss/style.scss */
+#news article .article-footer div span {
+  color: #404040;
+  padding: 0 7px;
+  display: inline-block;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+/* line 196, ../scss/style.scss */
+#news article:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+/* line 198, ../scss/style.scss */
+#news article:hover p {
+  color: #808080;
+}
+/* line 201, ../scss/style.scss */
+#news article:hover .img div {
+  opacity: 0.8;
+}
 
-/* line 217, ../scss/style.scss */
-#archive .archive article { margin: 0 0.85% 60px; width: 450px; }
+/* line 210, ../scss/style.scss */
+#archive .archive article {
+  margin: 0 0.85% 60px;
+  width: 450px;
+}
+/* line 213, ../scss/style.scss */
+#archive .archive article .excerpt {
+  height: 60px;
+  overflow: hidden;
+  margin: 0 0 10px;
+}
 /* line 220, ../scss/style.scss */
-#archive .archive article .excerpt { height: 60px; overflow: hidden; margin: 0 0 10px; }
-/* line 227, ../scss/style.scss */
-#archive article { background: #fff; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); display: inline-block; -webkit-transition: all 0.25s ease; -moz-transition: all 0.25s ease; -o-transition: all 0.25s ease; }
-/* line 235, ../scss/style.scss */
-#archive article p { color: #acacac; -webkit-transition: all 0.25s ease; -moz-transition: all 0.25s ease; -o-transition: all 0.25s ease; }
-/* line 243, ../scss/style.scss */
-#archive article .img div { height: 307px; background-position: center center; background-size: cover; -webkit-transition: all 0.25s ease; -moz-transition: all 0.25s ease; -o-transition: all 0.25s ease; }
-/* line 253, ../scss/style.scss */
-#archive article section { padding: 40px 30px 30px 30px; }
-/* line 256, ../scss/style.scss */
-#archive article .article-footer { padding: 8px 0; font-size: 0.7em; border-top: 1px solid #e8e8e8; zoom: 1; font-size: 10px; width: 90%; margin: 10px auto; height: 30px; }
-/* line 265, ../scss/style.scss */
-#archive article .article-footer div { float: left; padding-left: 10px; margin-right: 10px; border-left: 1px solid #e8e8e8; }
-/* line 270, ../scss/style.scss */
-#archive article .article-footer div:first-child { border-left: none; }
-/* line 273, ../scss/style.scss */
-#archive article .article-footer div span { color: #404040; padding: 0 7px; display: inline-block; border: 1px solid #e5e5e5; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; background-color: #f5f5f5; }
-/* line 285, ../scss/style.scss */
-#archive article:hover { box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); }
-/* line 287, ../scss/style.scss */
-#archive article:hover p { color: #808080; }
-/* line 290, ../scss/style.scss */
-#archive article:hover .img div { opacity: 0.8; }
+#archive article {
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+}
+/* line 228, ../scss/style.scss */
+#archive article p {
+  color: #acacac;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+}
+/* line 236, ../scss/style.scss */
+#archive article .img div {
+  height: 307px;
+  background-position: center center;
+  background-size: cover;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+}
+/* line 246, ../scss/style.scss */
+#archive article section {
+  padding: 40px 30px 30px 30px;
+}
+/* line 249, ../scss/style.scss */
+#archive article .article-footer {
+  padding: 8px 0;
+  font-size: 0.7em;
+  border-top: 1px solid #e8e8e8;
+  zoom: 1;
+  font-size: 10px;
+  width: 90%;
+  margin: 10px auto;
+  height: 30px;
+}
+/* line 258, ../scss/style.scss */
+#archive article .article-footer div {
+  float: left;
+  padding-left: 10px;
+  margin-right: 10px;
+  border-left: 1px solid #e8e8e8;
+}
+/* line 263, ../scss/style.scss */
+#archive article .article-footer div:first-child {
+  border-left: none;
+}
+/* line 266, ../scss/style.scss */
+#archive article .article-footer div span {
+  color: #404040;
+  padding: 0 7px;
+  display: inline-block;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+/* line 278, ../scss/style.scss */
+#archive article:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+/* line 280, ../scss/style.scss */
+#archive article:hover p {
+  color: #808080;
+}
+/* line 283, ../scss/style.scss */
+#archive article:hover .img div {
+  opacity: 0.8;
+}
 
-/* line 298, ../scss/style.scss */
-.post-type-archive-tour #tour { margin: 0 auto 60px; }
-/* line 300, ../scss/style.scss */
-.post-type-archive-tour #tour .table { background: #fff; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); color: gray; }
+/* line 291, ../scss/style.scss */
+.post-type-archive-tour #tour {
+  margin: 0 auto 60px;
+}
+/* line 293, ../scss/style.scss */
+.post-type-archive-tour #tour .table {
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  color: gray;
+}
+/* line 297, ../scss/style.scss */
+.post-type-archive-tour #tour .table .title {
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase;
+  font: 300 18px "Raleway";
+  font-size: 2em;
+}
 /* line 304, ../scss/style.scss */
-.post-type-archive-tour #tour .table .title { text-align: center; font-weight: 100; text-transform: uppercase; font: 300 18px "Raleway"; font-size: 2em; }
-/* line 311, ../scss/style.scss */
-.post-type-archive-tour #tour .table th { text-transform: uppercase; }
-/* line 314, ../scss/style.scss */
-.post-type-archive-tour #tour .table td { font-family: "Raleway"; font-weight: 300; font-size: 1.2em; padding: 25px 10px; }
+.post-type-archive-tour #tour .table th {
+  text-transform: uppercase;
+}
+/* line 307, ../scss/style.scss */
+.post-type-archive-tour #tour .table td {
+  font-family: "Raleway";
+  font-weight: 300;
+  font-size: 1.2em;
+  padding: 25px 10px;
+}
 
+/* line 318, ../scss/style.scss */
+#post article {
+  margin: 0px auto 50px auto;
+  width: 100%;
+}
+/* line 321, ../scss/style.scss */
+#post article .media {
+  min-height: 300px;
+  text-align: center;
+  background: #111;
+}
 /* line 325, ../scss/style.scss */
-#post article { margin: 0px auto 50px auto; width: 100%; }
-/* line 328, ../scss/style.scss */
-#post article .media { min-height: 300px; text-align: center; background: #111; }
-/* line 332, ../scss/style.scss */
-#post article .media img { height: 100%; width: auto; }
-/* line 337, ../scss/style.scss */
-#post article .post-text { color: #acacac; padding: 40px 30px 30px 30px; background: #fff; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); display: inline-block; -webkit-transition: all 0.25s ease; -moz-transition: all 0.25s ease; -o-transition: all 0.25s ease; }
-/* line 346, ../scss/style.scss */
-#post article .post-text .divider { display: block; border-top: 1px solid #b8b8b8; width: 60px; margin: 15px 0; }
-/* line 352, ../scss/style.scss */
-#post article .post-text .video-post .post-format-content { display: none; }
-/* line 355, ../scss/style.scss */
-#post article .post-text .article-footer { padding: 8px 0; font-size: 0.7em; border-top: 1px solid #e8e8e8; zoom: 1; font-size: 10px; }
-/* line 361, ../scss/style.scss */
-#post article .post-text .article-footer div { float: left; padding-left: 10px; margin-right: 10px; border-left: 1px solid #e8e8e8; }
-/* line 366, ../scss/style.scss */
-#post article .post-text .article-footer div:first-child { border-left: none; }
-/* line 369, ../scss/style.scss */
-#post article .post-text .article-footer div span { color: #404040; padding: 0 7px; display: inline-block; border: 1px solid #e5e5e5; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; background-color: #f5f5f5; }
-/* line 382, ../scss/style.scss */
-#post article .post-social { margin-left: 0; }
-/* line 384, ../scss/style.scss */
-#post article .post-social .row { margin-left: 0; }
-/* line 386, ../scss/style.scss */
-#post article .post-social .row a { background: #303030; display: block; position: relative; float: left; width: 146px; height: 130px; border-bottom: 1px solid; border-right: 1px solid; }
-/* line 395, ../scss/style.scss */
-#post article .post-social .row a:hover .icon-2x { color: #08c; }
-/* line 396, ../scss/style.scss */
-#post article .post-social .row a .icon-2x { color: #f1f1f1; position: absolute; top: 50%; left: 50%; margin-top: -12px; transition: all 0.5s ease; }
-/* line 404, ../scss/style.scss */
-#post article .post-social .row a .icon-angle-right { margin-left: -5px; }
-/* line 405, ../scss/style.scss */
-#post article .post-social .row a .icon-angle-left { margin-left: -5px; }
-/* line 406, ../scss/style.scss */
-#post article .post-social .row a .icon-facebook { margin-left: -5px; }
+#post article .media img {
+  height: 100%;
+  width: auto;
+}
+/* line 330, ../scss/style.scss */
+#post article .post-text {
+  color: #acacac;
+  padding: 40px 30px 30px 30px;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+}
+/* line 339, ../scss/style.scss */
+#post article .post-text .divider {
+  display: block;
+  border-top: 1px solid #b8b8b8;
+  width: 60px;
+  margin: 15px 0;
+}
+/* line 345, ../scss/style.scss */
+#post article .post-text .video-post .post-format-content {
+  display: none;
+}
+/* line 348, ../scss/style.scss */
+#post article .post-text .article-footer {
+  padding: 8px 0;
+  font-size: 0.7em;
+  border-top: 1px solid #e8e8e8;
+  zoom: 1;
+  font-size: 10px;
+}
+/* line 354, ../scss/style.scss */
+#post article .post-text .article-footer div {
+  float: left;
+  padding-left: 10px;
+  margin-right: 10px;
+  border-left: 1px solid #e8e8e8;
+}
+/* line 359, ../scss/style.scss */
+#post article .post-text .article-footer div:first-child {
+  border-left: none;
+}
+/* line 362, ../scss/style.scss */
+#post article .post-text .article-footer div span {
+  color: #404040;
+  padding: 0 7px;
+  display: inline-block;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+/* line 375, ../scss/style.scss */
+#post article .post-social {
+  margin-left: 0;
+}
+/* line 377, ../scss/style.scss */
+#post article .post-social .row {
+  margin-left: 0;
+}
+/* line 379, ../scss/style.scss */
+#post article .post-social .row a {
+  background: #303030;
+  display: block;
+  position: relative;
+  float: left;
+  width: 146px;
+  height: 130px;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+}
+/* line 388, ../scss/style.scss */
+#post article .post-social .row a:hover .icon-2x {
+  color: #08c;
+}
+/* line 389, ../scss/style.scss */
+#post article .post-social .row a .icon-2x {
+  color: #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -12px;
+  transition: all 0.5s ease;
+}
+/* line 397, ../scss/style.scss */
+#post article .post-social .row a .icon-angle-right {
+  margin-left: -5px;
+}
+/* line 398, ../scss/style.scss */
+#post article .post-social .row a .icon-angle-left {
+  margin-left: -5px;
+}
+/* line 399, ../scss/style.scss */
+#post article .post-social .row a .icon-facebook {
+  margin-left: -5px;
+}
+/* line 400, ../scss/style.scss */
+#post article .post-social .row a .icon-twitter {
+  margin-left: -13px;
+}
+
 /* line 407, ../scss/style.scss */
-#post article .post-social .row a .icon-twitter { margin-left: -13px; }
+footer.footer {
+  background: white;
+  padding: 20px 0 5px;
+}
+/* line 411, ../scss/style.scss */
+footer.footer .pull-right a {
+  font-size: 16px;
+  margin: 0 10px;
+}
+/* line 415, ../scss/style.scss */
+footer.footer .pull-right a:hover .icon-rss {
+  color: #80B719;
+}
 
-/* line 414, ../scss/style.scss */
-footer.footer { background: white; padding: 20px 0 5px; }
-/* line 418, ../scss/style.scss */
-footer.footer .pull-right a { font-size: 16px; margin: 0 10px; }
-/* line 422, ../scss/style.scss */
-footer.footer .pull-right a:hover .icon-rss { color: #80B719; }
+/* line 423, ../scss/style.scss */
+.next {
+  width: 40px;
+  height: 60px;
+  background: white url("../images/arrow-r.png") no-repeat center center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  right: 0;
+  z-index: 5;
+  top: 50%;
+  margin: -30px 0 0 0;
+}
 
+/* line 435, ../scss/style.scss */
+#social {
+  width: 100%;
+  overflow: auto;
+  background: #fff;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
 /* line 440, ../scss/style.scss */
-.next { width: 40px; height: 60px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); position: absolute; z-index: 5; top: 50%; margin: -30px 0 0 0; background: white url("../images/arrow-r.png") no-repeat center center; right: 0; }
-
+#social .embed {
+  /*background: #f2f2f2;*/
+  margin: 0 0 0 94px;
+  height: 185px;
+  position: relative;
+}
 /* line 446, ../scss/style.scss */
-.prev { width: 40px; height: 60px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); position: absolute; z-index: 5; top: 50%; margin: -30px 0 0 0; background: white url("../images/arrow-l.png") no-repeat center center; left: 0; }
-
-/* line 454, ../scss/style.scss */
-#social { width: 100%; overflow: auto; background: #fff; box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); }
-/* line 459, ../scss/style.scss */
-#social .embed { /*background: #f2f2f2;*/ margin: 0 0 0 94px; height: 185px; position: relative; }
-/* line 465, ../scss/style.scss */
-#social .facebook { background: url("../images/fb.jpg") no-repeat left top; background-size: auto; }
-/* line 466, ../scss/style.scss */
-#social .instagram { background: url("../images/in.jpg") no-repeat left top; background-size: auto; }
-/* line 468, ../scss/style.scss */
-#social .instagram .embed { padding: 0 0 5px; }
-/* line 469, ../scss/style.scss */
-#social .instagram .scrollarea { width: 500px; }
-/* line 472, ../scss/style.scss */
-#social .instagram article { height: 185px; width: 185px; float: left; margin: 0 20px 0 0; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); position: relative; }
+#social .facebook {
+  background: url("../images/fb.jpg") no-repeat left top;
+  background-size: auto;
+}
+/* line 447, ../scss/style.scss */
+#social .instagram {
+  background: url("../images/in.jpg") no-repeat left top;
+  background-size: auto;
+}
+/* line 449, ../scss/style.scss */
+#social .instagram .embed {
+  padding: 0 0 5px;
+}
+/* line 450, ../scss/style.scss */
+#social .instagram .scrollarea {
+  width: 500px;
+}
+/* line 453, ../scss/style.scss */
+#social .instagram article {
+  height: 185px;
+  width: 185px;
+  float: left;
+  margin: 0 20px 0 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+/* line 460, ../scss/style.scss */
+#social .instagram article p {
+  position: absolute;
+  background: #fff;
+  display: block;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  bottom: -185px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+/* line 474, ../scss/style.scss */
+#social .instagram article:hover p {
+  bottom: 0;
+}
 /* line 479, ../scss/style.scss */
-#social .instagram article p { position: absolute; background: #fff; display: block; padding: 10px; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); margin: 0; bottom: -185px; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -o-transition: all 0.5s ease; }
-/* line 493, ../scss/style.scss */
-#social .instagram article:hover p { bottom: 0; }
-/* line 498, ../scss/style.scss */
-#social .instagram img { height: 185px; }
-/* line 502, ../scss/style.scss */
-#social .twitter { background: url("../images/tw.jpg") no-repeat left top; background-size: auto; }
+#social .instagram img {
+  height: 185px;
+}
+/* line 483, ../scss/style.scss */
+#social .twitter {
+  background: url("../images/tw.jpg") no-repeat left top;
+  background-size: auto;
+}
 
-/* line 504, ../scss/style.scss */
-#social > div { width: 29%; margin: 50px 0 50px 50px; float: left; overflow: hidden; }
+/* line 485, ../scss/style.scss */
+#social > div {
+  width: 29%;
+  margin: 50px 0 50px 50px;
+  float: left;
+  overflow: hidden;
+}
 
 /* Twitter */
-/* line 513, ../scss/style.scss */
-#social .twitter .tweet_list { padding: 0px; margin: 0px; list-style: none; }
+/* line 494, ../scss/style.scss */
+#social .twitter .tweet_list {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
 
-/* line 519, ../scss/style.scss */
-#social .twitter .tweet_list li { margin: 0 0 20px; }
+/* line 500, ../scss/style.scss */
+#social .twitter .tweet_list li {
+  margin: 0 0 20px;
+}
 
-/* line 523, ../scss/style.scss */
-#social .twitter .tweet_text { color: #acacac; }
+/* line 504, ../scss/style.scss */
+#social .twitter .tweet_text {
+  color: #acacac;
+}
 
-/* line 524, ../scss/style.scss */
-#social .twitter .tweet_time { display: block; margin: 0 0 5px; }
+/* line 505, ../scss/style.scss */
+#social .twitter .tweet_time {
+  display: block;
+  margin: 0 0 5px;
+  font-size: 12px;
+  font-style: italic;
+}
 
-/* line 526, ../scss/style.scss */
-#events { margin: 60px; width: auto !important; }
-/* line 529, ../scss/style.scss */
-#events .eventsnext { display: block; width: 30px; height: 60px; background: #fff; color: #111; position: absolute; right: 0; margin-top: 45px; }
+/* line 507, ../scss/style.scss */
+#events {
+  margin: 60px;
+  width: auto !important;
+}
+/* line 510, ../scss/style.scss */
+#events .eventsnext {
+  display: block;
+  width: 30px;
+  height: 60px;
+  background: #fff;
+  color: #111;
+  position: absolute;
+  right: 0;
+  margin-top: 45px;
+}
 
-/* line 541, ../scss/style.scss */
-#events section { background: #fff; box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); display: inline-block; width: 300px; height: 160px; padding: 30px; margin: 0 30px 30px 0; position: relative; }
+/* line 522, ../scss/style.scss */
+#events section {
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  width: 300px;
+  height: 160px;
+  padding: 30px;
+  margin: 0 30px 30px 0;
+  position: relative;
+}
 
-/* line 552, ../scss/style.scss */
-#events h3, #events h4 { font-size: 18px; margin: 0px; }
+/* line 533, ../scss/style.scss */
+#events h3, #events h4 {
+  font-size: 18px;
+  margin: 0px;
+}
 
-/* line 557, ../scss/style.scss */
-#events p { display: block; position: absolute; bottom: 30px; margin: 0px; color: #acacac; -webkit-transition: all 0.25s ease; -moz-transition: all 0.25s ease; -o-transition: all 0.25s ease; }
+/* line 538, ../scss/style.scss */
+#events p {
+  display: block;
+  position: absolute;
+  bottom: 30px;
+  margin: 0px;
+  color: #acacac;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+}
 
-/* line 569, ../scss/style.scss */
-#events section:hover p { color: #808080; }
+/* line 550, ../scss/style.scss */
+#events section:hover p {
+  color: #808080;
+}
 
 /*														-- (1285, infinity) */
-@media (min-width: 1285px) { /* line 574, ../scss/style.scss */
-  #news article { width: 545px; } }
+@media (min-width: 1285px) {
+  /* line 555, ../scss/style.scss */
+  #news article {
+    width: 400px;
+  }
+}
 /* Large desktop										-- (1200, infinity) */
-@media (min-width: 1200px) { /* line 579, ../scss/style.scss */
-  #news article { margin: 0 0 60px 60px !important; }
-  /* line 580, ../scss/style.scss */
-  #archive .archive article { width: 31.623931623931625%; }
-  /* line 581, ../scss/style.scss */
-  .post-social { width: 292px; }
-  /* line 582, ../scss/style.scss */
-  .post-text { width: 878px; } }
-@media (max-width: 1199px) { /* line 586, ../scss/style.scss */
-  .post-social { width: 292px; }
-  /* line 587, ../scss/style.scss */
-  .post-text { width: 648px; } }
-@media (max-width: 979px) { /* line 591, ../scss/style.scss */
-  #post article .post-text { width: 100%; }
-  /* line 592, ../scss/style.scss */
-  .post-social { display: none; } }
-@media (max-width: 940px) { /* line 596, ../scss/style.scss */
-  #archive .archive article.span4 { width: 48%; } }
+@media (min-width: 1200px) {
+  /* line 560, ../scss/style.scss */
+  #news {
+    margin: 60px 0 0 !important;
+  }
+
+  /* line 561, ../scss/style.scss */
+  #news article {
+    margin: 0 0 60px 60px !important;
+  }
+
+  /* line 562, ../scss/style.scss */
+  #archive .archive article {
+    width: 31.623931623931625%;
+  }
+
+  /* line 563, ../scss/style.scss */
+  .post-social {
+    width: 292px;
+  }
+
+  /* line 564, ../scss/style.scss */
+  .post-text {
+    width: 878px;
+  }
+}
+@media (max-width: 1199px) {
+  /* line 568, ../scss/style.scss */
+  .post-social {
+    width: 292px;
+  }
+
+  /* line 569, ../scss/style.scss */
+  .post-text {
+    width: 648px;
+  }
+}
+@media (max-width: 979px) {
+  /* line 573, ../scss/style.scss */
+  #post article .post-text {
+    width: 100%;
+  }
+
+  /* line 574, ../scss/style.scss */
+  .post-social {
+    display: none;
+  }
+}
+@media (max-width: 940px) {
+  /* line 578, ../scss/style.scss */
+  #archive .archive article.span4 {
+    width: 48%;
+  }
+}
 /*														-- (768, infinity) */
-@media (min-width: 768px) { /* line 603, ../scss/style.scss */
-  #news article { margin: 0 0 60px 60px !important; }
-  /* line 604, ../scss/style.scss */
-  #social > div { margin: 50px 0 50px 50px !important; }
-  /* line 605, ../scss/style.scss */
-  #social .embed { margin: 0 0 0 94px !important; }
-  /* line 606, ../scss/style.scss */
-  #events { margin: 60px !important; }
-  /* line 607, ../scss/style.scss */
-  #events section { width: 300px !important; } }
+@media (min-width: 768px) {
+  /* line 585, ../scss/style.scss */
+  #news article {
+    margin: 0 0 60px 60px !important;
+  }
+
+  /* line 586, ../scss/style.scss */
+  #news {
+    margin: 60px 0 0 !important;
+  }
+
+  /* line 587, ../scss/style.scss */
+  #social > div {
+    margin: 50px 0 50px 50px !important;
+  }
+
+  /* line 588, ../scss/style.scss */
+  #social .embed {
+    margin: 0 0 0 94px !important;
+  }
+
+  /* line 589, ../scss/style.scss */
+  #events {
+    margin: 60px !important;
+  }
+
+  /* line 590, ../scss/style.scss */
+  #events section {
+    width: 300px !important;
+  }
+}
 /* Portrait tablet to landscape and desktop 			-- (768, 979) */
-@media (min-width: 768px) and (max-width: 979px) { /* line 612, ../scss/style.scss */
-  #post article .post-text { width: 724px; }
-  /* line 615, ../scss/style.scss */
-  #archive .archive article.span4 { width: 48%; } }
+@media (min-width: 768px) and (max-width: 979px) {
+  /* line 595, ../scss/style.scss */
+  #post article .post-text {
+    width: 724px;
+  }
+
+  /* line 598, ../scss/style.scss */
+  #archive .archive article.span4 {
+    width: 48%;
+  }
+}
 /* Landscape phone to portrait tablet 					-- (0, 768) */
-@media (max-width: 767px) { /* line 623, ../scss/style.scss */
-  body { padding: 0; }
+@media (max-width: 767px) {
+  /* line 606, ../scss/style.scss */
+  body {
+    padding: 0;
+  }
+
+  /* line 608, ../scss/style.scss */
+  nav ul li a {
+    font-size: 12px !important;
+    width: 112px !important;
+  }
+
+  /* line 613, ../scss/style.scss */
+  #news .scrollarea {
+    width: 100%;
+  }
+
+  /* line 615, ../scss/style.scss */
+  #social > div {
+    background-size: 25px !important;
+  }
+
+  /* line 617, ../scss/style.scss */
+  #events section {
+    width: 100%;
+    margin: 0 auto 30px auto !important;
+  }
+
+  /* line 619, ../scss/style.scss */
+  #post article {
+    width: 90%;
+  }
+
+  /* line 621, ../scss/style.scss */
+  #post article .post-text {
+    width: 100%;
+  }
+
+  /* line 623, ../scss/style.scss */
+  #archive .archive {
+    padding: 5%;
+  }
   /* line 625, ../scss/style.scss */
-  nav ul li a { font-size: 12px !important; width: 112px !important; }
+  #archive .archive article.span4 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* line 628, ../scss/style.scss */
+  div.span12 img {
+    height: auto;
+  }
+
   /* line 630, ../scss/style.scss */
-  #news .scrollarea { width: 100%; }
-  /* line 632, ../scss/style.scss */
-  #social > div { background-size: 25px !important; }
-  /* line 634, ../scss/style.scss */
-  #events section { width: 100%; margin: 0 auto 30px auto !important; }
-  /* line 636, ../scss/style.scss */
-  #post article { width: 90%; }
-  /* line 638, ../scss/style.scss */
-  #post article .post-text { width: 100%; }
-  /* line 640, ../scss/style.scss */
-  #archive .archive { padding: 5%; }
-  /* line 642, ../scss/style.scss */
-  #archive .archive article.span4 { width: 100%; margin-bottom: 20px; }
-  /* line 645, ../scss/style.scss */
-  div.span12 img { height: auto; }
-  /* line 647, ../scss/style.scss */
-  .post-social { display: none; } }
+  .post-social {
+    display: none;
+  }
+}
 /* Landscape phones and down 							-- (0, 480) */
-@media (max-width: 480px) { /* line 653, ../scss/style.scss */
-  #logo { background-size: 65%; }
-  /* line 654, ../scss/style.scss */
-  nav ul li a { width: 72px !important; }
-  /* line 658, ../scss/style.scss */
-  #events section { margin-right: 0px !important; margin: 0 auto 30px auto !important; } }
+@media (max-width: 480px) {
+  /* line 636, ../scss/style.scss */
+  #logo {
+    background-size: 65%;
+  }
+
+  /* line 637, ../scss/style.scss */
+  nav ul li a {
+    width: 72px !important;
+  }
+
+  /* line 641, ../scss/style.scss */
+  #events section {
+    margin-right: 0px !important;
+    margin: 0 auto 30px auto !important;
+  }
+}

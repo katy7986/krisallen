@@ -2703,7 +2703,7 @@ nav ul li a:hover {
 
 /* line 128, ../scss/style.scss */
 #news {
-  margin: 60px 0 0 0;
+  margin: 0 0 0 0;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -3382,7 +3382,7 @@ footer.footer .pull-right .icon-pawns:hover {
 @media (min-width: 1200px) {
   /* line 694, ../scss/style.scss */
   #news {
-    margin: 60px 0 0 !important;
+    margin: 0 0 !important;
   }
 
   /* line 695, ../scss/style.scss */
@@ -3447,7 +3447,7 @@ footer.footer .pull-right .icon-pawns:hover {
 
   /* line 721, ../scss/style.scss */
   #news {
-    margin: 60px 0 0 !important;
+    margin: 0 0 !important;
   }
 
   /* line 722, ../scss/style.scss */

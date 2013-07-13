@@ -126,7 +126,7 @@ nav {
 #main { background:#ededed; padding: 60px 0 0; margin: 0 0; }
 
 #news {
-	margin: 60px 0 0 0;
+	margin: 0 0 0 0;
 	width: 100%;
 	overflow: hidden;
 	position: relative;
@@ -691,7 +691,7 @@ footer.footer {
 
 /* Large desktop										-- (1200, infinity) */
 @media (min-width: 1200px) {
-	#news { margin: 60px 0 0 !important; }
+	#news { margin: 0 0 !important; }
 	#news article { margin: 0 0 30px 30px !important; }
 	#archive .archive article { width: 31.623931623931625%; }
 	.post-social { width: 292px; }
@@ -718,7 +718,7 @@ footer.footer {
 /*														-- (768, infinity) */
 @media (min-width: 768px) { 
 	#news article { margin: 0 0 30px 30px !important; }
-	#news { margin: 60px 0 0 !important; }
+	#news { margin: 0 0 !important; }
 	#social > div { margin: 50px 0 50px 50px !important; }
 	#social .embed { margin: 0 0 0 94px !important; }
 	#events { margin: 60px !important; }

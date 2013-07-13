@@ -53,7 +53,8 @@
 				<li><a href="<?php echo home_url(); ?>/category/news/">News</a></li>
 				<li><a href="<?php echo home_url(); ?>/tour">Shows</a></li>
 				<li><a href="<?php echo home_url(); ?>/category/media/">Media</a></li>
-				<li><a href="https://itunes.apple.com/us/artist/kris-allen/id305374342#" target="_blank">Music</a></li>
+				<li><a href="https://itunes.apple.com/us/artist/kris-allen/id305374342#" target="_blank">iTunes</a></li>
+				<li><a href="http://open.spotify.com/artist/2zwHaEmXxX6DTv4i8ajNCM" target="_blank">Spotify</a></li>
 				<!--<li><a href="http://merch.krisallenofficial.com">Merch</a></li>-->
 			</ul>
 		</nav>	

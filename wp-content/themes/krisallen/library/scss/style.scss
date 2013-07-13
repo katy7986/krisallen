@@ -425,6 +425,19 @@ footer.footer {
 				}
 			}
 		}
+		
+		.icon-pawns {
+			display: inline-block;
+			text-indent: -9999px;
+			margin: 0;
+			background-image: url('../images/little-pawns.png');
+			background-position: 0 0;
+			width: 16px;
+			height: 18px;
+			&:hover {
+				background-position: 0 18px;
+			}
+		}
 	}
 }
 

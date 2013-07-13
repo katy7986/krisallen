@@ -15,7 +15,7 @@
 						<a href="<?php bloginfo('url') ?>/category/news" class="img"><div style="background-image:url('<?php bloginfo('template_directory') ?>/library/images/kris-hat.jpg')"></div></a>
 						<section>
 							<h3><a href="#" title="Welcome to Kris Allen.com" rel="bookmark">Welcome to KrisAllenOfficial.com</a></h3>
-							<p>Click the right arrow, or swipe, to read the latest news updates on Kris! </p>
+							<p>Welcome to the new website everyone! I know it's been a long time coming but I'm happy to say it is here and I think you guys are going to enjoy it. This will be the spot to come hang out, drink some coffee, and catch up...with me… <a href="#">Read more »</a></p>
 						</section>
 							
 						<footer class="article-footer">

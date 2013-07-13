@@ -8,6 +8,7 @@
 	                		
 					<p class="source-org copyright pull-left">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>. </p>
 					<p class="pull-right">
+						<a href="http://www.littlepawns.com" data-toggle="tooltip" title="Little Pawns" rel="tooltip" target="_blank" class="icon-pawns">&#9823;</a>
 						<a href="https://itunes.apple.com/us/artist/kris-allen/id305374342#" data-toggle="tooltip" title="iTunes" rel="tooltip" target="_blank"><i class="icon-music"></i></a>
 						<a href="http://open.spotify.com/artist/2zwHaEmXxX6DTv4i8ajNCM" data-toggle="tooltip" title="Spotify" rel="tooltip" target="_blank"><i class="icon-rss"></i></a>
 						<a href="http://facebook.com/krisallen" data-toggle="tooltip" title="Facebook" rel="tooltip" target="_blank"><i class="icon-facebook"></i></a> 

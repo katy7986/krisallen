@@ -9,7 +9,7 @@
 
 	<article id="post-<?php the_ID(); ?>" class="span12 story" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 	
-		<a href="#" class="img"><div class="span12 media fitvids"><?php the_post_format_audio(); ?></div></a>
+		<a href="#" class="img"><div class="span12 media audio fitvids"><?php the_post_format_audio(); ?></div></a>
 	
 		<section class="post-text span8">
 		

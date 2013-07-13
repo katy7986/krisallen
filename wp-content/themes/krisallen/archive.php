@@ -104,18 +104,21 @@
 							</article>
 					
 					    <?php endwhile; ?>	
-					
+			
+
+				</div>
+				<div class="row">	
 					        <?php if (function_exists('bones_page_navi')) { ?>
 						        <?php bones_page_navi(); ?>
 					        <?php } else { ?>
-						        <nav class="wp-prev-next">
+						        <div class="wp-prev-next">
 							        <ul class="clearfix">
 								        <li class="prev-link"><?php next_posts_link(__('&laquo; Older Entries', "bonestheme")) ?></li>
 								        <li class="next-link"><?php previous_posts_link(__('Newer Entries &raquo;', "bonestheme")) ?></li>
 							        </ul>
-					    	    </nav>
+					    	    </div>
 					        <?php } ?>
-					
+				</div>	
 					    <?php else : ?>
 					
     					    <article id="post-not-found" class="hentry clearfix span12">
@@ -129,11 +132,11 @@
     		    				    <p><?php _e("This is the error message in the archive.php template.", "bonestheme"); ?></p>
     			    			</footer>
     				    	</article>
-					
-					    <?php endif; ?>
 			
 
 				</div>
+					
+					    <?php endif; ?>
 				
 			</section>
 			

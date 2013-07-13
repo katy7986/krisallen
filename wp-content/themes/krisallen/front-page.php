@@ -12,10 +12,10 @@
 					
 					<!-- Welcome Message -->
 					<article class="span3 first">
-						<a href="<?php bloginfo('url') ?>/category/news" class="img"><div style="background-image:url('<?php bloginfo('template_directory') ?>/library/images/kris-hat.jpg')"></div></a>
+						<a href="<?php bloginfo('url') ?>/welcome-to-krisallenofficial-com/" class="img"><div style="background-image:url('<?php bloginfo('template_directory') ?>/library/images/kris-hat.jpg')"></div></a>
 						<section>
-							<h3><a href="#" title="Welcome to Kris Allen.com" rel="bookmark">Welcome to KrisAllenOfficial.com</a></h3>
-							<p>Welcome to the new website everyone! I know it's been a long time coming but I'm happy to say it is here and I think you guys are going to enjoy it. This will be the spot to come hang out, drink some coffee, and catch up...with me… <a href="#">Read more »</a></p>
+							<h3><a href="<?php bloginfo('url') ?>/welcome-to-krisallenofficial-com/" title="Welcome to Kris Allen.com" rel="bookmark">Welcome to KrisAllenOfficial.com</a></h3>
+							<p>Welcome to the new website everyone! I know it's been a long time coming but I'm happy to say it is here and I think you guys are going to enjoy it. This will be the spot to come hang out, drink some coffee, and catch up...with me… <a href="<?php bloginfo('url') ?>/welcome-to-krisallenofficial-com/">Read more »</a></p>
 						</section>
 							
 						<footer class="article-footer">
@@ -36,7 +36,7 @@
 							</div>
 							
 							<div>
-								<a href="<?php bloginfo('url') ?>/category/news" class="read-more">Read More</a> &rarr;
+								<a href="<?php bloginfo('url') ?>/welcome-to-krisallenofficial-com/" class="read-more">Read More</a> &rarr;
 							</div>		
 				
 					</footer> <!-- end article footer -->

@@ -8,9 +8,14 @@
 ?>
 
 	<article id="post-<?php the_ID(); ?>" class="span12 story" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+		
+		<?php if( is_page() ) { ?>
+		<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); $url = $thumb['0']; ?>
+		<a href="#" class="img"><div class="span12 media" style="background-image:url('<?php echo $url; ?>')"></div></a>
+		<?php } else { ?>
 		<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'medium' ); $url = $thumb['0']; ?>
-	
 		<a href="#" class="img"><div class="span12 media"><img src="<?php echo $url; ?>"></div></a>
+		<?php } ?>
 	
 		<section class="post-text span8">
 		
@@ -45,8 +50,8 @@
 		
 		<section class="post-social span4">
 			<div class="row">
-				<a href="<?php echo get_permalink(get_adjacent_post(false,'',false)); ?>" class="prev-post"><i class="icon-angle-left icon-white icon-2x"></i></a>
-				<a href="<?php echo get_permalink(get_adjacent_post(false,'',true)); ?>" class="next-post"><i class="icon-angle-right icon-white icon-2x"></i></a>
+				<a href="<?php echo get_permalink(get_adjacent_post(false,'',false)); ?>" class="prev-post" data-toggle="tooltip" title="Previous Post" rel="tooltip"><i class="icon-angle-left icon-white icon-2x"></i></a>
+				<a href="<?php echo get_permalink(get_adjacent_post(false,'',true)); ?>" class="next-post" data-toggle="tooltip" title="Next Post" rel="tooltip"><i class="icon-angle-right icon-white icon-2x"></i></a>
 			</div>
 			<div class="row">
 				<a href="http://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href, '', 'width=575,height=350,menubar=no,toolbar=no,resizable=yes,scrollbars=yes');return false;" class="fb"><i class="icon-facebook icon-white icon-2x"></i></a>

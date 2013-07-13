@@ -9,7 +9,9 @@
 							<article class="span4">
 								<section>
 									<h3><?php _e("", "bonestheme"); ?></span> <?php single_cat_title(); ?></h3>
-									<?php echo category_description(); ?>
+									<div class="sub-menu">
+										<?php echo category_description(); ?>
+									</div>
 								</section>
 									
 								<footer class="article-footer">

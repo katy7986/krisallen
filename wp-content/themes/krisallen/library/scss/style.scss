@@ -225,6 +225,14 @@ nav {
 		-webkit-transition: all 0.25s ease;
 		-moz-transition: all 0.25s ease;
 		-o-transition: all 0.25s ease;	
+		.sub-menu {
+			a {
+				font: 300 18px "Raleway";
+				margin: 0 0 20px;
+				line-height: 1em;
+				height: 30px;
+			}
+		}
 		p {
 			color: #acacac;
 

@@ -64,7 +64,7 @@ function bones_custom_dashboard_widgets() {
 // removing the dashboard widgets
 add_action('admin_menu', 'disable_default_dashboard_widgets');
 // adding any custom widgets
-add_action('wp_dashboard_setup', 'bones_custom_dashboard_widgets');
+// add_action('wp_dashboard_setup', 'bones_custom_dashboard_widgets');
 
 
 /************* CUSTOM LOGIN PAGE *****************/

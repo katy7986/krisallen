@@ -54,7 +54,7 @@
 				<li><a href="<?php echo home_url(); ?>/tour">Shows</a></li>
 				<li><a href="<?php echo home_url(); ?>/category/media/">Media</a></li>
 				<li><a href="<?php echo home_url(); ?>/category/music/">Music</a></li>
-				<!--<li><a href="http://merch.krisallenofficial.com">Merch</a></li>-->
+				<li><a href="<?php echo home_url(); ?>/store/">Store</a></li>
 			</ul>
 		</nav>	
 			

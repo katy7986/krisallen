@@ -330,6 +330,10 @@ nav {
 			min-height: 300px;
 			text-align: center;
 			background: #dedede;
+			&.audio {
+				max-height: 350px;
+				overflow: hidden;
+			}
 			img {
 				height: 100%;
 				width: auto;

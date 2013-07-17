@@ -70,6 +70,7 @@ jQuery(document).ready(function($){
 	});	
 	
 	$('.fitvids').fitVids();
+	$('.audio.fitvids').fitVids({ customSelector: "iframe[src^='https://embed.spotify.com/']" });
 
 	function onResize() {
 		var w = $(window).width(),
@@ -105,6 +106,7 @@ jQuery(document).ready(function($){
 		}
 	
 		$('.fitvids').fitVids();
+		$('.audio.fitvids').fitVids({ customSelector: "iframe[src^='https://embed.spotify.com/']" });
 	}
 
 	$(window).resize(function() { onResize(); });

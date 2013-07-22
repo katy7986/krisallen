@@ -3173,25 +3173,29 @@ nav ul li a:hover {
 }
 
 /* line 529, ../scss/style.scss */
+.category-music #main #archive .post-format-content {
+  display: none;
+}
+/* line 532, ../scss/style.scss */
 .category-music #main #archive article .img div {
   height: 375px !important;
 }
 
-/* line 536, ../scss/style.scss */
+/* line 539, ../scss/style.scss */
 footer.footer {
   background: white;
   padding: 20px 0 5px;
 }
-/* line 540, ../scss/style.scss */
+/* line 543, ../scss/style.scss */
 footer.footer .pull-right a {
   font-size: 16px;
   margin: 0 10px;
 }
-/* line 544, ../scss/style.scss */
+/* line 547, ../scss/style.scss */
 footer.footer .pull-right a:hover .icon-rss {
   color: #80B719;
 }
-/* line 550, ../scss/style.scss */
+/* line 553, ../scss/style.scss */
 footer.footer .pull-right .icon-pawns {
   position: relative;
   top: 2px;
@@ -3203,12 +3207,12 @@ footer.footer .pull-right .icon-pawns {
   width: 16px;
   height: 18px;
 }
-/* line 560, ../scss/style.scss */
+/* line 563, ../scss/style.scss */
 footer.footer .pull-right .icon-pawns:hover {
   background-position: 0 18px;
 }
 
-/* line 567, ../scss/style.scss */
+/* line 570, ../scss/style.scss */
 .next {
   width: 40px;
   height: 60px;
@@ -3221,7 +3225,7 @@ footer.footer .pull-right .icon-pawns:hover {
   margin: -30px 0 0 0;
 }
 
-/* line 579, ../scss/style.scss */
+/* line 582, ../scss/style.scss */
 .prev {
   width: 40px;
   height: 60px;
@@ -3234,39 +3238,39 @@ footer.footer .pull-right .icon-pawns:hover {
   margin: -30px 0 0 0;
 }
 
-/* line 591, ../scss/style.scss */
+/* line 594, ../scss/style.scss */
 #social {
   width: 100%;
   overflow: auto;
   background: #fff;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
-/* line 596, ../scss/style.scss */
+/* line 599, ../scss/style.scss */
 #social .embed {
   /*background: #f2f2f2;*/
   margin: 0 0 0 94px;
   height: 185px;
   position: relative;
 }
-/* line 602, ../scss/style.scss */
+/* line 605, ../scss/style.scss */
 #social .facebook {
   background: url("../images/fb.jpg") no-repeat left top;
   background-size: auto;
 }
-/* line 603, ../scss/style.scss */
+/* line 606, ../scss/style.scss */
 #social .instagram {
   background: url("../images/in.jpg") no-repeat left top;
   background-size: auto;
 }
-/* line 605, ../scss/style.scss */
+/* line 608, ../scss/style.scss */
 #social .instagram .embed {
   padding: 0 0 5px;
 }
-/* line 606, ../scss/style.scss */
+/* line 609, ../scss/style.scss */
 #social .instagram .scrollarea {
   width: 500px;
 }
-/* line 609, ../scss/style.scss */
+/* line 612, ../scss/style.scss */
 #social .instagram article {
   height: 185px;
   width: 185px;
@@ -3275,7 +3279,7 @@ footer.footer .pull-right .icon-pawns:hover {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   position: relative;
 }
-/* line 616, ../scss/style.scss */
+/* line 619, ../scss/style.scss */
 #social .instagram article p {
   position: absolute;
   background: #fff;
@@ -3288,21 +3292,21 @@ footer.footer .pull-right .icon-pawns:hover {
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
 }
-/* line 630, ../scss/style.scss */
+/* line 633, ../scss/style.scss */
 #social .instagram article:hover p {
   bottom: 0;
 }
-/* line 635, ../scss/style.scss */
+/* line 638, ../scss/style.scss */
 #social .instagram img {
   height: 185px;
 }
-/* line 639, ../scss/style.scss */
+/* line 642, ../scss/style.scss */
 #social .twitter {
   background: url("../images/tw.jpg") no-repeat left top;
   background-size: auto;
 }
 
-/* line 641, ../scss/style.scss */
+/* line 644, ../scss/style.scss */
 #social > div {
   width: 29%;
   margin: 50px 0 50px 50px;
@@ -3311,24 +3315,24 @@ footer.footer .pull-right .icon-pawns:hover {
 }
 
 /* Twitter */
-/* line 650, ../scss/style.scss */
+/* line 653, ../scss/style.scss */
 #social .twitter .tweet_list {
   padding: 0px;
   margin: 0px;
   list-style: none;
 }
 
-/* line 656, ../scss/style.scss */
+/* line 659, ../scss/style.scss */
 #social .twitter .tweet_list li {
   margin: 0 0 20px;
 }
 
-/* line 660, ../scss/style.scss */
+/* line 663, ../scss/style.scss */
 #social .twitter .tweet_text {
   color: #acacac;
 }
 
-/* line 661, ../scss/style.scss */
+/* line 664, ../scss/style.scss */
 #social .twitter .tweet_time {
   display: block;
   margin: 0 0 5px;
@@ -3336,12 +3340,12 @@ footer.footer .pull-right .icon-pawns:hover {
   font-style: italic;
 }
 
-/* line 663, ../scss/style.scss */
+/* line 666, ../scss/style.scss */
 #events {
   margin: 60px;
   width: auto !important;
 }
-/* line 666, ../scss/style.scss */
+/* line 669, ../scss/style.scss */
 #events .eventsnext {
   display: block;
   width: 30px;
@@ -3353,7 +3357,7 @@ footer.footer .pull-right .icon-pawns:hover {
   margin-top: 45px;
 }
 
-/* line 678, ../scss/style.scss */
+/* line 681, ../scss/style.scss */
 #events section {
   background: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
@@ -3365,13 +3369,13 @@ footer.footer .pull-right .icon-pawns:hover {
   position: relative;
 }
 
-/* line 689, ../scss/style.scss */
+/* line 692, ../scss/style.scss */
 #events h3, #events h4 {
   font-size: 18px;
   margin: 0px;
 }
 
-/* line 694, ../scss/style.scss */
+/* line 697, ../scss/style.scss */
 #events p {
   display: block;
   position: absolute;
@@ -3383,194 +3387,194 @@ footer.footer .pull-right .icon-pawns:hover {
   -o-transition: all 0.25s ease;
 }
 
-/* line 706, ../scss/style.scss */
+/* line 709, ../scss/style.scss */
 #events section:hover p {
   color: #808080;
 }
 
 /*														-- (1285, infinity) */
 @media (min-width: 1285px) {
-  /* line 711, ../scss/style.scss */
+  /* line 714, ../scss/style.scss */
   #news article {
     width: 375px;
   }
 }
 /* Large desktop										-- (1200, infinity) */
 @media (min-width: 1200px) {
-  /* line 716, ../scss/style.scss */
+  /* line 719, ../scss/style.scss */
   #news {
     margin: 0 0 !important;
   }
 
-  /* line 717, ../scss/style.scss */
+  /* line 720, ../scss/style.scss */
   #news article {
     margin: 0 0 30px 30px !important;
   }
 
-  /* line 718, ../scss/style.scss */
+  /* line 721, ../scss/style.scss */
   #archive .archive article {
     width: 31.623931623931625%;
   }
 
-  /* line 719, ../scss/style.scss */
+  /* line 722, ../scss/style.scss */
   .post-social {
     width: 292px;
   }
 
-  /* line 720, ../scss/style.scss */
+  /* line 723, ../scss/style.scss */
   .post-text {
     width: 878px;
   }
 }
 @media (max-width: 1199px) {
-  /* line 724, ../scss/style.scss */
+  /* line 727, ../scss/style.scss */
   .post-social {
     width: 292px;
   }
 
-  /* line 725, ../scss/style.scss */
+  /* line 728, ../scss/style.scss */
   .post-text {
     width: 648px;
   }
 }
 @media (max-width: 979px) {
-  /* line 729, ../scss/style.scss */
+  /* line 732, ../scss/style.scss */
   #post article .post-text {
     width: 100%;
   }
 
-  /* line 730, ../scss/style.scss */
+  /* line 733, ../scss/style.scss */
   #page article .post-text {
     width: 100%;
   }
 
-  /* line 731, ../scss/style.scss */
+  /* line 734, ../scss/style.scss */
   .post-social {
     display: none;
   }
 }
 @media (max-width: 940px) {
-  /* line 735, ../scss/style.scss */
+  /* line 738, ../scss/style.scss */
   #archive .archive article.span4 {
     width: 48%;
   }
 }
 /*														-- (768, infinity) */
 @media (min-width: 768px) {
-  /* line 742, ../scss/style.scss */
+  /* line 745, ../scss/style.scss */
   #news article {
     margin: 0 0 30px 30px !important;
   }
 
-  /* line 743, ../scss/style.scss */
+  /* line 746, ../scss/style.scss */
   #news {
     margin: 0 0 !important;
   }
 
-  /* line 744, ../scss/style.scss */
+  /* line 747, ../scss/style.scss */
   #social > div {
     margin: 50px 0 50px 50px !important;
   }
 
-  /* line 745, ../scss/style.scss */
+  /* line 748, ../scss/style.scss */
   #social .embed {
     margin: 0 0 0 94px !important;
   }
 
-  /* line 746, ../scss/style.scss */
+  /* line 749, ../scss/style.scss */
   #events {
     margin: 60px !important;
   }
 
-  /* line 747, ../scss/style.scss */
+  /* line 750, ../scss/style.scss */
   #events section {
     width: 300px !important;
   }
 }
 /* Portrait tablet to landscape and desktop 			-- (768, 979) */
 @media (min-width: 768px) and (max-width: 979px) {
-  /* line 752, ../scss/style.scss */
+  /* line 755, ../scss/style.scss */
   #post article .post-text, #page article .post-text {
     width: 724px;
   }
 
-  /* line 755, ../scss/style.scss */
+  /* line 758, ../scss/style.scss */
   #archive .archive article.span4 {
     width: 48%;
   }
 }
 /* Landscape phone to portrait tablet 					-- (0, 768) */
 @media (max-width: 767px) {
-  /* line 763, ../scss/style.scss */
+  /* line 766, ../scss/style.scss */
   body {
     padding: 0;
   }
 
-  /* line 765, ../scss/style.scss */
+  /* line 768, ../scss/style.scss */
   nav ul li a {
     font-size: 12px !important;
     width: 112px !important;
   }
 
-  /* line 770, ../scss/style.scss */
+  /* line 773, ../scss/style.scss */
   #news .scrollarea {
     width: 100%;
   }
 
-  /* line 772, ../scss/style.scss */
+  /* line 775, ../scss/style.scss */
   #social > div {
     background-size: 25px !important;
   }
 
-  /* line 774, ../scss/style.scss */
+  /* line 777, ../scss/style.scss */
   #events section {
     width: 100%;
     margin: 0 auto 30px auto !important;
   }
 
-  /* line 776, ../scss/style.scss */
+  /* line 779, ../scss/style.scss */
   #post article, #page article {
     width: 90%;
   }
 
-  /* line 778, ../scss/style.scss */
+  /* line 781, ../scss/style.scss */
   #post article .post-text, #page article .post-text {
     width: 100%;
   }
 
-  /* line 780, ../scss/style.scss */
+  /* line 783, ../scss/style.scss */
   #archive .archive {
     padding: 5%;
   }
-  /* line 782, ../scss/style.scss */
+  /* line 785, ../scss/style.scss */
   #archive .archive article.span4 {
     width: 100%;
     margin-bottom: 20px;
   }
 
-  /* line 785, ../scss/style.scss */
+  /* line 788, ../scss/style.scss */
   div.span12 img {
     height: auto;
   }
 
-  /* line 787, ../scss/style.scss */
+  /* line 790, ../scss/style.scss */
   .post-social {
     display: none;
   }
 }
 /* Landscape phones and down 							-- (0, 480) */
 @media (max-width: 480px) {
-  /* line 793, ../scss/style.scss */
+  /* line 796, ../scss/style.scss */
   #logo {
     background-size: 65%;
   }
 
-  /* line 794, ../scss/style.scss */
+  /* line 797, ../scss/style.scss */
   nav ul li a {
     width: 72px !important;
   }
 
-  /* line 798, ../scss/style.scss */
+  /* line 801, ../scss/style.scss */
   #events section {
     margin-right: 0px !important;
     margin: 0 auto 30px auto !important;

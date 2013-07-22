@@ -526,6 +526,9 @@ nav {
 .category-music {
 	#main {
 		#archive {
+			.post-format-content {
+				display: none;
+			}
 			article .img div {
 				height: 375px !important;
 			}

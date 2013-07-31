@@ -6,6 +6,7 @@
 		'order' => 'ASC',
 		'post_type' => 'tour',
 		'orderby' => 'meta_value_num', 
+		'post_status' => array( 'published', 'draft' ),
 		'meta_query' => array(
 		    array(
 		        'key' => '_ka_tour_date', // Check the start date field

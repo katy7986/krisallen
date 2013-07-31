@@ -339,6 +339,12 @@ nav {
 				width: auto;
 			}
 		}
+		.photo {
+			min-height: 425px !important;
+			text-align: center;
+			background-attachment: fixed !important;
+			background-size: cover !important;
+		}
 		.post-text {
 			color: #acacac;
 			padding: 40px 30px 30px 30px;
@@ -364,6 +370,9 @@ nav {
 				line-height: 2em;
 				color: #686868;
 				font-size: 1.2em;
+				.post-format-content {
+					display: none;
+				}
 			}
 			.article-footer {
 				padding: 8px 0;

@@ -340,7 +340,7 @@ nav {
 			}
 		}
 		.photo {
-			min-height: 450px !important;
+			min-height: 450px;
 			text-align: center;
 			background-attachment: fixed !important;
 			background-size: cover !important;
@@ -797,6 +797,15 @@ footer.footer {
 	div.span12 img { height: auto; }
 	
 	.post-social { display: none; }
+	
+	#post article .media.photo {
+		min-height: 100px !important;
+	}
+	
+	#post article .media.photo img {
+		width: 100% !important;
+		height: auto !important;
+	}
 }
  
 /* Landscape phones and down 							-- (0, 480) */

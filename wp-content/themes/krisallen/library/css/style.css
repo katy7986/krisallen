@@ -2935,7 +2935,7 @@ nav ul li a:hover {
 }
 /* line 342, ../scss/style.scss */
 #post article .photo {
-  min-height: 450px !important;
+  min-height: 450px;
   text-align: center;
   background-attachment: fixed !important;
   background-size: cover !important;
@@ -3572,20 +3572,31 @@ footer.footer .pull-right .icon-pawns:hover {
   .post-social {
     display: none;
   }
+
+  /* line 801, ../scss/style.scss */
+  #post article .media.photo {
+    min-height: 100px !important;
+  }
+
+  /* line 805, ../scss/style.scss */
+  #post article .media.photo img {
+    width: 100% !important;
+    height: auto !important;
+  }
 }
 /* Landscape phones and down 							-- (0, 480) */
 @media (max-width: 480px) {
-  /* line 805, ../scss/style.scss */
+  /* line 814, ../scss/style.scss */
   #logo {
     background-size: 65%;
   }
 
-  /* line 806, ../scss/style.scss */
+  /* line 815, ../scss/style.scss */
   nav ul li a {
     width: 72px !important;
   }
 
-  /* line 810, ../scss/style.scss */
+  /* line 819, ../scss/style.scss */
   #events section {
     margin-right: 0px !important;
     margin: 0 auto 30px auto !important;

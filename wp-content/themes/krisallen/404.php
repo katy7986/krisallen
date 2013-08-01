@@ -1,17 +1,19 @@
 <?php get_header(); ?>
 					
-				<section id="page" class="container">
+			<section id="post" class="container">
 			
 				<div class="row">
-					<article id="post-not-found" class="span12 story">
-						<h3><?php _e("Epic 404 - Article Not Found", "bonestheme"); ?></h3>
-						<div class="divider"></div>
-						<section class="entry-content">
-							<p><?php _e("The article you were looking for was not found, but maybe try looking again!", "bonestheme"); ?></p>
+					<article id="post-<?php the_ID(); ?>" class="span12 story" role="article" itemscope itemtype="http://schema.org/BlogPosting">	
+						<section class="post-text span8">
+							<h3 class="entry-title single-title"><?php _e("Epic 404 - Article Not Found", "bonestheme"); ?></h3>
+							<div class="divider"></div>
+							<section class="entry-content clearfix">
+								<p><?php _e("The article you were looking for was not found, but maybe try looking again!", "bonestheme"); ?></p>
+							</section>
+							<footer class="article-footer">
+							    <p><?php _e("This is the error message.", "bonestheme"); ?></p>
+							</footer>
 						</section>
-						<footer class="article-footer">
-						    <p><?php _e("This is the error message.", "bonestheme"); ?></p>
-						</footer>
 					</article>		
 				</div>
 					

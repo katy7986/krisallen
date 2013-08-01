@@ -9,8 +9,8 @@
 
 	<article id="post-<?php the_ID(); ?>" class="span12 story" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 		
-		<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' ); $url = $thumb['0']; ?>
-		<a href="#" class="img"><div class="span12 media photo" style="background-image:url('<?php echo $url; ?>')"></div></a>
+		<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' ); $url = $thumb['0']; ?>
+		<a href="#" class="img"><div class="span12 media photo"><img src="<?php echo $url; ?>"></div></a>
 	
 		<section class="post-text span8">
 		

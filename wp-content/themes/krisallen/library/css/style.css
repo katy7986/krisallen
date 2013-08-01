@@ -2935,7 +2935,7 @@ nav ul li a:hover {
 }
 /* line 342, ../scss/style.scss */
 #post article .photo {
-  min-height: 425px !important;
+  min-height: 450px !important;
   text-align: center;
   background-attachment: fixed !important;
   background-size: cover !important;

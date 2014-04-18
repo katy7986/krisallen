@@ -179,6 +179,7 @@
 					$args = array(
 						'meta_key' => '_ka_tour_date',
 						'order' => 'ASC',
+						'post_per_page' => -1,
 						'post_type' => 'tour',
 						'orderby' => 'meta_value_num', 
 						'meta_query' => array(

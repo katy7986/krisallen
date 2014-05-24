@@ -1,12 +1,11 @@
 <?php 
 	get_header(); 
 	$args = array(
-		'post_per_page' => -1,
+		'posts_per_page' => -1,
 		'meta_key' => '_ka_tour_date',
 		'order' => 'ASC',
 		'post_type' => 'tour',
 		'orderby' => 'meta_value_num', 
-		'post_status' => array( 'published', 'draft' ),
 		'meta_query' => array(
 		    array(
 		        'key' => '_ka_tour_date', // Check the start date field
@@ -17,7 +16,7 @@
 	);
 	query_posts( $args );
 ?>
-			
+			 
 			<section id="tour" class="container">
 
 				<div class="row-fluid">

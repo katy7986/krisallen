@@ -2614,7 +2614,7 @@ h4 {
 body {
   background: #ededed;
   color: #686868;
-  font: 12px HelveticaNeue, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font: 12px "Lucida Grande", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
   line-height: 21px;
 }
 

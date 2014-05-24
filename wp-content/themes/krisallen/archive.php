@@ -167,17 +167,19 @@
 								$data = json_decode($response, true);
 								$html_output = '';
 								
-								foreach ( $data["data"] as $value ) {
-									$html_output .= '<a href="'.$value['link'].'" target="_blank">';
-									$html_output .= '<article>';
-									$html_output .= '<img src="' .$value['images']['standard_resolution']['url']. '"/>';
-									$html_output .= '<p>' .$value['caption']['text']. '</p>';
-									$html_output .= '</article>';
-									$html_output .= '</a>';
-								}						
-								echo $html_output;
-								
-								set_transient('instagramz', $html_output, 60*60*4 );
+								if (is_array($data)) {
+									foreach ( $data["data"] as $value ) {
+										$html_output .= '<a href="'.$value['link'].'" target="_blank">';
+										$html_output .= '<article>';
+										$html_output .= '<img src="' .$value['images']['standard_resolution']['url']. '"/>';
+										$html_output .= '<p>' .$value['caption']['text']. '</p>';
+										$html_output .= '</article>';
+										$html_output .= '</a>';
+									}						
+									echo $html_output;
+									
+									set_transient('instagramz', $html_output, 60*60*4 );
+								}
 								
 							} else {
 								echo $transient;

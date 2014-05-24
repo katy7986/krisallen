@@ -139,7 +139,7 @@
 								$count = 6;
 								
 								// Call two WordPress functions to receive data and to parse the body
-								$response = wp_remote_retrieve_body( wp_remote_get( "https://api.instagram.com/v1/users/7924810/media/recent/?access_token=21611949.200a12c.deaad557dfee46ca8c28ec49c0c97608&count=$count" ) );
+								$response = wp_remote_retrieve_body( wp_remote_get( "https://api.instagram.com/v1/users/7924810/media/recent/?access_token=21611949.200a12c.deaad557dfee46ca8c28ec49c0c97608&count=6" ) );
 								
 								// Call json_decode function that will return object with data
 								$data = json_decode($response, true);
@@ -179,6 +179,7 @@
 					$args = array(
 						'meta_key' => '_ka_tour_date',
 						'order' => 'ASC',
+						'post_per_page' => -1,
 						'post_type' => 'tour',
 						'orderby' => 'meta_value_num', 
 						'meta_query' => array(

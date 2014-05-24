@@ -53,17 +53,18 @@ single-bookmarks.php
 					
 					    <?php else : ?>
 					
-        					<article id="post-not-found" class="hentry clearfix">
-        						<header class="article-header">
-        							<h1><?php _e("Oops, Post Not Found!", "bonestheme"); ?></h1>
-        						</header>
-        						<section class="entry-content">
-        							<p><?php _e("Uh Oh. Something is missing. Try double checking things.", "bonestheme"); ?></p>
-        						</section>
-        						<footer class="article-footer">
-        						    <p><?php _e("This is the error message in the single-custom_type.php template.", "bonestheme"); ?></p>
-        						</footer>
-        					</article>
+    					<article id="post-<?php the_ID(); ?>" class="span12 story" role="article" itemscope itemtype="http://schema.org/BlogPosting">	
+							<section class="post-text span8">
+								<h3 class="entry-title single-title"><?php _e("No tour days are available at this time", "bonestheme"); ?></h3>
+								<div class="divider"></div>
+								<section class="entry-content clearfix">
+									<p><?php _e("To tour dates are available at this time. Please check back soon for updates!", "bonestheme"); ?></p>
+								</section>
+								<footer class="article-footer">
+								    <p><?php _e("We will be announcing more dates soon!.", "bonestheme"); ?></p>
+								</footer>
+							</section>
+						</article>	
 					
 					    <?php endif; ?>
 			
